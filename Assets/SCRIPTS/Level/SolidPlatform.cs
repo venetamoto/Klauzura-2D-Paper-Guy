@@ -1,17 +1,10 @@
 using UnityEngine;
 
-namespace PaperGuy.Level
+[RequireComponent(typeof(Collider2D))]
+public class SolidPlatform : MonoBehaviour
 {
-    public class SolidPlatform : MonoBehaviour
+    void Awake()
     {
-        private void Reset() => EnsureSolidCollider();
-        private void Awake() => EnsureSolidCollider();
-
-        private void EnsureSolidCollider()
-        {
-            if (!TryGetComponent(out Collider2D col))
-                col = gameObject.AddComponent<BoxCollider2D>();
-            col.isTrigger = false;
-        }
+        GetComponent<Collider2D>().isTrigger = false;
     }
 }

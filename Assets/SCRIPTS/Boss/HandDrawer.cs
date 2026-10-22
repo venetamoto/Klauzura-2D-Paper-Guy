@@ -1,110 +1,94 @@
 using System.Collections;
-using System.Collections.Generic;
-using PaperGuy.Interactions;
-using PaperGuy.Player;
 using UnityEngine;
 
-namespace PaperGuy.Boss
+[RequireComponent(typeof(Collider2D))]
+public class HandDrawer : MonoBehaviour
 {
-    // Ruka autora přiletí, nakreslí tvar a odletí. Nakreslený tvar je jedlý.
-    [RequireComponent(typeof(Collider2D))]
-    public class HandDrawer : MonoBehaviour
+    public Transform hand;
+    public EdibleCollectible drawing;
+    public LineRenderer line;
+
+    public Vector2[] shape =
     {
-        [Header("Reference")]
-        [SerializeField] private Transform hand;
-        [Tooltip("Jedlý objekt s LineRendererem — do něj se kreslí.")]
-        [SerializeField] private EdibleCollectible drawing;
-        [SerializeField] private LineRenderer line;
+        new Vector2(0f, 0.8f), new Vector2(0.19f, 0.26f), new Vector2(0.76f, 0.25f),
+        new Vector2(0.3f, -0.1f), new Vector2(0.47f, -0.65f), new Vector2(0f, -0.32f),
+        new Vector2(-0.47f, -0.65f), new Vector2(-0.3f, -0.1f), new Vector2(-0.76f, 0.25f),
+        new Vector2(-0.19f, 0.26f), new Vector2(0f, 0.8f)
+    };
 
-        [Header("Tvar (lokální body vůči Drawing)")]
-        [SerializeField] private Vector2[] shape =
+    public float drawSpeed = 2.5f;
+    public float flyTime = 0.6f;
+    public Vector2 offscreenOffset = new Vector2(5f, 10f);
+    public Vector2 handOffset = Vector2.zero;
+
+    bool started;
+
+    void Awake()
+    {
+        GetComponent<Collider2D>().isTrigger = true;
+        hand.gameObject.SetActive(false);
+        line.positionCount = 0;
+        SetEdible(false);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (started) return;
+        if (other.GetComponentInParent<PlayerController2D>() == null) return;
+
+        started = true;
+        StartCoroutine(Draw());
+    }
+
+    IEnumerator Draw()
+    {
+        Vector3[] points = new Vector3[shape.Length];
+        for (int i = 0; i < shape.Length; i++)
+            points[i] = drawing.transform.TransformPoint(shape[i]);
+
+        Vector3 away = points[0] + (Vector3)offscreenOffset;
+
+        hand.gameObject.SetActive(true);
+        yield return Fly(away, points[0]);
+
+        line.useWorldSpace = true;
+        line.positionCount = 1;
+        line.SetPosition(0, points[0]);
+
+        for (int i = 1; i < points.Length; i++)
         {
-            new Vector2(0f, 0.8f), new Vector2(0.19f, 0.26f), new Vector2(0.76f, 0.25f),
-            new Vector2(0.3f, -0.1f), new Vector2(0.47f, -0.65f), new Vector2(0f, -0.32f),
-            new Vector2(-0.47f, -0.65f), new Vector2(-0.3f, -0.1f), new Vector2(-0.76f, 0.25f),
-            new Vector2(-0.19f, 0.26f), new Vector2(0f, 0.8f)
-        };
+            line.positionCount = i + 1;
+            float length = Vector3.Distance(points[i - 1], points[i]);
 
-        [Header("Časování")]
-        [SerializeField, Min(0.1f)] private float drawSpeed = 2.5f;
-        [SerializeField, Min(0f)] private float flyTime = 0.6f;
-        [Tooltip("Odkud ruka přiletí a kam odletí (vůči tvaru).")]
-        [SerializeField] private Vector2 offscreenOffset = new Vector2(5f, 10f);
-        [Tooltip("Posun ruky od hrotu tužky (sprite ruky má pivot přímo na hrotu → 0,0).")]
-        [SerializeField] private Vector2 handOffset = Vector2.zero;
-
-        private bool _started;
-
-        private void Awake()
-        {
-            GetComponent<Collider2D>().isTrigger = true;
-            if (hand != null) hand.gameObject.SetActive(false);
-            if (line != null) line.positionCount = 0;
-            SetDrawingEdible(false);
-        }
-
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (_started) return;
-            Rigidbody2D body = other.attachedRigidbody;
-            if (body == null || !body.TryGetComponent(out PlayerController2D _)) return;
-
-            _started = true;
-            StartCoroutine(DrawRoutine());
-        }
-
-        private IEnumerator DrawRoutine()
-        {
-            Transform origin = drawing.transform;
-            var points = new List<Vector3>(shape.Length);
-            foreach (Vector2 p in shape) points.Add(origin.TransformPoint(p));
-
-            Vector3 away = points[0] + (Vector3)offscreenOffset;
-            hand.gameObject.SetActive(true);
-            yield return Fly(away, points[0]);
-
-            line.useWorldSpace = true;
-            line.positionCount = 1;
-            line.SetPosition(0, points[0]);
-
-            for (int i = 1; i < points.Count; i++)
+            for (float t = 0f; t < length; t += drawSpeed * Time.deltaTime)
             {
-                Vector3 from = points[i - 1], to = points[i];
-                int index = line.positionCount;
-                line.positionCount = index + 1;
-
-                float length = Vector3.Distance(from, to);
-                for (float t = 0f; t < length; t += drawSpeed * Time.deltaTime)
-                {
-                    Vector3 tip = Vector3.Lerp(from, to, t / length);
-                    line.SetPosition(index, tip);
-                    hand.position = tip + (Vector3)handOffset;
-                    yield return null;
-                }
-                line.SetPosition(index, to);
-            }
-
-            yield return Fly(points[points.Count - 1], away);
-            hand.gameObject.SetActive(false);
-            SetDrawingEdible(true);
-        }
-
-        private IEnumerator Fly(Vector3 from, Vector3 to)
-        {
-            for (float t = 0f; t < flyTime; t += Time.deltaTime)
-            {
-                hand.position = Vector3.Lerp(from, to, Mathf.SmoothStep(0f, 1f, t / flyTime)) + (Vector3)handOffset;
+                Vector3 tip = Vector3.Lerp(points[i - 1], points[i], t / length);
+                line.SetPosition(i, tip);
+                hand.position = tip + (Vector3)handOffset;
                 yield return null;
             }
-            hand.position = to + (Vector3)handOffset;
+            line.SetPosition(i, points[i]);
         }
 
-        // Dokud se kreslí, nejde tvar sníst.
-        private void SetDrawingEdible(bool edible)
+        yield return Fly(points[points.Length - 1], away);
+        hand.gameObject.SetActive(false);
+        SetEdible(true);
+    }
+
+    IEnumerator Fly(Vector3 from, Vector3 to)
+    {
+        for (float t = 0f; t < flyTime; t += Time.deltaTime)
         {
-            if (drawing == null) return;
-            drawing.enabled = edible;
-            foreach (Collider2D c in drawing.GetComponents<Collider2D>()) c.enabled = edible;
+            hand.position = Vector3.Lerp(from, to, Mathf.SmoothStep(0f, 1f, t / flyTime)) + (Vector3)handOffset;
+            yield return null;
         }
+        hand.position = to + (Vector3)handOffset;
+    }
+
+    void SetEdible(bool value)
+    {
+        drawing.enabled = value;
+        foreach (Collider2D c in drawing.GetComponents<Collider2D>())
+            c.enabled = value;
     }
 }

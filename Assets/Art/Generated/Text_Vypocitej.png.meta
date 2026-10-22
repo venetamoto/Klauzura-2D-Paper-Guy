@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: afb30e6ecfd52714685c569501dcdb71
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4228976089459758226
+    second: Text_Vypocitej_0
+  - first:
+      213: -4736885418813826248
+    second: Text_Vypocitej_1
+  - first:
+      213: -6843416973992818687
+    second: Text_Vypocitej_2
+  - first:
+      213: -4349996860289254939
+    second: Text_Vypocitej_3
+  - first:
+      213: 108149360371709855
+    second: Text_Vypocitej_4
+  - first:
+      213: 6959073147242501771
+    second: Text_Vypocitej_5
+  - first:
+      213: -3727507843432581115
+    second: Text_Vypocitej_6
+  - first:
+      213: 4182440431175283107
+    second: Text_Vypocitej_7
+  - first:
+      213: -6614175087412259495
+    second: Text_Vypocitej_8
+  - first:
+      213: -7888096502005980414
+    second: Text_Vypocitej_9
+  - first:
+      213: 1882947594799814781
+    second: Text_Vypocitej_10
+  - first:
+      213: 5235534511545335872
+    second: Text_Vypocitej_11
+  - first:
+      213: -5417386970217196262
+    second: Text_Vypocitej_12
+  - first:
+      213: 6151730577846966852
+    second: Text_Vypocitej_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Text_Vypocitej_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 53
+        width: 92
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2949ed7e85750ba30800000000000000
+      internalID: 4228976089459758226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Vypocitej_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 9
+        width: 77
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83bdfd50fc3334eb0800000000000000
+      internalID: -4736885418813826248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Vypocitej_2
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 115
+        width: 47
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1088747258c4701a0800000000000000
+      internalID: -6843416973992818687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Vypocitej_3
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 113
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e9f46027e4b1a3c0800000000000000
+      internalID: -4349996860289254939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Vypocitej_4
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 40
+        width: 61
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9734af2549308100800000000000000
+      internalID: 108149360371709855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Vypocitej_5
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 118
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b86595b1828939060800000000000000
+      internalID: 6959073147242501771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Vypocitej_6
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 15
+        width: 69
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 508f7b69d5b354cc0800000000000000
+      internalID: -3727507843432581115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Vypocitej_7
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 44
+        width: 61
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a13f62a9630b0a30800000000000000
+      internalID: 4182440431175283107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Vypocitej_8
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 42
+        width: 55
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 955dd882dcab534a0800000000000000
+      internalID: -6614175087412259495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Vypocitej_9
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 41
+        width: 26
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 203aeeb360ad78290800000000000000
+      internalID: -7888096502005980414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Vypocitej_10
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 38
+        width: 58
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7818b67cd2912a10800000000000000
+      internalID: 1882947594799814781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Vypocitej_11
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 5
+        width: 56
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04045f136ea58a840800000000000000
+      internalID: 5235534511545335872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Vypocitej_12
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 82
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15df5dc04391d4b0800000000000000
+      internalID: -5417386970217196262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Vypocitej_13
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 40
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a1a760e565f5550800000000000000
+      internalID: 6151730577846966852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Text_Vypocitej_0: 4228976089459758226
+      Text_Vypocitej_1: -4736885418813826248
+      Text_Vypocitej_10: 1882947594799814781
+      Text_Vypocitej_11: 5235534511545335872
+      Text_Vypocitej_12: -5417386970217196262
+      Text_Vypocitej_13: 6151730577846966852
+      Text_Vypocitej_2: -6843416973992818687
+      Text_Vypocitej_3: -4349996860289254939
+      Text_Vypocitej_4: 108149360371709855
+      Text_Vypocitej_5: 6959073147242501771
+      Text_Vypocitej_6: -3727507843432581115
+      Text_Vypocitej_7: 4182440431175283107
+      Text_Vypocitej_8: -6614175087412259495
+      Text_Vypocitej_9: -7888096502005980414
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
