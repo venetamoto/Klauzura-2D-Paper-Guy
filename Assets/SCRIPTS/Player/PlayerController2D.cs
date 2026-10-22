@@ -60,6 +60,7 @@ public class PlayerController2D : MonoBehaviour
         rb.gravityScale = gravityScale;
         rb.freezeRotation = true;
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        rb.useFullKinematicContacts = true;
 
         Collider2D col = GetComponent<Collider2D>();
         footOffset = col != null ? rb.position.y - col.bounds.min.y : 0.5f;

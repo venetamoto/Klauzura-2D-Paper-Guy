@@ -5,8 +5,9 @@ using UnityEngine;
 public class HandDrawer : MonoBehaviour
 {
     public Transform hand;
-    public EdibleCollectible drawing;
     public LineRenderer line;
+    public EdibleCollectible drawing;
+    public GameObject removeWhenDone;
 
     public Vector2[] shape =
     {
@@ -28,7 +29,7 @@ public class HandDrawer : MonoBehaviour
         GetComponent<Collider2D>().isTrigger = true;
         hand.gameObject.SetActive(false);
         line.positionCount = 0;
-        SetEdible(false);
+        if (drawing != null) SetEdible(false);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -44,7 +45,7 @@ public class HandDrawer : MonoBehaviour
     {
         Vector3[] points = new Vector3[shape.Length];
         for (int i = 0; i < shape.Length; i++)
-            points[i] = drawing.transform.TransformPoint(shape[i]);
+            points[i] = line.transform.TransformPoint(shape[i]);
 
         Vector3 away = points[0] + (Vector3)offscreenOffset;
 
@@ -72,7 +73,9 @@ public class HandDrawer : MonoBehaviour
 
         yield return Fly(points[points.Length - 1], away);
         hand.gameObject.SetActive(false);
-        SetEdible(true);
+
+        if (drawing != null) SetEdible(true);
+        if (removeWhenDone != null) removeWhenDone.SetActive(false);
     }
 
     IEnumerator Fly(Vector3 from, Vector3 to)
