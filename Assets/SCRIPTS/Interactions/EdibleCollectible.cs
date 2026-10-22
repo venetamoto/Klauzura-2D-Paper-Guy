@@ -1,34 +1,32 @@
-using PaperGuy.Player;
 using UnityEngine;
 
-namespace PaperGuy.Interactions
+[RequireComponent(typeof(Collider2D))]
+public class EdibleCollectible : MonoBehaviour
 {
-    public class EdibleCollectible : CollectibleBase
+    public float hideDelay = 0.15f;
+
+    bool eaten;
+
+    void Awake()
     {
-        public enum EdibleKind
-        {
-            Text,
-            Drawing
-        }
+        GetComponent<Collider2D>().isTrigger = true;
+    }
 
-        [SerializeField] private EdibleKind kind = EdibleKind.Text;
-        [Tooltip("Popis pro UI/log (např. \"slovo Úkol\", \"nakreslený trojúhelník\").")]
-        [SerializeField] private string description;
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (eaten || !enabled) return;
 
-        public EdibleKind Kind => kind;
-        public string Description => string.IsNullOrEmpty(description) ? name : description;
+        PlayerController2D player = other.GetComponentInParent<PlayerController2D>();
+        if (player == null) return;
 
-        private void Reset()
-        {
-            kind = name.ToLowerInvariant().Contains("draw") ? EdibleKind.Drawing : EdibleKind.Text;
-            if (TryGetComponent(out Collider2D col)) col.isTrigger = true;
-            else gameObject.AddComponent<BoxCollider2D>().isTrigger = true;
-        }
+        eaten = true;
+        player.Eat();
+        Debug.Log("Snedeno: " + name);
+        Invoke(nameof(Hide), hideDelay);
+    }
 
-        protected override void OnCollected(PlayerController2D eater)
-        {
-            string what = kind == EdibleKind.Text ? "text" : "obrázek";
-            Debug.Log($"[EdibleCollectible] Hráč snědl {what} „{Description}“", this);
-        }
+    void Hide()
+    {
+        gameObject.SetActive(false);
     }
 }

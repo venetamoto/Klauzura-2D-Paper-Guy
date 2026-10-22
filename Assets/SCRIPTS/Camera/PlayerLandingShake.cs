@@ -1,31 +1,26 @@
-using PaperGuy.Player;
 using UnityEngine;
 
-namespace PaperGuy.Cameras
+public class PlayerLandingShake : MonoBehaviour
 {
-    public class PlayerLandingShake : MonoBehaviour
+    public PlayerController2D player;
+    public CameraShake shake;
+    public float minImpactSpeed = 6f;
+    public float amplitudePerUnitSpeed = 0.012f;
+    public float duration = 0.25f;
+
+    void OnEnable()
     {
-        [SerializeField] private PlayerController2D player;
-        [SerializeField] private CameraShake shake;
-        [Tooltip("Minimální rychlost pádu (jednotek/s), od které se kamera třese.")]
-        [SerializeField] private float minImpactSpeed = 14f;
-        [SerializeField] private float amplitudePerUnitSpeed = 0.015f;
-        [SerializeField] private float duration = 0.25f;
+        if (player != null) player.Landed += OnLanded;
+    }
 
-        private void OnEnable()
-        {
-            if (player != null) player.Landed += OnLanded;
-        }
+    void OnDisable()
+    {
+        if (player != null) player.Landed -= OnLanded;
+    }
 
-        private void OnDisable()
-        {
-            if (player != null) player.Landed -= OnLanded;
-        }
-
-        private void OnLanded(float impactSpeed)
-        {
-            if (impactSpeed < minImpactSpeed || shake == null) return;
-            shake.Shake((impactSpeed - minImpactSpeed * 0.5f) * amplitudePerUnitSpeed, duration);
-        }
+    void OnLanded(float speed)
+    {
+        if (shake != null && speed >= minImpactSpeed)
+            shake.Shake(speed * amplitudePerUnitSpeed, duration);
     }
 }
