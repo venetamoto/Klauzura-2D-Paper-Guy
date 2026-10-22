@@ -4,7 +4,6 @@ using UnityEngine.Events;
 
 namespace PaperGuy.Level
 {
-    /// <summary>Neviditelná čára na stránce: hráč ji překročí — úroveň přejde do další etapy.</summary>
     [RequireComponent(typeof(Collider2D))]
     public class LevelZoneTrigger : MonoBehaviour
     {

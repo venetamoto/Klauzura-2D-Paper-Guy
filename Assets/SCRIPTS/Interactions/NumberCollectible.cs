@@ -3,10 +3,6 @@ using UnityEngine;
 
 namespace PaperGuy.Interactions
 {
-    /// <summary>
-    /// Číslo nebo znak na stránce. Označuje se jako správná/špatná odpověď —
-    /// co z toho plyne, rozhodne posluchač (EquationGate, LevelManager, UI).
-    /// </summary>
     public class NumberCollectible : CollectibleBase
     {
         [SerializeField] private int value;

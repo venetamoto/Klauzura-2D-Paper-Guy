@@ -7,27 +7,83 @@ using UnityEngine;
 
 namespace PaperGuy.Player
 {
-    /// <summary>
-    /// Vlastník „hardwaru“ postavy (Rigidbody2D, vstup, nastavení) a stavového automatu.
-    /// Stavy volají jeho primitiva (ApplyHorizontalMovement, TryConsumeJump…),
-    /// vnější svět s ním komunikuje přes veřejné metody a C# události.
-    /// </summary>
     [RequireComponent(typeof(Rigidbody2D), typeof(PlayerInputReader))]
     public class PlayerController2D : MonoBehaviour
     {
-        [SerializeField] private PlayerMovementSettings settings = new PlayerMovementSettings();
+        // =====================================================================
+        //  Inspektor
+        // =====================================================================
 
-        [Header("Reference")]
+        [Header("Nastavení pohybu (Movement Settings)")]
+        [Tooltip("Rychlost chůze v jednotkách za sekundu.")]
+        [SerializeField, Min(0f)] private float walkSpeed = 7f;
+        [Tooltip("Plynulost rozjezdu: o kolik jednotek/s se rychlost zvýší za sekundu.")]
+        [SerializeField, Min(0f)] private float acceleration = 60f;
+        [Tooltip("Plynulost dojezdu: jak rychle postava zastaví po puštění ovládání.")]
+        [SerializeField, Min(0f)] private float deceleration = 70f;
+        [Tooltip("Kolik kontroly má hráč ve vzduchu (0 = žádná, 1 = jako na zemi).")]
+        [SerializeField, Range(0f, 1f)] private float airControl = 0.65f;
+
+        [Header("Nastavení skoku (Jump Settings)")]
+        [Tooltip("Síla skoku = počáteční vertikální rychlost. Výška ≈ síla² / (2 · 9.81 · Gravity Scale).")]
+        [SerializeField, Min(0f)] private float jumpForce = 13f;
+        [Tooltip("Základní tíže postavy (zapisuje se do Rigidbody2D.gravityScale).")]
+        [SerializeField, Min(0f)] private float gravityScale = 3f;
+        [Tooltip("Násobitel tíže při pádu — postava padá rychleji, než stoupá.")]
+        [SerializeField, Min(1f)] private float fallGravityMultiplier = 1.8f;
+        [Tooltip("Násobitel tíže, když hráč pustí skok při stoupání (krátký skok).")]
+        [SerializeField, Min(1f)] private float lowJumpGravityMultiplier = 2.5f;
+        [Tooltip("Maximální rychlost pádu.")]
+        [SerializeField, Min(0f)] private float maxFallSpeed = 22f;
+        [Tooltip("Coyote Time: kolik sekund po sestupu z hrany ještě jde skočit.")]
+        [SerializeField, Min(0f)] private float coyoteTime = 0.1f;
+        [Tooltip("Jump Buffer: kolik sekund si hra pamatuje stisk skoku před dopadem.")]
+        [SerializeField, Min(0f)] private float jumpBuffer = 0.12f;
+
+        [Header("Kontrola země (Ground Check Settings)")]
+        [Tooltip("Bod u nohou hráče. Když je prázdné, použije se spodní hrana collideru.")]
         [SerializeField] private Transform groundCheck;
-        [Tooltip("Podřízený objekt se spritem — naklání se při klouzání.")]
-        [SerializeField] private Transform visualRoot;
+        [Tooltip("Poloměr kruhu, kterým se hledá zem.")]
+        [SerializeField, Min(0.01f)] private float groundCheckRadius = 0.15f;
+        [Tooltip("Vrstvy, které se počítají jako zem (nastavte na Ground).")]
+        [SerializeField] private LayerMask groundLayers = 1;
+
+        [Header("Omezení zpět (Back Limit)")]
         [Tooltip("Kamera, jejíž levý okraj omezuje hráče. Když je prázdné, hledá se ve scéně.")]
         [SerializeField] private CameraController2D cameraController;
         [SerializeField] private bool useBackLimit = true;
+        [Tooltip("Odsazení od levého okraje záběru (obvykle polovina šířky collideru).")]
+        [SerializeField, Min(0f)] private float leftEdgePadding = 0.4f;
+
+        [Header("Klouzání po grafu (Slide Settings)")]
+        [Tooltip("Jak silně sklon křivky zrychluje klouzání.")]
+        [SerializeField] private float slideGravity = 25f;
+        [Tooltip("Stálé zrychlení podél křivky (i na rovině).")]
+        [SerializeField] private float slideBaseAcceleration = 2f;
+        [SerializeField, Min(0f)] private float slideMinEntrySpeed = 3f;
+        [SerializeField, Min(0f)] private float slideMinSpeed = 2f;
+        [SerializeField, Min(0f)] private float slideMaxSpeed = 22f;
+        [Tooltip("Kolik rychlosti si postava odnese z konce křivky.")]
+        [SerializeField, Range(0f, 1.5f)] private float slideExitMomentum = 1f;
+        [Tooltip("Jak moc se sprite naklání podle křivky.")]
+        [SerializeField, Range(0f, 1f)] private float slideTiltAmount = 0.6f;
+
+        [Header("Jídlo (Eat Settings)")]
+        [Tooltip("Jak dlouho trvá „snědení“ — po tuto dobu je zablokovaný horizontální pohyb.")]
+        [SerializeField, Min(0f)] private float eatDuration = 0.35f;
+
+        [Header("Vizuál")]
+        [Tooltip("Podřízený objekt se spritem — naklání se při klouzání.")]
+        [SerializeField] private Transform visualRoot;
+        [Tooltip("Od jaké rychlosti se přehrává animace běhu.")]
+        [SerializeField, Min(0f)] private float runAnimThreshold = 0.1f;
+
+        // =====================================================================
+        //  Vnitřní stav
+        // =====================================================================
 
         private Rigidbody2D _rb;
         private Collider2D _collider;
-        private float _baseGravityScale;
         private float _lastGroundedTime = float.NegativeInfinity;
         private float _maxFallSpeedThisAir;
         private bool _jumpedThisAir;
@@ -42,7 +98,6 @@ namespace PaperGuy.Player
         private PlayerDisabledState _disabled;
 
         // ---------- Veřejný stav ----------
-        public PlayerMovementSettings Settings => settings;
         public PlayerInputReader Input { get; private set; }
         public Rigidbody2D Body => _rb;
         public Vector2 Velocity => _rb.linearVelocity;
@@ -54,9 +109,19 @@ namespace PaperGuy.Player
         public bool IsSliding => _fsm.Current == _slide;
         public bool IsDead => _fsm.Current == _disabled && _disabled.IsDead;
 
+        // ---------- Parametry pro stavy (jen ke čtení) ----------
+        public float RunAnimThreshold => runAnimThreshold;
+        public float SlideGravity => slideGravity;
+        public float SlideBaseAcceleration => slideBaseAcceleration;
+        public float SlideMinEntrySpeed => slideMinEntrySpeed;
+        public float SlideMinSpeed => slideMinSpeed;
+        public float SlideMaxSpeed => slideMaxSpeed;
+        public float SlideExitMomentum => slideExitMomentum;
+        public float SlideTiltAmount => slideTiltAmount;
+        public float EatDuration => eatDuration;
+
         // ---------- Události ----------
         public event Action Jumped;
-        /// <summary>Argument — rychlost pádu v okamžiku dopadu na zem (kladná).</summary>
         public event Action<float> Landed;
         public event Action SlideStarted;
         public event Action SlideFinished;
@@ -68,6 +133,18 @@ namespace PaperGuy.Player
             remove => _fsm.StateChanged -= value;
         }
 
+        private void Reset()
+        {
+            int ground = LayerMask.GetMask("Ground");
+            if (ground != 0) groundLayers = ground;
+        }
+
+        private void OnValidate()
+        {
+            // Změna Gravity Scale v inspektoru se projeví hned i za běhu.
+            if (_rb != null && !IsSliding) _rb.gravityScale = gravityScale;
+        }
+
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
@@ -77,7 +154,7 @@ namespace PaperGuy.Player
             _rb.interpolation = RigidbodyInterpolation2D.Interpolate;
             _rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
             _rb.freezeRotation = true;
-            _baseGravityScale = _rb.gravityScale;
+            _rb.gravityScale = gravityScale;
 
             // Vzdálenost od pivotu těla k „chodidlům“ — aby při klouzání stály nohy na křivce.
             FootOffset = _collider != null ? _rb.position.y - _collider.bounds.min.y : 0.5f;
@@ -112,9 +189,9 @@ namespace PaperGuy.Player
         public void ApplyHorizontalMovement(float inputX, float dt)
         {
             Vector2 v = _rb.linearVelocity;
-            float target = inputX * settings.moveSpeed;
-            float rate = Mathf.Abs(target) > 0.01f ? settings.acceleration : settings.deceleration;
-            if (!IsGrounded) rate *= settings.airControl;
+            float target = inputX * walkSpeed;
+            float rate = Mathf.Abs(target) > 0.01f ? acceleration : deceleration;
+            if (!IsGrounded) rate *= airControl;
 
             v.x = Mathf.MoveTowards(v.x, target, rate * dt);
             _rb.linearVelocity = v;
@@ -122,11 +199,10 @@ namespace PaperGuy.Player
             if (Mathf.Abs(inputX) > 0.01f) SetFacing(inputX > 0f ? 1 : -1);
         }
 
-        /// <summary>Skok s ohledem na buffer vstupu a „coyote time“.</summary>
         public bool TryConsumeJump()
         {
-            bool canJump = !_jumpedThisAir && Time.time - _lastGroundedTime <= settings.coyoteTime;
-            if (!canJump || !Input.HasBufferedJump) return false;
+            bool canJump = !_jumpedThisAir && Time.time - _lastGroundedTime <= coyoteTime;
+            if (!canJump || !Input.HasBufferedJump(jumpBuffer)) return false;
 
             Input.ConsumeJump();
             _jumpedThisAir = true;
@@ -134,24 +210,23 @@ namespace PaperGuy.Player
             _lastGroundedTime = float.NegativeInfinity;
 
             Vector2 v = _rb.linearVelocity;
-            v.y = settings.jumpVelocity;
+            v.y = jumpForce;
             _rb.linearVelocity = v;
             Jumped?.Invoke();
             return true;
         }
 
-        /// <summary>Těžší pád a krátký skok při puštění tlačítka.</summary>
         public void ApplyGravityModifiers()
         {
             Vector2 v = _rb.linearVelocity;
             float multiplier = 1f;
-            if (v.y < 0f) multiplier = settings.fallGravityMultiplier;
-            else if (v.y > 0f && !Input.JumpHeld && _jumpedThisAir) multiplier = settings.lowJumpGravityMultiplier;
-            _rb.gravityScale = _baseGravityScale * multiplier;
+            if (v.y < 0f) multiplier = fallGravityMultiplier;
+            else if (v.y > 0f && !Input.JumpHeld && _jumpedThisAir) multiplier = lowJumpGravityMultiplier;
+            _rb.gravityScale = gravityScale * multiplier;
 
-            if (v.y < -settings.maxFallSpeed)
+            if (v.y < -maxFallSpeed)
             {
-                v.y = -settings.maxFallSpeed;
+                v.y = -maxFallSpeed;
                 _rb.linearVelocity = v;
             }
         }
@@ -168,7 +243,7 @@ namespace PaperGuy.Player
 
         public void ReturnToLocomotion()
         {
-            _rb.gravityScale = _baseGravityScale;
+            _rb.gravityScale = gravityScale;
             _fsm.ChangeState(_locomotion);
         }
 
@@ -176,17 +251,15 @@ namespace PaperGuy.Player
         //  API pro vnější svět
         // =====================================================================
 
-        /// <summary>Začít klouzat po trajektorii (volá SlideTrigger).</summary>
         public void StartSlide(ISlidePath path)
         {
             if (path == null || IsDead || IsSliding) return;
             _slide.Setup(path);
-            _rb.gravityScale = _baseGravityScale;
+            _rb.gravityScale = gravityScale;
             _fsm.ChangeState(_slide);
             SlideStarted?.Invoke();
         }
 
-        /// <summary>Volá stav klouzání na konci křivky.</summary>
         public void FinishSlide(Vector2 endPosition, Vector2 exitVelocity)
         {
             ReturnToLocomotion();         // Exit() vrátí tělo do Dynamic
@@ -196,7 +269,6 @@ namespace PaperGuy.Player
             SlideFinished?.Invoke();
         }
 
-        /// <summary>Pokusit se sníst předmět. Vrací true, pokud byl předmět přijat.</summary>
         public bool TryEat(ICollectable item)
         {
             if (item == null || IsDead || !item.CanBeCollected) return false;
@@ -208,7 +280,6 @@ namespace PaperGuy.Player
             return true;
         }
 
-        /// <summary>Vypnout/zapnout ovládání (cutscény).</summary>
         public void SetControlEnabled(bool enabled)
         {
             if (IsDead) return;
@@ -260,25 +331,21 @@ namespace PaperGuy.Player
 
         private bool HasGroundAt(Vector2 point)
         {
-            _groundFilter.SetLayerMask(settings.groundLayers);
+            _groundFilter.SetLayerMask(groundLayers);
             _groundFilter.useTriggers = false;
 
-            int count = Physics2D.OverlapCircle(point, settings.groundCheckRadius, _groundFilter, _groundHits);
+            int count = Physics2D.OverlapCircle(point, groundCheckRadius, _groundFilter, _groundHits);
             for (int i = 0; i < count; i++)
                 if (_groundHits[i].attachedRigidbody != _rb) // vlastní collider se za zem nepočítá
                     return true;
             return false;
         }
 
-        /// <summary>
-        /// Pojistka nad fyzickou stěnou CameraLeftBoundary: nedovolíme odejít vlevo ze záběru
-        /// ani při tunelování, ani když stěna ve scéně není.
-        /// </summary>
         private void EnforceBackLimit()
         {
             if (cameraController == null) return;
 
-            float minX = cameraController.LeftEdgeX + settings.leftEdgePadding;
+            float minX = cameraController.LeftEdgeX + leftEdgePadding;
             Vector2 pos = _rb.position;
             if (pos.x >= minX) return;
 
@@ -295,7 +362,7 @@ namespace PaperGuy.Player
         {
             if (groundCheck == null) return;
             Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(groundCheck.position, settings.groundCheckRadius);
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
     }
 }

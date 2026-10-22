@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 namespace PaperGuy.Level
 {
-    /// <summary>Etapy sešitové úrovně v pořadí průchodu.</summary>
     public enum LevelPhase
     {
         GraphSlide,        // sjezd po grafu
@@ -17,10 +16,6 @@ namespace PaperGuy.Level
         Complete
     }
 
-    /// <summary>
-    /// Dirigent úrovně: drží aktuální etapu, rozesílá PhaseChanged,
-    /// po smrti hráče restartuje scénu.
-    /// </summary>
     public class LevelManager : MonoBehaviour
     {
         [SerializeField] private PlayerController2D player;
@@ -29,7 +24,6 @@ namespace PaperGuy.Level
 
         public LevelPhase Phase { get; private set; }
 
-        /// <summary>(stará, nová)</summary>
         public event Action<LevelPhase, LevelPhase> PhaseChanged;
 
         private void Awake() => Phase = startPhase;
@@ -46,7 +40,6 @@ namespace PaperGuy.Level
             CollectibleBase.OnItemEaten -= OnItemEaten;
         }
 
-        /// <summary>Přejít na etapu. Zpět se nevracíme.</summary>
         public void SetPhase(LevelPhase next)
         {
             if (next <= Phase) return;

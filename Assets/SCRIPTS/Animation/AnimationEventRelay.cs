@@ -4,11 +4,6 @@ using UnityEngine.Events;
 
 namespace PaperGuy.Animations
 {
-    /// <summary>
-    /// Dává se na objekt s Animatorem. V klipech přidejte Animation Event s funkcí
-    /// <c>Fire</c> a textovým parametrem (např. "Footstep", "EatBite", "Land").
-    /// Kód se přihlásí k <see cref="EventFired"/>, designér k UnityEvent v inspektoru.
-    /// </summary>
     public class AnimationEventRelay : MonoBehaviour
     {
         [Serializable]

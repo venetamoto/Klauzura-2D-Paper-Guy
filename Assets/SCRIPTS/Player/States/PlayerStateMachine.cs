@@ -6,7 +6,6 @@ namespace PaperGuy.Player
     {
         public PlayerState Current { get; private set; }
 
-        /// <summary>(předchozí, nový)</summary>
         public event Action<PlayerState, PlayerState> StateChanged;
 
         public void ChangeState(PlayerState next)

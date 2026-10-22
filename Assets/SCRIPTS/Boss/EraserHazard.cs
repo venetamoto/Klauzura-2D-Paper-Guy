@@ -4,10 +4,6 @@ using UnityEngine;
 
 namespace PaperGuy.Boss
 {
-    /// <summary>
-    /// Guma, která „vygumovává“ stránku u levého okraje záběru. Jede spolu s kamerou;
-    /// hráč, kterého stěna záběru přitlačí ke gumě, zemře.
-    /// </summary>
     [RequireComponent(typeof(Collider2D))]
     [DefaultExecutionOrder(110)] // po CameraController2D
     public class EraserHazard : MonoBehaviour

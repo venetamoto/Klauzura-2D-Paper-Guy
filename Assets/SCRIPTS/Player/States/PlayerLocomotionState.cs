@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace PaperGuy.Player
 {
-    /// <summary>Běžné ovládání: běh, skok, pád. Idle/Run/Jump/Fall jsou jen vizuální podstavy.</summary>
     public class PlayerLocomotionState : PlayerState
     {
         public PlayerLocomotionState(PlayerController2D player) : base(player) { }
@@ -12,7 +11,7 @@ namespace PaperGuy.Player
             get
             {
                 if (Player.IsGrounded)
-                    return Mathf.Abs(Player.Velocity.x) > Player.Settings.runAnimThreshold
+                    return Mathf.Abs(Player.Velocity.x) > Player.RunAnimThreshold
                         ? PlayerAnimState.Run
                         : PlayerAnimState.Idle;
 

@@ -1,6 +1,5 @@
 namespace PaperGuy.Player
 {
-    /// <summary>Ovládání vypnuté: smrt nebo cutscéna. Tělo dál padá vlivem gravitace.</summary>
     public class PlayerDisabledState : PlayerState
     {
         public PlayerDisabledState(PlayerController2D player) : base(player) { }

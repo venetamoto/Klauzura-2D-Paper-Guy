@@ -7,12 +7,6 @@ using UnityEngine.Events;
 
 namespace PaperGuy.Boss
 {
-    /// <summary>
-    /// Závěrečná honička. Při přechodu úrovně do <see cref="LevelPhase.FinalChase"/>:
-    /// třes + krátké intro Ruky → guma se aktivuje u levého okraje →
-    /// kamera zapne automatický posun a postupně zrychluje (svět „ujíždí“ doleva, hráč běží doprava).
-    /// Při <see cref="LevelPhase.Complete"/> se honička zastaví.
-    /// </summary>
     public class HandChaseController : MonoBehaviour
     {
         [SerializeField] private LevelManager levelManager;

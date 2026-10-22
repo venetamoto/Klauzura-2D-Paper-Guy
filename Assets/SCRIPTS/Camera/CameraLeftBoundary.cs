@@ -2,11 +2,6 @@ using UnityEngine;
 
 namespace PaperGuy.Cameras
 {
-    /// <summary>
-    /// Fyzická „stěna“ u levého okraje záběru. Kinematické těleso se pohybuje přes MovePosition,
-    /// takže při automatickém posunu hráče poctivě tlačí, místo aby se jím teleportovalo.
-    /// Dejte na SAMOSTATNÝ GameObject (ne podřízený kameře).
-    /// </summary>
     [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
     public class CameraLeftBoundary : MonoBehaviour
     {

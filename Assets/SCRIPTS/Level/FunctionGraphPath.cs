@@ -3,11 +3,6 @@ using UnityEngine;
 
 namespace PaperGuy.Level
 {
-    /// <summary>
-    /// Graf funkce y = f(x), nakreslený „v sešitě“. Vzorkuje se do tabulky podle délky oblouku.
-    /// Volitelně vyplní LineRenderer (viditelná čára) a EdgeCollider2D (fyzický povrch).
-    /// Lokální prostor objektu = soustava souřadnic grafu: posouvejte/škálujte Transform.
-    /// </summary>
     [ExecuteAlways]
     public class FunctionGraphPath : MonoBehaviour, ISlidePath
     {
@@ -147,7 +142,6 @@ namespace PaperGuy.Level
             return bestDistance;
         }
 
-        /// <summary>Binární hledání segmentu podle délky oblouku.</summary>
         private int FindSegment(float distance, out float t)
         {
             if (_localPoints.Length < 2) Rebuild();

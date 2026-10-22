@@ -3,33 +3,21 @@ using UnityEngine.InputSystem;
 
 namespace PaperGuy.Player
 {
-    /// <summary>
-    /// Tenký obal nad Input Systemem. Kontrolér odsud čte „záměry“
-    /// (osu pohybu, buffer skoku) a neví nic o klávesách ani gamepadech.
-    /// Pokud nejsou akce přiřazené, vytvoří se záložní bindingy (WASD/šipky/mezerník/gamepad).
-    /// </summary>
     public class PlayerInputReader : MonoBehaviour
     {
         [Header("Akce (Player/Move, Player/Jump z InputSystem_Actions)")]
         [SerializeField] private InputActionReference moveAction;
         [SerializeField] private InputActionReference jumpAction;
 
-        [Header("Buffer skoku")]
-        [Tooltip("Kolik sekund si hra „pamatuje“ stisk skoku, pokud hráč zmáčkl těsně před dopadem.")]
-        [SerializeField] private float jumpBufferTime = 0.12f;
-
         private InputAction _move;
         private InputAction _jump;
         private bool _ownsActions;
         private float _jumpPressedTime = float.NegativeInfinity;
 
-        /// <summary>Horizontální osa v rozsahu [-1; 1].</summary>
         public float MoveX { get; private set; }
 
-        /// <summary>Tlačítko skoku je držené (pro proměnnou výšku skoku).</summary>
         public bool JumpHeld => _jump != null && _jump.IsPressed();
 
-        /// <summary>Globální blokace vstupu (cutscény, smrt, intro honičky).</summary>
         public bool InputEnabled { get; set; } = true;
 
         private void Awake()
@@ -106,10 +94,8 @@ namespace PaperGuy.Player
                 _jumpPressedTime = Time.time;
         }
 
-        /// <summary>Je v bufferu „čerstvý“ stisk skoku?</summary>
-        public bool HasBufferedJump => Time.time - _jumpPressedTime <= jumpBufferTime;
+        public bool HasBufferedJump(float window) => Time.time - _jumpPressedTime <= window;
 
-        /// <summary>Spotřebovat stisk skoku, aby se neprovedl dvakrát.</summary>
         public void ConsumeJump() => _jumpPressedTime = float.NegativeInfinity;
     }
 }

@@ -2,15 +2,6 @@ using UnityEngine;
 
 namespace PaperGuy.Cameras
 {
-    /// <summary>
-    /// Ortografická kamera plošinovky:
-    /// • mrtvá zóna + předstih ve směru běhu (look-ahead);
-    /// • oddělené vyhlazování X/Y;
-    /// • „západka“ — kamera nikdy nejede doleva;
-    /// • automatický posun (honička) — spodní mez pozice kamery, která se sama posouvá doprava;
-    /// • omezení hranicemi úrovně (confiner) podle BoxCollider2D;
-    /// • přičítání posunu z CameraShake.
-    /// </summary>
     [RequireComponent(typeof(Camera))]
     [DefaultExecutionOrder(100)] // po všech LateUpdate herní logiky
     public class CameraController2D : MonoBehaviour
@@ -63,7 +54,6 @@ namespace PaperGuy.Cameras
         public float HalfHeight => _camera.orthographicSize;
         public float HalfWidth => _camera.orthographicSize * _camera.aspect;
 
-        /// <summary>Levý okraj viditelné oblasti (bez třesu). Používá ho omezovač hráče.</summary>
         public float LeftEdgeX => _basePosition.x - HalfWidth;
         public float RightEdgeX => _basePosition.x + HalfWidth;
         public Vector2 BasePosition => _basePosition;
@@ -85,7 +75,6 @@ namespace PaperGuy.Cameras
             if (snap) SnapToTarget();
         }
 
-        /// <summary>Okamžitě postavit kameru na cíl (start úrovně, respawn).</summary>
         public void SnapToTarget()
         {
             if (target == null)
@@ -102,10 +91,6 @@ namespace PaperGuy.Cameras
             ApplyTransform();
         }
 
-        /// <summary>
-        /// Zapnout automatický posun doprava (honička). Kamera zrychlí na <paramref name="speed"/>
-        /// za <paramref name="accelerationTime"/> sekund. Hráč může kameru předběhnout, ale nesmí zaostat.
-        /// </summary>
         public void StartAutoScroll(float speed, float accelerationTime = 1f)
         {
             _autoScrollTargetSpeed = Mathf.Max(0f, speed);

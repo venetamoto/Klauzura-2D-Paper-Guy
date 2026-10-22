@@ -5,10 +5,6 @@ using UnityEngine.Events;
 
 namespace PaperGuy.Level
 {
-    /// <summary>
-    /// Logická překážka s rovnicí. Otevře se, když hráč sní správnou odpověď
-    /// se stejným groupId. Špatná odpověď se vrátí na své místo.
-    /// </summary>
     public class EquationGate : MonoBehaviour
     {
         [SerializeField] private string groupId = "Equation_01";

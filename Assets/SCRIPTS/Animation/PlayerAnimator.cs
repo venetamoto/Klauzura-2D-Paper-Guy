@@ -5,14 +5,6 @@ using UnityEngine;
 
 namespace PaperGuy.Animations
 {
-    /// <summary>
-    /// Most „logika → Animator“. Čte PlayerController2D a:
-    /// 1) zapisuje parametry (Speed, VerticalSpeed, IsGrounded, IsSliding, State, trigger Eat) —
-    ///    pro ty, kdo preferují přechody/blend tree;
-    /// 2) (výchozí) přímo přehrává stav pojmenovaný podle <see cref="PlayerAnimState"/>
-    ///    přes CrossFade — pak v Animatoru nejsou potřeba žádné šipky přechodů.
-    /// Chybějící parametry/stavy se tiše přeskočí.
-    /// </summary>
     public class PlayerAnimator : MonoBehaviour
     {
         [SerializeField] private PlayerController2D player;
@@ -70,7 +62,13 @@ namespace PaperGuy.Animations
 
         private void LateUpdate()
         {
-            if (player == null || animator == null) return;
+            if (player == null) return;
+
+            if (spriteRenderer != null)
+                spriteRenderer.flipX = spriteFacesRight ? player.FacingDirection < 0 : player.FacingDirection > 0;
+
+            // Greybox bez Animator Controlleru — jen otáčíme sprite.
+            if (animator == null || animator.runtimeAnimatorController == null) return;
 
             PlayerAnimState state = player.AnimState;
             Vector2 velocity = player.Velocity;
@@ -88,15 +86,12 @@ namespace PaperGuy.Animations
                     animator.CrossFadeInFixedTime(hash, crossFadeDuration, layer);
             }
             _current = state;
-
-            if (spriteRenderer != null)
-                spriteRenderer.flipX = spriteFacesRight ? player.FacingDirection < 0 : player.FacingDirection > 0;
         }
 
         private void OnItemEaten(ICollectable _)
         {
             // Trigger je potřeba jen v režimu „přes přechody“ (např. Eat přes klouzání na samostatné vrstvě).
-            if (_parameters.Contains(EatHash)) animator.SetTrigger(EatHash);
+            if (animator != null && _parameters.Contains(EatHash)) animator.SetTrigger(EatHash);
         }
 
         private void SetFloat(int hash, float value) { if (_parameters.Contains(hash)) animator.SetFloat(hash, value); }

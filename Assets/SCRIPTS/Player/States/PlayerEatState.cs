@@ -1,6 +1,5 @@
 namespace PaperGuy.Player
 {
-    /// <summary>Krátká pauza na „snědení“: horizontální vstup je zablokovaný, gravitace funguje.</summary>
     public class PlayerEatState : PlayerState
     {
         private float _timer;
@@ -9,7 +8,7 @@ namespace PaperGuy.Player
 
         public override PlayerAnimState AnimState => PlayerAnimState.Eat;
 
-        public override void Enter() => _timer = Player.Settings.eatDuration;
+        public override void Enter() => _timer = Player.EatDuration;
 
         public override void FixedTick(float dt)
         {

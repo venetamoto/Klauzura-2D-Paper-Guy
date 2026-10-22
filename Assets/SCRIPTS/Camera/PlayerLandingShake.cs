@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace PaperGuy.Cameras
 {
-    /// <summary>Zatřese kamerou, když hráč dopadne po pádu z výšky.</summary>
     public class PlayerLandingShake : MonoBehaviour
     {
         [SerializeField] private PlayerController2D player;

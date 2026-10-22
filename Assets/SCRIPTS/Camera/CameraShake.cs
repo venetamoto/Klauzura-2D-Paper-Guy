@@ -2,11 +2,6 @@ using UnityEngine;
 
 namespace PaperGuy.Cameras
 {
-    /// <summary>
-    /// Lehký třes na Perlinově šumu. Sám pozici nemění — vrací posun
-    /// <see cref="CurrentOffset"/>, který CameraController2D přičte k základní pozici.
-    /// Více volání Shake se nesčítá donekonečna: bere se maximum.
-    /// </summary>
     public class CameraShake : MonoBehaviour
     {
         [SerializeField] private float frequency = 25f;

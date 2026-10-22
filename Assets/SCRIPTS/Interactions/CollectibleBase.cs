@@ -6,18 +6,9 @@ using UnityEngine.Events;
 
 namespace PaperGuy.Interactions
 {
-    /// <summary>
-    /// Základ pro jedlé předměty. Sám zachytí hráče triggerem a předá se do
-    /// <see cref="PlayerController2D.TryEat"/> — hráč rozhodne, jestli teď může jíst.
-    ///
-    /// O snědení informuje dvěma způsoby:
-    /// • statická C# událost <see cref="OnItemEaten"/> — pro LevelManager, UI, hádanky;
-    /// • UnityEvent <c>onEaten</c> — pro bodové nastavení v inspektoru.
-    /// </summary>
     [RequireComponent(typeof(Collider2D))]
     public abstract class CollectibleBase : MonoBehaviour, ICollectable
     {
-        /// <summary>Globální událost: jaký předmět a kdo ho snědl.</summary>
         public static event Action<CollectibleBase, PlayerController2D> OnItemEaten;
 
         // Vynulování odběratelů při vypnutém Domain Reload (Enter Play Mode Options).
@@ -65,7 +56,6 @@ namespace PaperGuy.Interactions
             StartCoroutine(HideRoutine());
         }
 
-        /// <summary>Vrátit předmět na místo (např. špatná odpověď je „vyplivnuta“).</summary>
         public virtual void ResetCollectible()
         {
             StopAllCoroutines();
@@ -74,7 +64,6 @@ namespace PaperGuy.Interactions
             SetCollidersEnabled(true);
         }
 
-        /// <summary>Háček pro potomky: zvuk, částice, připsání bodů.</summary>
         protected virtual void OnCollected(PlayerController2D eater) { }
 
         private IEnumerator HideRoutine()

@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace PaperGuy.Level
 {
-    /// <summary>Trigger na začátku grafu: hráč vstoupí — začne klouzání.</summary>
     [RequireComponent(typeof(Collider2D))]
     public class SlideTrigger : MonoBehaviour
     {
