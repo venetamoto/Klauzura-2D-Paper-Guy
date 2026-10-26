@@ -3,131 +3,161 @@ using UnityEngine;
 public class PlayerAnimator : MonoBehaviour
 {
     public PlayerController2D player;
-    public SpriteRenderer spriteRenderer;
 
-    [Header("Z boku")]
-    public Sprite[] walkFrames;
-    public Sprite[] runFrames;
-    public Sprite[] eatFrames;
-    public Sprite tumbleFrame;
+    [Header("Casti postavy")]
+    public Transform body;
+    public SpriteRenderer head;
+    public SpriteRenderer cape;
+    public LineRenderer legLeft;
+    public LineRenderer legRight;
 
-    [Header("Zepredu (kdyz stoji)")]
-    public GameObject front;
-    public SpriteRenderer frontHead;
-    public SpriteRenderer frontBody;
-    public Sprite[] headFrames;
+    [Header("Obrazky")]
+    public Sprite headFront;
+    public Sprite headFrontBlink;
+    public Sprite headSide;
+    public Sprite headSideBlink;
+    public Sprite[] headEat;
+    public Sprite capeFront;
+    public Sprite capeSide;
+    public Sprite[] capeFall;
+    public Sprite[] capeEat;
 
-    [Header("Rychlost")]
-    public float walkFps = 10f;
-    public float runFps = 9f;
-    public float tumbleSpeed = 720f;
+    [Header("Nastaveni")]
+    public float stepRate = 2.4f;
+    public float stepLength = 0.2f;
     public float blinkEvery = 3f;
     public float headSwing = 6f;
-    public float bobHeight = 0.06f;
+    public float tumbleSpeed = 720f;
 
-    Sprite[] current;
-    int frame;
-    float timer;
-    float blinkTimer;
-    float walkPhase;
+    // jidlo: jak dlouho je videt kazdy obrazek plastiku (soucet = 1.2 s)
+    readonly float[] eatTimes = { 0.15f, 0.2f, 0.3f, 0.2f, 0.2f, 0.15f };
+    readonly int[] eatHead = { 0, 1, 1, 1, 2, 2 };
+
+    float phase;
     float spin;
+    float blinkTimer;
+    float eatClock;
+    bool wasEating;
 
     void LateUpdate()
     {
-        if (player == null || spriteRenderer == null) return;
+        if (player == null || body == null) return;
+        float dt = Time.deltaTime;
 
-        Transform visual = spriteRenderer.transform;
-        spriteRenderer.flipX = player.Facing < 0;
+        blinkTimer += dt;
+        bool blink = blinkTimer > blinkEvery;
+        if (blinkTimer > blinkEvery + 0.15f) blinkTimer = Random.Range(0f, 1.5f);
 
-        bool standing = player.IsGrounded && !player.IsSliding && !player.IsEating && Mathf.Abs(player.Velocity.x) < 0.1f;
-        ShowFront(standing);
-        if (standing)
-        {
-            current = null;
-            Idle();
-            return;
-        }
+        head.transform.localRotation = Quaternion.identity;
+        cape.transform.localScale = Vector3.one;
 
-        visual.localScale = Vector3.one;
-
+        // kotrmelce po grafu
         if (player.IsSliding)
         {
-            spin -= tumbleSpeed * Time.deltaTime * player.Facing;
-            visual.localRotation = Quaternion.Euler(0f, 0f, spin);
-            visual.localPosition = Vector3.zero;
-            if (tumbleFrame != null) spriteRenderer.sprite = tumbleFrame;
-            current = null;
+            spin -= tumbleSpeed * dt * player.Facing;
+            body.localScale = new Vector3(player.Facing, 1f, 1f);
+            body.localRotation = Quaternion.Euler(0f, 0f, spin);
+            Vector3 center = new Vector3(0f, 0.6f, 0f);
+            body.localPosition = center - body.localRotation * Vector3.Scale(body.localScale, center);
+            head.sprite = headSide;
+            cape.sprite = capeSide;
+            Tucked();
             return;
         }
         spin = 0f;
+        body.localPosition = Vector3.zero;
 
+        bool standing = player.IsGrounded && !player.IsEating && Mathf.Abs(player.Velocity.x) < 0.1f;
+
+        // stoji: diva se na nas, mrka a pokyvuje hlavou
+        if (standing)
+        {
+            body.localScale = Vector3.one;
+            body.localRotation = Quaternion.identity;
+            head.sprite = blink ? headFrontBlink : headFront;
+            cape.sprite = capeFront;
+            head.transform.localRotation = Quaternion.Euler(0f, 0f, Mathf.Sin(Time.time * 1.6f) * headSwing);
+            cape.transform.localScale = new Vector3(1f, 1f + Mathf.Sin(Time.time * 2.5f) * 0.02f, 1f);
+            Leg(legLeft, new Vector2(-0.16f, 0f), new Vector2(-0.18f, -0.5f), 0f, -1f);
+            Leg(legRight, new Vector2(0.16f, 0f), new Vector2(0.18f, -0.5f), 0f, 1f);
+            wasEating = false;
+            return;
+        }
+
+        body.localScale = new Vector3(player.Facing, 1f, 1f);
+        body.localRotation = Quaternion.identity;
+
+        // jidlo: plastik se rozevre, z bricha vyleze tlama s jazykem (1.2 s)
         if (player.IsEating)
         {
-            Play(eatFrames, eatFrames.Length / player.eatDuration, false);
-            visual.localPosition = Vector3.zero;
-            visual.localRotation = Quaternion.identity;
+            if (!wasEating) eatClock = 0f;
+            wasEating = true;
+            eatClock += dt;
+
+            int i = 0;
+            float t = eatClock;
+            while (i < eatTimes.Length - 1 && t > eatTimes[i]) { t -= eatTimes[i]; i++; }
+
+            cape.sprite = i < capeEat.Length ? capeEat[i] : capeSide;
+            head.sprite = headEat[eatHead[i]];
+            Leg(legLeft, new Vector2(-0.04f, 0f), new Vector2(-0.12f, -0.5f), 0.03f, 1f);
+            Leg(legRight, new Vector2(0.04f, 0f), new Vector2(0.12f, -0.5f), 0.03f, 1f);
             return;
         }
+        wasEating = false;
+        head.sprite = blink ? headSideBlink : headSide;
 
+        // ve vzduchu: nahoru skrcene nohy, dolu se plast rozevre jako padak
         if (!player.IsGrounded)
         {
-            Play(runFrames, runFps, true);
-            visual.localPosition = Vector3.zero;
-            visual.localRotation = Quaternion.identity;
+            if (player.Velocity.y > -2f)
+            {
+                cape.sprite = capeSide;
+                Tucked();
+            }
+            else
+            {
+                int flutter = (int)(Time.time * 8f) % 2;
+                cape.sprite = capeFall != null && capeFall.Length > 1 ? capeFall[flutter] : capeSide;
+                Leg(legLeft, new Vector2(-0.04f, 0f), new Vector2(-0.08f, -0.48f), 0.04f, 1f);
+                Leg(legRight, new Vector2(0.04f, 0f), new Vector2(0.1f, -0.45f), 0.06f, 1f);
+            }
             return;
         }
 
-        float speed = Mathf.Clamp(Mathf.Abs(player.Velocity.x) / 7f, 0.5f, 1.2f);
-        Play(walkFrames, walkFps * speed, true);
-        walkPhase += Time.deltaTime * walkFps * speed * Mathf.PI / 2f;
-        visual.localPosition = new Vector3(0f, Mathf.Abs(Mathf.Sin(walkPhase)) * bobHeight, 0f);
-        visual.localRotation = Quaternion.Euler(0f, 0f, -4f * player.Facing);
+        // chuze
+        cape.sprite = capeSide;
+        float speed = Mathf.Abs(player.Velocity.x);
+        phase += speed * stepRate * dt;
+        body.localPosition = new Vector3(0f, Mathf.Abs(Mathf.Sin(phase)) * 0.06f, 0f);
+        body.localRotation = Quaternion.Euler(0f, 0f, -4f);
+        WalkLeg(legLeft, -0.04f, phase);
+        WalkLeg(legRight, 0.04f, phase + Mathf.PI);
     }
 
-    void ShowFront(bool show)
+    void WalkLeg(LineRenderer lr, float hipX, float a)
     {
-        if (front == null) return;
-        if (front.activeSelf != show) front.SetActive(show);
-        spriteRenderer.enabled = !show;
+        float footX = hipX + Mathf.Sin(a) * stepLength;
+        float lift = Mathf.Max(0f, Mathf.Cos(a)) * 0.13f;
+        Leg(lr, new Vector2(hipX, 0f), new Vector2(footX, -0.5f + lift - body.localPosition.y), 0.07f, 1f);
     }
 
-    // stoji: diva se na nas, mrka a pokyvuje hlavou
-    void Idle()
+    void Tucked()
     {
-        if (frontHead == null || headFrames == null || headFrames.Length == 0) return;
-
-        blinkTimer += Time.deltaTime;
-        bool blink = blinkTimer > blinkEvery;
-        if (blinkTimer > blinkEvery + 0.15f) blinkTimer = Random.Range(0f, 1.5f);
-        frontHead.sprite = headFrames[blink && headFrames.Length > 1 ? 1 : 0];
-
-        frontHead.transform.localRotation = Quaternion.Euler(0f, 0f, Mathf.Sin(Time.time * 1.6f) * headSwing);
-
-        if (frontBody != null)
-        {
-            float breathe = Mathf.Sin(Time.time * 2.5f) * 0.02f;
-            frontBody.transform.localScale = new Vector3(1f - breathe * 0.5f, 1f + breathe, 1f);
-        }
+        Leg(legLeft, new Vector2(-0.04f, 0f), new Vector2(0.0f, -0.28f), 0.16f, 1f);
+        Leg(legRight, new Vector2(0.04f, 0f), new Vector2(0.06f, -0.3f), 0.14f, 1f);
     }
 
-    void Play(Sprite[] frames, float fps, bool loop)
+    // noha: kycel - koleno - chodidlo - spicka
+    void Leg(LineRenderer lr, Vector2 hip, Vector2 foot, float bend, float toe)
     {
-        if (frames == null || frames.Length == 0) return;
-
-        if (frames != current)
-        {
-            current = frames;
-            frame = 0;
-            timer = 0f;
-        }
-
-        timer += Time.deltaTime;
-        if (timer >= 1f / fps)
-        {
-            timer -= 1f / fps;
-            frame++;
-            if (frame >= frames.Length) frame = loop ? 0 : frames.Length - 1;
-        }
-        spriteRenderer.sprite = frames[frame];
+        Vector2 mid = (hip + foot) / 2f;
+        Vector2 dir = (foot - hip).normalized;
+        Vector2 knee = mid + new Vector2(-dir.y, dir.x) * bend;
+        lr.positionCount = 4;
+        lr.SetPosition(0, hip);
+        lr.SetPosition(1, knee);
+        lr.SetPosition(2, foot);
+        lr.SetPosition(3, foot + new Vector2(0.09f * toe, 0f));
     }
 }
