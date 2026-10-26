@@ -27,6 +27,7 @@ public class PlayerController2D : MonoBehaviour
     [Header("Klouzani po grafu")]
     public float slideGravity = 25f;
     public float slideMaxSpeed = 22f;
+    public Vector2 slideLaunch = new Vector2(8f, 6f);
 
     [Header("Jidlo")]
     public float eatDuration = 0.35f;
@@ -162,9 +163,10 @@ public class PlayerController2D : MonoBehaviour
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
             rb.position = slidePath.GetPoint(slidePath.Length) + Vector2.up * footOffset;
-            rb.linearVelocity = dir * slideSpeed;
+            float forward = Mathf.Max(Mathf.Abs(dir.x) * slideSpeed, slideLaunch.x);
+            rb.linearVelocity = new Vector2(forward * Facing, slideLaunch.y);
             IsSliding = false;
-            jumped = false;
+            jumped = true;
             return;
         }
 
