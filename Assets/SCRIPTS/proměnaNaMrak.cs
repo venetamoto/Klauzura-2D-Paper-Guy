@@ -2,15 +2,27 @@ using UnityEngine;
 
 public class proměnaNaMrak : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject mrakTransformatorPrefab;
+    bool mrakTransformace = false;
     void Start()
     {
-        
+        mrakTransformace = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (mrakTransformace == true)
+        {
+            Instantiate(mrakTransformatorPrefab, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "mrakTransformator")
+        {
+            mrakTransformace = true;
+        }
     }
 }
