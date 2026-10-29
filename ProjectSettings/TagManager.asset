@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - mrakTransformator
+  - "\u010Dm\xE1rkaTransformator"
   layers:
   - Default
   - TransparentFX

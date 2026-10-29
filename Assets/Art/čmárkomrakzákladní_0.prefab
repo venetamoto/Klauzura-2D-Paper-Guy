@@ -262,6 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::pohyb
   speedX: 10
   speedY: 5
+  spriteRenderer: {fileID: 0}
 --- !u!61 &2456890738472651819
 BoxCollider2D:
   m_ObjectHideFlags: 0
