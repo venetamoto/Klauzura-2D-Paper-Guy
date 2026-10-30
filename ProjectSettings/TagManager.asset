@@ -6,6 +6,8 @@ TagManager:
   tags:
   - mrakTransformator
   - "\u010Dm\xE1rkaTransformator"
+  - bomba
+  - zdivo
   layers:
   - Default
   - TransparentFX

@@ -8,10 +8,12 @@ public class proměnaNaMrak : MonoBehaviour
     bool cmarkaTransformace = false;
     public static bool znicCmarku = false;
     public static bool znicMrak = false;
+    public static bool znicZed = false;
     void Start()
     {
         znicCmarku = false;
         znicMrak = false;
+        znicZed = false;
         mrakTransformace = false;
         cmarkaTransformace = false;
     }
@@ -32,10 +34,19 @@ public class proměnaNaMrak : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "mrakTransformator")
+        if (collision.gameObject.tag == "bomba")
         {
-            mrakTransformace = true;
-            znicMrak = true;
+            bomba.bombaSebrano = true;
+        }
+        if (collision.gameObject.tag == "zdivo")
+        {
+            if (bomba.bombaSebrano == true)
+            {
+                znicZed = true;
+                mrakTransformace = true;
+                znicMrak = true;
+                transform.position = new Vector3(4f, -10f, 0f);
+            }
         }
         if (collision.gameObject.tag == "čmárkaTransformator")
         {
