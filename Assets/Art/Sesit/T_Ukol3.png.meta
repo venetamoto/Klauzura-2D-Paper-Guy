@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: a3ed7fee54a69c141babe80a9c643c17
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6707025843818246759
+    second: T_Ukol3_0
+  - first:
+      213: 1311863869565795461
+    second: T_Ukol3_1
+  - first:
+      213: -4934323330470292685
+    second: T_Ukol3_2
+  - first:
+      213: -5683908372245158500
+    second: T_Ukol3_3
+  - first:
+      213: -4714992621285640767
+    second: T_Ukol3_4
+  - first:
+      213: -6586527790286220652
+    second: T_Ukol3_5
+  - first:
+      213: 4693688408635641847
+    second: T_Ukol3_6
+  - first:
+      213: 2714479977107206884
+    second: T_Ukol3_7
+  - first:
+      213: 5136691394646273385
+    second: T_Ukol3_8
+  - first:
+      213: 8493394371302986983
+    second: T_Ukol3_9
+  - first:
+      213: -2431363587361212880
+    second: T_Ukol3_10
+  - first:
+      213: 6565319636233686421
+    second: T_Ukol3_11
+  - first:
+      213: 7460880723475162553
+    second: T_Ukol3_12
+  - first:
+      213: 4713419836141737830
+    second: T_Ukol3_13
+  - first:
+      213: -993002378607767361
+    second: T_Ukol3_14
+  - first:
+      213: 8823157762319678804
+    second: T_Ukol3_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T_Ukol3_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 67
+        width: 88
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 762b6283874241d50800000000000000
+      internalID: 6707025843818246759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_1
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 79
+        width: 20
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c73232d3da43210800000000000000
+      internalID: 1311863869565795461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_2
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 176
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3335568f213c58bb0800000000000000
+      internalID: -4934323330470292685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_3
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 64
+        width: 83
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9565783373be11b0800000000000000
+      internalID: -5683908372245158500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_4
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 74
+        width: 89
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c57ea9213bf09eb0800000000000000
+      internalID: -4714992621285640767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_5
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 178
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49250c42fd3f794a0800000000000000
+      internalID: -6586527790286220652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_6
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 156
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ff881b4db4532140800000000000000
+      internalID: 4693688408635641847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_7
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 63
+        width: 118
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e2b2614825cba520800000000000000
+      internalID: 2714479977107206884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_8
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 96
+        width: 81
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d62baab91394740800000000000000
+      internalID: 5136691394646273385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_9
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 74
+        width: 68
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e411d64e299ed570800000000000000
+      internalID: 8493394371302986983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_10
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 69
+        width: 17
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036f38ff2bf024ed0800000000000000
+      internalID: -2431363587361212880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_11
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 71
+        width: 69
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d0b92bc63bc1b50800000000000000
+      internalID: 6565319636233686421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_12
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 73
+        width: 67
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5eb421d7f5a8760800000000000000
+      internalID: 7460880723475162553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_13
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 36
+        width: 48
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66712824e5e696140800000000000000
+      internalID: 4713419836141737830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_14
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 68
+        width: 17
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb057f909952832f0800000000000000
+      internalID: -993002378607767361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Ukol3_15
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 69
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45d7b4cdc37227a70800000000000000
+      internalID: 8823157762319678804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      T_Ukol3_0: 6707025843818246759
+      T_Ukol3_1: 1311863869565795461
+      T_Ukol3_10: -2431363587361212880
+      T_Ukol3_11: 6565319636233686421
+      T_Ukol3_12: 7460880723475162553
+      T_Ukol3_13: 4713419836141737830
+      T_Ukol3_14: -993002378607767361
+      T_Ukol3_15: 8823157762319678804
+      T_Ukol3_2: -4934323330470292685
+      T_Ukol3_3: -5683908372245158500
+      T_Ukol3_4: -4714992621285640767
+      T_Ukol3_5: -6586527790286220652
+      T_Ukol3_6: 4693688408635641847
+      T_Ukol3_7: 2714479977107206884
+      T_Ukol3_8: 5136691394646273385
+      T_Ukol3_9: 8493394371302986983
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,6 +6,18 @@ string outDir = args.Length > 0 ? args[0] : ".";
 string what = args.Length > 1 ? args[1] : "all";
 Directory.CreateDirectory(outDir);
 
+if (what == "sesit")
+{
+    Sesit.Render(outDir, args[2]);
+    return;
+}
+
+if (what == "overlay")
+{
+    Overlay.Render(args[2], args[3], args[4], args[5]);
+    return;
+}
+
 if (what == "all" || what == "hand")
 {
     Hand.Render(Path.Combine(outDir, "Hand_Pencil.png"), 1024);
