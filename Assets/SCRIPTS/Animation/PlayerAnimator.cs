@@ -18,9 +18,12 @@ public class PlayerAnimator : MonoBehaviour
     public Sprite idleHeadBlink;
 
     [Header("Obrazky")]
+    public Sprite headFront;
+    public Sprite headFrontBlink;
     public Sprite headSide;
     public Sprite headSideBlink;
     public Sprite[] headEat;
+    public Sprite capeFront;
     public Sprite capeSide;
     public Sprite[] capeFall;
     public Sprite[] capeEat;
@@ -73,6 +76,21 @@ public class PlayerAnimator : MonoBehaviour
 
         bool standing = player.IsGrounded && !player.IsEating && Mathf.Abs(player.Velocity.x) < 0.1f;
         ShowIdle(standing);
+
+        // stoji bez kresby (napr. prefab v cizich scenach): diva se na nas, mrka a pokyvuje hlavou
+        if (standing && idleBody == null)
+        {
+            body.localScale = Vector3.one;
+            body.localRotation = Quaternion.identity;
+            head.sprite = blink ? headFrontBlink : headFront;
+            cape.sprite = capeFront;
+            head.transform.localRotation = Quaternion.Euler(0f, 0f, Mathf.Sin(Time.time * 1.6f) * headSwing);
+            cape.transform.localScale = new Vector3(1f, 1f + Mathf.Sin(Time.time * 2.5f) * 0.02f, 1f);
+            Leg(legLeft, new Vector2(-0.16f, 0f), new Vector2(-0.18f, -0.5f), 0f, -1f);
+            Leg(legRight, new Vector2(0.16f, 0f), new Vector2(0.18f, -0.5f), 0f, 1f);
+            wasEating = false;
+            return;
+        }
 
         // stoji: kresba se diva na nas, mrka, pokyvuje hlavou a dycha
         if (standing)
@@ -137,6 +155,7 @@ public class PlayerAnimator : MonoBehaviour
 
     void ShowIdle(bool on)
     {
+        if (idleBody == null) return;
         idleBody.enabled = on;
         idleHead.enabled = on;
         head.enabled = !on;
