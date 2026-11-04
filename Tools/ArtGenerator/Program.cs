@@ -12,6 +12,12 @@ if (what == "sesit")
     return;
 }
 
+if (what == "idle")
+{
+    Idle.Render(args[2], outDir);
+    return;
+}
+
 if (what == "overlay")
 {
     Overlay.Render(args[2], args[3], args[4], args[5]);

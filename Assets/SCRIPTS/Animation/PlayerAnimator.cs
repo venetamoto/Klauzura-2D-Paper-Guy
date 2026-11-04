@@ -11,13 +11,16 @@ public class PlayerAnimator : MonoBehaviour
     public LineRenderer legLeft;
     public LineRenderer legRight;
 
+    [Header("Kdyz stoji (kresba)")]
+    public SpriteRenderer idleBody;
+    public SpriteRenderer idleHead;
+    public Sprite idleHeadOpen;
+    public Sprite idleHeadBlink;
+
     [Header("Obrazky")]
-    public Sprite headFront;
-    public Sprite headFrontBlink;
     public Sprite headSide;
     public Sprite headSideBlink;
     public Sprite[] headEat;
-    public Sprite capeFront;
     public Sprite capeSide;
     public Sprite[] capeFall;
     public Sprite[] capeEat;
@@ -54,6 +57,7 @@ public class PlayerAnimator : MonoBehaviour
         // kotrmelce po grafu
         if (player.IsSliding)
         {
+            ShowIdle(false);
             spin -= tumbleSpeed * dt * player.Facing;
             body.localScale = new Vector3(player.Facing, 1f, 1f);
             body.localRotation = Quaternion.Euler(0f, 0f, spin);
@@ -68,18 +72,14 @@ public class PlayerAnimator : MonoBehaviour
         body.localPosition = Vector3.zero;
 
         bool standing = player.IsGrounded && !player.IsEating && Mathf.Abs(player.Velocity.x) < 0.1f;
+        ShowIdle(standing);
 
-        // stoji: diva se na nas, mrka a pokyvuje hlavou
+        // stoji: kresba se diva na nas, mrka, pokyvuje hlavou a dycha
         if (standing)
         {
-            body.localScale = Vector3.one;
-            body.localRotation = Quaternion.identity;
-            head.sprite = blink ? headFrontBlink : headFront;
-            cape.sprite = capeFront;
-            head.transform.localRotation = Quaternion.Euler(0f, 0f, Mathf.Sin(Time.time * 1.6f) * headSwing);
-            cape.transform.localScale = new Vector3(1f, 1f + Mathf.Sin(Time.time * 2.5f) * 0.02f, 1f);
-            Leg(legLeft, new Vector2(-0.16f, 0f), new Vector2(-0.18f, -0.5f), 0f, -1f);
-            Leg(legRight, new Vector2(0.16f, 0f), new Vector2(0.18f, -0.5f), 0f, 1f);
+            idleHead.sprite = blink ? idleHeadBlink : idleHeadOpen;
+            idleHead.transform.localRotation = Quaternion.Euler(0f, 0f, Mathf.Sin(Time.time * 1.6f) * headSwing);
+            idleBody.transform.localScale = new Vector3(1f, 1f + Mathf.Sin(Time.time * 2.5f) * 0.02f, 1f);
             wasEating = false;
             return;
         }
@@ -133,6 +133,16 @@ public class PlayerAnimator : MonoBehaviour
         body.localRotation = Quaternion.Euler(0f, 0f, -4f);
         WalkLeg(legLeft, -0.04f, phase);
         WalkLeg(legRight, 0.04f, phase + Mathf.PI);
+    }
+
+    void ShowIdle(bool on)
+    {
+        idleBody.enabled = on;
+        idleHead.enabled = on;
+        head.enabled = !on;
+        cape.enabled = !on;
+        legLeft.enabled = !on;
+        legRight.enabled = !on;
     }
 
     void WalkLeg(LineRenderer lr, float hipX, float a)
