@@ -12,6 +12,18 @@ if (what == "sesit")
     return;
 }
 
+if (what == "kresba")
+{
+    Kresba.Render(outDir, args.Skip(2).ToArray());
+    return;
+}
+
+if (what == "okraj")
+{
+    Okraj.Render(args[2], args[3], args[4], 53.333f, 30f);
+    return;
+}
+
 if (what == "idle")
 {
     Idle.Render(args[2], outDir);
