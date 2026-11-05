@@ -24,9 +24,6 @@ public class PlayerKresba : MonoBehaviour
     float blinkTimer;
     float stepClock;
     float spin;
-    float eatClock;
-    bool wasEating;
-
     void LateUpdate()
     {
         if (player == null || kresba == null) return;
@@ -61,39 +58,12 @@ public class PlayerKresba : MonoBehaviour
         }
         spin = 0f;
 
-        // jidlo: napred se zakloni, pak chnapne dopredu a trikrat zprudka zvykne
+        // jidlo: jen kresba autorky, nic se s ni nekrouti
         if (player.IsEating)
         {
-            if (!wasEating) eatClock = 0f;
-            wasEating = true;
-            eatClock += dt;
             kresba.sprite = jidlo != null ? jidlo : bok;
-            float f = player.Facing;
-
-            if (eatClock < 0.2f)
-            {
-                float k = eatClock / 0.2f;
-                t.localRotation = Quaternion.Euler(0f, 0f, 14f * k * f);
-                t.localScale = new Vector3(1f - 0.1f * k, 1f + 0.12f * k, 1f);
-            }
-            else if (eatClock < 0.35f)
-            {
-                float k = (eatClock - 0.2f) / 0.15f;
-                t.localRotation = Quaternion.Euler(0f, 0f, Mathf.Lerp(14f, -18f, k) * f);
-                t.localPosition = new Vector3(0.2f * k * f, 0f, 0f);
-                t.localScale = new Vector3(1f + 0.12f * k, 1f - 0.1f * k, 1f);
-            }
-            else
-            {
-                float k = (eatClock - 0.35f) / 0.85f;
-                float chomp = Mathf.Abs(Mathf.Sin(k * Mathf.PI * 3f)) * (1f - k * 0.6f);
-                t.localRotation = Quaternion.Euler(0f, 0f, -6f * (1f - k) * f);
-                t.localPosition = new Vector3(0.2f * (1f - k) * f, chomp * 0.12f, 0f);
-                t.localScale = new Vector3(1f + chomp * 0.22f, 1f - chomp * 0.18f, 1f);
-            }
             return;
         }
-        wasEating = false;
 
         // ve vzduchu: nahoru skok, dolu padak
         if (!player.IsGrounded)

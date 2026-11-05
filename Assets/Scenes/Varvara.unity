@@ -2806,6 +2806,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DvereSKlicem
   fadeTime: 0.5
+  dosah: 0.6
+  napovedaOd: 3
 --- !u!1 &477883918
 GameObject:
   m_ObjectHideFlags: 0
@@ -6080,6 +6082,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Klic
   outline: {fileID: 1867633505}
   flyTime: 0.4
+  dosah: 1
+  napovedaOd: 3
 --- !u!61 &854352198
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15575,6 +15579,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1516316970225311282, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      propertyPath: chuze.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516316970225311282, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      propertyPath: 'chuze.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: fa288cc03ed9413aa877fdc6b1e07728, type: 3}
     - target: {fileID: 5450966328039453157, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5

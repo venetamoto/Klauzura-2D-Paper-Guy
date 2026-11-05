@@ -18,6 +18,12 @@ if (what == "sesit")
     return;
 }
 
+if (what == "kresbacista")
+{
+    Kresba.RenderCista(outDir, args.Skip(2).ToArray());
+    return;
+}
+
 if (what == "kresba")
 {
     Kresba.Render(outDir, args.Skip(2).ToArray());
