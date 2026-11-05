@@ -1,12 +1,13 @@
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class pohyb : MonoBehaviour
+public class ovládáníMraku : MonoBehaviour
 {
     [SerializeField] float speedX = 1f;
     [SerializeField] float speedY = 1f;
     public SpriteRenderer spriteRenderer;
+
+    public proměnaNaMrak promena;
 
     void Start()
     {

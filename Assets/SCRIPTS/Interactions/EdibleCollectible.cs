@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -6,7 +7,6 @@ public class EdibleCollectible : MonoBehaviour
 {
     public float waitForTongue = 0.35f;
     public float flyTime = 0.3f;
-
     bool eaten;
 
     void Awake()

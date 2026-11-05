@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: -1890651310198482789}
   m_Layer: 0
   m_Name: "\u010Dm\xE1rkomrakz\xE1kladn\xED_0"
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: "Assembly-CSharp::prom\u011BnaNaMrak"
   mrakTransformatorPrefab: {fileID: 8154505352052876079}
   cmarkaTransformatorPrefab: {fileID: 5743658605676537183, guid: 6ecfef81c9039b448869557dee26cdf2, type: 3}
+  zamraceno: 0
 --- !u!114 &1524898053097314465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +264,7 @@ MonoBehaviour:
   speedX: 10
   speedY: 5
   spriteRenderer: {fileID: 0}
+  promena: {fileID: 0}
 --- !u!61 &2456890738472651819
 BoxCollider2D:
   m_ObjectHideFlags: 0

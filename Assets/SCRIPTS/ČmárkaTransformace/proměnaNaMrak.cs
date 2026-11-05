@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class proměnaNaMrak : MonoBehaviour
 {
@@ -9,11 +10,13 @@ public class proměnaNaMrak : MonoBehaviour
     public static bool znicCmarku = false;
     public static bool znicMrak = false;
     public static bool znicZed = false;
+    public static bool znicZed2 = false;
     void Start()
     {
         znicCmarku = false;
         znicMrak = false;
         znicZed = false;
+        znicZed2 = false;
         mrakTransformace = false;
         cmarkaTransformace = false;
     }
@@ -46,6 +49,7 @@ public class proměnaNaMrak : MonoBehaviour
                 mrakTransformace = true;
                 znicMrak = true;
                 transform.position = new Vector3(4f, -10f, 0f);
+                bomba.bombaSebrano = false;
             }
         }
         if (collision.gameObject.tag == "čmárkaTransformator")
