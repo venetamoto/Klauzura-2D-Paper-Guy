@@ -11,16 +11,20 @@ public class Klic : MonoBehaviour
     public float flyTime = 0.4f;
     [Tooltip("Jak blizko musi hrac byt, aby mohl klic vzit klavesou F.")]
     public float dosah = 1f;
+    [Tooltip("Odkud uz je videt napoveda \"Stiskni F\".")]
+    public float napovedaOd = 3f;
 
     bool taken;
     Collider2D col;
     PlayerController2D player;
     Collider2D playerCol;
+    NapovedaF napoveda;
 
     void Awake()
     {
         col = GetComponent<Collider2D>();
         col.isTrigger = true;
+        napoveda = NapovedaF.Vytvor(new Vector3(col.bounds.center.x, col.bounds.max.y + 0.9f, 0f));
     }
 
     // hrac stoji u klice a zmackne F
@@ -33,10 +37,12 @@ public class Klic : MonoBehaviour
             if (player == null) return;
             playerCol = player.GetComponent<Collider2D>();
         }
-        if (Physics2D.Distance(col, playerCol).distance > dosah) return;
-        if (!StisklF()) return;
+        float d = Physics2D.Distance(col, playerCol).distance;
+        napoveda.gameObject.SetActive(d < napovedaOd);
+        if (d > dosah || !StisklF()) return;
 
         taken = true;
+        napoveda.gameObject.SetActive(false);
         mam = true;
         Debug.Log("Klic sebran");
         StartCoroutine(FlyToPlayer(player.transform));
