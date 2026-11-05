@@ -10,7 +10,16 @@ using System.IO;
 // Vypise sirku hlavy v px - podle ni se v Unity nastavi velikost, aby vsechny kresby mely stejne velkou hlavu.
 public static class Kresba
 {
-    const int Close = 6;
+    static int Close = 6;
+    static bool cista;
+
+    // cista = jen papir pryc, tuzka zustane jak je nakreslena (nic se nezaliva ani neztmavuje)
+    public static void RenderCista(string outDir, string[] pairs)
+    {
+        Close = 2;
+        cista = true;
+        Render(outDir, pairs);
+    }
 
     public static void Render(string outDir, string[] pairs)
     {
@@ -98,16 +107,16 @@ public static class Kresba
                 if (x >= 0 && y >= 0 && x < w && y < h)
                 {
                     float l = lum[x, y];
-                    if (outside[x, y] <= Close + 1 && l > 120f)
+                    if (outside[x, y] <= Close + 1 && (cista || l > 120f))
                     {
                         // okraj: jen tuzka, papir pryc
-                        float a = (float)Math.Pow(Math.Clamp((245f - l) / 110f, 0f, 1f), 0.75);
+                        float a = cista ? Math.Clamp((250f - l) / 220f, 0f, 1f) : (float)Math.Pow(Math.Clamp((245f - l) / 110f, 0f, 1f), 0.75);
                         c = Color.FromArgb((int)(a * 255), 28, 28, 30);
                     }
                     else
                     {
                         int v = (int)Math.Clamp(l, 0f, 255f);
-                        if (v < 170) v = (int)(v * 0.85f);
+                        if (!cista && v < 170) v = (int)(v * 0.85f);
                         c = Color.FromArgb(255, v, v, v);
                     }
                 }

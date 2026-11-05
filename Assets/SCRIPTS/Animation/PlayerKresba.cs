@@ -13,21 +13,31 @@ public class PlayerKresba : MonoBehaviour
     public Sprite skok;
     public Sprite pad;
     public Sprite jidlo;
+    [Tooltip("Animace jidla od autorky - snimky jdou po rade behem jidla (jazyk).")]
+    public Sprite[] jidloSnimky;
 
     [Header("Nastaveni")]
     public float blinkEvery = 3f;
     public float stepRate = 8f;
     public float tumbleSpeed = 720f;
+    [Tooltip("Kde jsou chodidla vuci stredu postavy (spodek kolideru).")]
+    public float feetY = -0.5f;
 
     float blinkTimer;
     float stepClock;
     float spin;
     float eatClock;
     bool wasEating;
-
     void LateUpdate()
     {
         if (player == null || kresba == null) return;
+        Pose();
+        // kresba stoji chodidly na spodku kolideru, ne ve stredu postavy
+        kresba.transform.localPosition += new Vector3(0f, feetY, 0f);
+    }
+
+    void Pose()
+    {
         float dt = Time.deltaTime;
         Transform t = kresba.transform;
 
@@ -52,36 +62,18 @@ public class PlayerKresba : MonoBehaviour
         }
         spin = 0f;
 
-        // jidlo: napred se zakloni, pak chnapne dopredu a trikrat zprudka zvykne
+        // jidlo: snimky autorky po rade, nic se s nimi nekrouti
         if (player.IsEating)
         {
             if (!wasEating) eatClock = 0f;
             wasEating = true;
             eatClock += dt;
-            kresba.sprite = jidlo != null ? jidlo : bok;
-            float f = player.Facing;
-
-            if (eatClock < 0.2f)
+            if (jidloSnimky != null && jidloSnimky.Length > 0)
             {
-                float k = eatClock / 0.2f;
-                t.localRotation = Quaternion.Euler(0f, 0f, 14f * k * f);
-                t.localScale = new Vector3(1f - 0.1f * k, 1f + 0.12f * k, 1f);
+                int i = (int)(eatClock / player.eatDuration * jidloSnimky.Length);
+                kresba.sprite = jidloSnimky[Mathf.Clamp(i, 0, jidloSnimky.Length - 1)];
             }
-            else if (eatClock < 0.35f)
-            {
-                float k = (eatClock - 0.2f) / 0.15f;
-                t.localRotation = Quaternion.Euler(0f, 0f, Mathf.Lerp(14f, -18f, k) * f);
-                t.localPosition = new Vector3(0.2f * k * f, 0f, 0f);
-                t.localScale = new Vector3(1f + 0.12f * k, 1f - 0.1f * k, 1f);
-            }
-            else
-            {
-                float k = (eatClock - 0.35f) / 0.85f;
-                float chomp = Mathf.Abs(Mathf.Sin(k * Mathf.PI * 3f)) * (1f - k * 0.6f);
-                t.localRotation = Quaternion.Euler(0f, 0f, -6f * (1f - k) * f);
-                t.localPosition = new Vector3(0.2f * (1f - k) * f, chomp * 0.12f, 0f);
-                t.localScale = new Vector3(1f + chomp * 0.22f, 1f - chomp * 0.18f, 1f);
-            }
+            else kresba.sprite = jidlo != null ? jidlo : bok;
             return;
         }
         wasEating = false;

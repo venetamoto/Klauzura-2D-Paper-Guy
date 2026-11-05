@@ -13,23 +13,42 @@ public class CameraController2D : MonoBehaviour
     public float introWait = 1.5f;
     public float introTime = 1.5f;
 
+    [Header("Kdyz ukazuje neco jineho (ruka)")]
+    public float showSmoothTime = 0.5f;
+
     Camera cam;
     Vector3 basePosition;
     Vector3 velocity;
     float normalSize;
     float timer;
+    Vector3 showPoint;
+    float showTimer;
 
     void Start()
     {
         cam = GetComponent<Camera>();
         normalSize = cam.orthographicSize;
-        basePosition = target != null ? GetGoal() : transform.position;
+        basePosition = target != null ? GetGoal(target.position) : transform.position;
+    }
+
+    // kamera se na chvili podiva na jine misto, pak se vrati k postave
+    public void Show(Vector3 point, float time)
+    {
+        showPoint = point;
+        showTimer = time;
     }
 
     void LateUpdate()
     {
-        if (target != null)
-            basePosition = Vector3.SmoothDamp(basePosition, GetGoal(), ref velocity, smoothTime);
+        if (showTimer > 0f)
+        {
+            showTimer -= Time.deltaTime;
+            basePosition = Vector3.SmoothDamp(basePosition, GetGoal(showPoint - (Vector3)offset), ref velocity, showSmoothTime);
+        }
+        else if (target != null)
+        {
+            basePosition = Vector3.SmoothDamp(basePosition, GetGoal(target.position), ref velocity, smoothTime);
+        }
 
         Vector3 pos = basePosition;
 
@@ -52,9 +71,9 @@ public class CameraController2D : MonoBehaviour
         transform.position = pos;
     }
 
-    Vector3 GetGoal()
+    Vector3 GetGoal(Vector3 point)
     {
-        Vector3 goal = new Vector3(target.position.x + offset.x, target.position.y + offset.y, transform.position.z);
+        Vector3 goal = new Vector3(point.x + offset.x, point.y + offset.y, transform.position.z);
 
         if (levelBounds != null)
         {
