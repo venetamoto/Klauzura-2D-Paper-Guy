@@ -13,6 +13,8 @@ public class PlayerKresba : MonoBehaviour
     public Sprite skok;
     public Sprite pad;
     public Sprite jidlo;
+    [Tooltip("Animace jidla od autorky - snimky jdou po rade behem jidla (jazyk).")]
+    public Sprite[] jidloSnimky;
 
     [Header("Nastaveni")]
     public float blinkEvery = 3f;
@@ -24,6 +26,8 @@ public class PlayerKresba : MonoBehaviour
     float blinkTimer;
     float stepClock;
     float spin;
+    float eatClock;
+    bool wasEating;
     void LateUpdate()
     {
         if (player == null || kresba == null) return;
@@ -58,12 +62,21 @@ public class PlayerKresba : MonoBehaviour
         }
         spin = 0f;
 
-        // jidlo: jen kresba autorky, nic se s ni nekrouti
+        // jidlo: snimky autorky po rade, nic se s nimi nekrouti
         if (player.IsEating)
         {
-            kresba.sprite = jidlo != null ? jidlo : bok;
+            if (!wasEating) eatClock = 0f;
+            wasEating = true;
+            eatClock += dt;
+            if (jidloSnimky != null && jidloSnimky.Length > 0)
+            {
+                int i = (int)(eatClock / player.eatDuration * jidloSnimky.Length);
+                kresba.sprite = jidloSnimky[Mathf.Clamp(i, 0, jidloSnimky.Length - 1)];
+            }
+            else kresba.sprite = jidlo != null ? jidlo : bok;
             return;
         }
+        wasEating = false;
 
         // ve vzduchu: nahoru skok, dolu padak
         if (!player.IsGrounded)

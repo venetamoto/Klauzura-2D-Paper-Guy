@@ -6,6 +6,12 @@ string outDir = args.Length > 0 ? args[0] : ".";
 string what = args.Length > 1 ? args[1] : "all";
 Directory.CreateDirectory(outDir);
 
+if (what == "animace")
+{
+    Animace.Render(outDir, args[2], args.Skip(3).ToArray());
+    return;
+}
+
 if (what == "napoveda")
 {
     Napoveda.Render(outDir, 3);

@@ -15587,6 +15587,46 @@ PrefabInstance:
       propertyPath: 'chuze.Array.data[1]'
       value: 
       objectReference: {fileID: 21300000, guid: fa288cc03ed9413aa877fdc6b1e07728, type: 3}
+    - target: {fileID: 1516316970225311282, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      propertyPath: jidloSnimky.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516316970225311282, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      propertyPath: 'jidloSnimky.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: f1884eec97694de7b7fb1c7afb748a06, type: 3}
+    - target: {fileID: 1516316970225311282, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      propertyPath: 'jidloSnimky.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 151bc70ab8cf4c2a94ff36c486e555ca, type: 3}
+    - target: {fileID: 1516316970225311282, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      propertyPath: 'jidloSnimky.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: b31abfd931f3463985129b4c9770da85, type: 3}
+    - target: {fileID: 1516316970225311282, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      propertyPath: 'jidloSnimky.Array.data[3]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 9cccd0897c3f4f689194c2fa4ef31f97, type: 3}
+    - target: {fileID: 1516316970225311282, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      propertyPath: 'jidloSnimky.Array.data[4]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 6332552a0f4d4e9aac0e22a013b57ad9, type: 3}
+    - target: {fileID: 1516316970225311282, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      propertyPath: 'jidloSnimky.Array.data[5]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 07b8b9bf3cc141deb84d6d1c5946ec5d, type: 3}
+    - target: {fileID: 1516316970225311282, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      propertyPath: 'jidloSnimky.Array.data[6]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 1a3dde831700428aa84606716b270e63, type: 3}
+    - target: {fileID: 1516316970225311282, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      propertyPath: 'jidloSnimky.Array.data[7]'
+      value: 
+      objectReference: {fileID: 21300000, guid: ed811c3baf9342df8d0eef5177638665, type: 3}
+    - target: {fileID: 1516316970225311282, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      propertyPath: 'jidloSnimky.Array.data[8]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 5ef31965b16c48e4956d32bc03d52d7c, type: 3}
     - target: {fileID: 5450966328039453157, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5
