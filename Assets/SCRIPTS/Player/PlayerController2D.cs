@@ -22,6 +22,8 @@ public class PlayerController2D : MonoBehaviour
     [Header("Zem")]
     public Transform groundCheck;
     public float groundCheckRadius = 0.15f;
+    [Tooltip("0 = jen kolecko pod stredem. Vic = obdelnik pres celou sirku chodidel (pro sikme a natocene bloky).")]
+    public float groundCheckWidth = 0f;
     public LayerMask groundLayers;
 
     [Header("Klouzani po grafu")]
@@ -118,7 +120,10 @@ public class PlayerController2D : MonoBehaviour
         Vector2 pos = groundCheck != null ? (Vector2)groundCheck.position : rb.position + Vector2.down * footOffset;
 
         bool goingUp = jumped && rb.linearVelocity.y > 0.1f;
-        IsGrounded = !goingUp && Physics2D.OverlapCircle(pos, groundCheckRadius, groundLayers) != null;
+        Collider2D ground = groundCheckWidth > 0f
+            ? Physics2D.OverlapBox(pos, new Vector2(groundCheckWidth, groundCheckRadius * 2f), 0f, groundLayers)
+            : Physics2D.OverlapCircle(pos, groundCheckRadius, groundLayers);
+        IsGrounded = !goingUp && ground != null;
 
         if (!IsGrounded)
         {

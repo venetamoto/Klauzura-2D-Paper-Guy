@@ -1,0 +1,51 @@
+using System.Collections;
+using UnityEngine;
+
+[RequireComponent(typeof(Collider2D))]
+public class Klic : MonoBehaviour
+{
+    public static bool mam;
+
+    public LineRenderer outline;
+    public float flyTime = 0.4f;
+
+    bool taken;
+
+    void Awake()
+    {
+        GetComponent<Collider2D>().isTrigger = true;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (taken) return;
+        PlayerController2D player = other.GetComponentInParent<PlayerController2D>();
+        if (player == null) return;
+
+        taken = true;
+        mam = true;
+        Debug.Log("Klic sebran");
+        StartCoroutine(FlyToPlayer(player.transform));
+    }
+
+    // nakresleny klic doleti k postave a zmizi
+    IEnumerator FlyToPlayer(Transform player)
+    {
+        Vector3 start = transform.position;
+        Vector3 startScale = transform.localScale;
+        Vector3[] drawn = new Vector3[outline != null ? outline.positionCount : 0];
+        if (outline != null) outline.GetPositions(drawn);
+
+        for (float t = 0f; t < flyTime; t += Time.deltaTime)
+        {
+            float k = t / flyTime;
+            transform.position = Vector3.Lerp(start, player.position + Vector3.up, k);
+            transform.localScale = startScale * (1f - k);
+            for (int i = 0; i < drawn.Length; i++)
+                outline.SetPosition(i, transform.position + (drawn[i] - start) * (1f - k));
+            yield return null;
+        }
+        if (outline != null) outline.positionCount = 0;
+        gameObject.SetActive(false);
+    }
+}

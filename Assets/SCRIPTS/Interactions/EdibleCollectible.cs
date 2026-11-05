@@ -9,6 +9,8 @@ public class EdibleCollectible : MonoBehaviour
 
     bool eaten;
 
+    public bool IsEaten => eaten;
+
     void Awake()
     {
         GetComponent<Collider2D>().isTrigger = true;

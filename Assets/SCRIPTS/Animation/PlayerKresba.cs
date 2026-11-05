@@ -18,6 +18,8 @@ public class PlayerKresba : MonoBehaviour
     public float blinkEvery = 3f;
     public float stepRate = 8f;
     public float tumbleSpeed = 720f;
+    [Tooltip("Kde jsou chodidla vuci stredu postavy (spodek kolideru).")]
+    public float feetY = -0.5f;
 
     float blinkTimer;
     float stepClock;
@@ -28,6 +30,13 @@ public class PlayerKresba : MonoBehaviour
     void LateUpdate()
     {
         if (player == null || kresba == null) return;
+        Pose();
+        // kresba stoji chodidly na spodku kolideru, ne ve stredu postavy
+        kresba.transform.localPosition += new Vector3(0f, feetY, 0f);
+    }
+
+    void Pose()
+    {
         float dt = Time.deltaTime;
         Transform t = kresba.transform;
 
