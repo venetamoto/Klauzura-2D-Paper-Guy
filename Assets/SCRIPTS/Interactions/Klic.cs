@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Collider2D))]
 public class Klic : MonoBehaviour
@@ -8,24 +9,43 @@ public class Klic : MonoBehaviour
 
     public LineRenderer outline;
     public float flyTime = 0.4f;
+    [Tooltip("Jak blizko musi hrac byt, aby mohl klic vzit klavesou F.")]
+    public float dosah = 1f;
 
     bool taken;
+    Collider2D col;
+    PlayerController2D player;
+    Collider2D playerCol;
 
     void Awake()
     {
-        GetComponent<Collider2D>().isTrigger = true;
+        col = GetComponent<Collider2D>();
+        col.isTrigger = true;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    // hrac stoji u klice a zmackne F
+    void Update()
     {
         if (taken) return;
-        PlayerController2D player = other.GetComponentInParent<PlayerController2D>();
-        if (player == null) return;
+        if (player == null)
+        {
+            player = FindFirstObjectByType<PlayerController2D>();
+            if (player == null) return;
+            playerCol = player.GetComponent<Collider2D>();
+        }
+        if (Physics2D.Distance(col, playerCol).distance > dosah) return;
+        if (!StisklF()) return;
 
         taken = true;
         mam = true;
         Debug.Log("Klic sebran");
         StartCoroutine(FlyToPlayer(player.transform));
+    }
+
+    public static bool StisklF()
+    {
+        if (Keyboard.current != null && Keyboard.current.fKey.wasPressedThisFrame) return true;
+        return Gamepad.current != null && Gamepad.current.buttonWest.wasPressedThisFrame;
     }
 
     // nakresleny klic doleti k postave a zmizi

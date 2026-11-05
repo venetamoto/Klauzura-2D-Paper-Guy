@@ -5,30 +5,33 @@ using UnityEngine;
 public class DvereSKlicem : MonoBehaviour
 {
     public float fadeTime = 0.5f;
+    [Tooltip("Jak blizko musi hrac byt, aby otevrel dvere klavesou F.")]
+    public float dosah = 0.6f;
 
     bool opening;
+    Collider2D col;
+    PlayerController2D player;
+    Collider2D playerCol;
 
     void Awake()
     {
         Klic.mam = false;
-        GetComponent<Collider2D>().isTrigger = false;
+        col = GetComponent<Collider2D>();
+        col.isTrigger = false;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        TryOpen(collision);
-    }
-
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        TryOpen(collision);
-    }
-
-    // bez klice se neda projit, s klicem dvere zmizi
-    void TryOpen(Collision2D collision)
+    // bez klice se neda projit, s klicem u dveri zmackni F
+    void Update()
     {
         if (opening || !Klic.mam) return;
-        if (collision.collider.GetComponentInParent<PlayerController2D>() == null) return;
+        if (player == null)
+        {
+            player = FindFirstObjectByType<PlayerController2D>();
+            if (player == null) return;
+            playerCol = player.GetComponent<Collider2D>();
+        }
+        if (Physics2D.Distance(col, playerCol).distance > dosah) return;
+        if (!Klic.StisklF()) return;
 
         opening = true;
         Debug.Log("Dvere odemceny");
@@ -37,7 +40,7 @@ public class DvereSKlicem : MonoBehaviour
 
     IEnumerator Open()
     {
-        GetComponent<Collider2D>().enabled = false;
+        col.enabled = false;
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         Color c = sr.color;
         for (float t = 0f; t < fadeTime; t += Time.deltaTime)
