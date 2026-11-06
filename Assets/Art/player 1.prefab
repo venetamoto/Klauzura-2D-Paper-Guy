@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 726624965804745807}
   - component: {fileID: 5593953406496798793}
   - component: {fileID: 1516316970225311282}
+  - component: {fileID: 3483386370605354661}
   m_Layer: 7
   m_Name: player 1
   m_TagString: Untagged
@@ -178,10 +179,30 @@ MonoBehaviour:
   skok: {fileID: 21300000, guid: db02c877a355b8b4bbf632e86db4de5e, type: 3}
   pad: {fileID: 21300000, guid: 9d57778cf8d6c644b9e7c6ad65077fcf, type: 3}
   jidlo: {fileID: 21300000, guid: 7c46d31b9fade514eb9dfb8ef138501a, type: 3}
+  jidloSnimky: []
+  lek: 0
+  utika: 0
+  krci: 0
+  panika: 0
+  mazany: 0
   blinkEvery: 3
   stepRate: 8
   tumbleSpeed: 720
   feetY: -0.5
+--- !u!114 &3483386370605354661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7341812184705142913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8466480a9ac26464ca9682a44188348c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: "Assembly-CSharp::prom\u011BnaNaMrak"
+  mrakTransformatorPrefab: {fileID: 8154505352052876079, guid: dc08f09713344734c9c2ef0b0a4bee90, type: 3}
+  cmarkaTransformatorPrefab: {fileID: 7341812184705142913}
 --- !u!1 &7636798461563725691
 GameObject:
   m_ObjectHideFlags: 0
