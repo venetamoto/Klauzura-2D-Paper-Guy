@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: b54f18a355e51bb439c418804e5a5927
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8314690151454366963
+    second: Epilog_0
+  - first:
+      213: 395776712125262456
+    second: Epilog_1
+  - first:
+      213: -4950740318287058401
+    second: Epilog_2
+  - first:
+      213: 7420677144379523310
+    second: Epilog_3
+  - first:
+      213: -4791035463802118681
+    second: Epilog_4
+  - first:
+      213: -3797641677187660940
+    second: Epilog_5
+  - first:
+      213: -1970069575306689926
+    second: Epilog_6
+  - first:
+      213: 6954299211760904169
+    second: Epilog_7
+  - first:
+      213: -2066993365300597627
+    second: Epilog_8
+  - first:
+      213: 7448631586849500273
+    second: Epilog_9
+  - first:
+      213: 8653799386497352370
+    second: Epilog_10
+  - first:
+      213: -2202566798823993457
+    second: Epilog_11
+  - first:
+      213: 4966624778205488383
+    second: Epilog_12
+  - first:
+      213: -9056409215823888952
+    second: Epilog_13
+  - first:
+      213: 7726539022692366022
+    second: Epilog_14
+  - first:
+      213: 8219822618976482424
+    second: Epilog_15
+  - first:
+      213: -34891142987164960
+    second: Epilog_16
+  - first:
+      213: 7311894921113579451
+    second: Epilog_17
+  - first:
+      213: -7674845162249470475
+    second: Epilog_18
+  - first:
+      213: -727701352058711471
+    second: Epilog_19
+  - first:
+      213: -5207433155352246691
+    second: Epilog_20
+  - first:
+      213: 5434752578123616834
+    second: Epilog_21
+  - first:
+      213: -4014116961366225759
+    second: Epilog_22
+  - first:
+      213: 5154754568029635985
+    second: Epilog_23
+  - first:
+      213: 3382782864116267751
+    second: Epilog_24
+  - first:
+      213: 4893789973458488964
+    second: Epilog_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Epilog_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 41
+        width: 93
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03af114c594c9c80800000000000000
+      internalID: -8314690151454366963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_1
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 42
+        width: 50
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a2990a2d41e7500800000000000000
+      internalID: 395776712125262456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_2
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 42
+        width: 41
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1aab4129ef6b4bb0800000000000000
+      internalID: -4950740318287058401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_3
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 89
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee00a9fdb8a8bf660800000000000000
+      internalID: 7420677144379523310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_4
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 41
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ed96c131a2d28db0800000000000000
+      internalID: -4791035463802118681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_5
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 99
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 473c20fe3011c4bc0800000000000000
+      internalID: -3797641677187660940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_6
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 42
+        width: 52
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a724a0db828e8a4e0800000000000000
+      internalID: -1970069575306689926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_7
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 102
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7a9c2a942a28060800000000000000
+      internalID: 6954299211760904169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_8
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 42
+        width: 42
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c2b245c709053e0800000000000000
+      internalID: -2066993365300597627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_9
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 40
+        width: 83
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17c2be4b6fade5760800000000000000
+      internalID: 7448631586849500273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_10
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 43
+        width: 37
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b20ba531b8781870800000000000000
+      internalID: 8653799386497352370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_11
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 89
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8fc60a8a29ee61e0800000000000000
+      internalID: -2202566798823993457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_12
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 25
+        width: 39
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff46795ebeefce440800000000000000
+      internalID: 4966624778205488383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_13
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 41
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd3e361dcb215280800000000000000
+      internalID: -9056409215823888952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_14
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 43
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c6b5cedd4e2a3b60800000000000000
+      internalID: 7726539022692366022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_15
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 41
+        width: 14
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87470d81f1da21270800000000000000
+      internalID: 8219822618976482424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_16
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 26
+        width: 29
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e25178b0ba048ff0800000000000000
+      internalID: -34891142987164960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_17
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 43
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbf25ffc0b1197560800000000000000
+      internalID: 7311894921113579451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_18
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 40
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fdbefdecf87d7590800000000000000
+      internalID: -7674845162249470475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_19
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 43
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15218ffc97fa6e5f0800000000000000
+      internalID: -727701352058711471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_20
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 42
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5643a7a22b7bb7b0800000000000000
+      internalID: -5207433155352246691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_21
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 40
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 242523ddcae1c6b40800000000000000
+      internalID: 5434752578123616834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_22
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 41
+        width: 13
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac45ee24edfa48c0800000000000000
+      internalID: -4014116961366225759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_23
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 41
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1958ab3f7fd598740800000000000000
+      internalID: 5154754568029635985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_24
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 41
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eabde7971f02fe20800000000000000
+      internalID: 3382782864116267751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_25
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 41
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e8c5d6d0c3ae340800000000000000
+      internalID: 4893789973458488964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Epilog_0: -8314690151454366963
+      Epilog_1: 395776712125262456
+      Epilog_10: 8653799386497352370
+      Epilog_11: -2202566798823993457
+      Epilog_12: 4966624778205488383
+      Epilog_13: -9056409215823888952
+      Epilog_14: 7726539022692366022
+      Epilog_15: 8219822618976482424
+      Epilog_16: -34891142987164960
+      Epilog_17: 7311894921113579451
+      Epilog_18: -7674845162249470475
+      Epilog_19: -727701352058711471
+      Epilog_2: -4950740318287058401
+      Epilog_20: -5207433155352246691
+      Epilog_21: 5434752578123616834
+      Epilog_22: -4014116961366225759
+      Epilog_23: 5154754568029635985
+      Epilog_24: 3382782864116267751
+      Epilog_25: 4893789973458488964
+      Epilog_3: 7420677144379523310
+      Epilog_4: -4791035463802118681
+      Epilog_5: -3797641677187660940
+      Epilog_6: -1970069575306689926
+      Epilog_7: 6954299211760904169
+      Epilog_8: -2066993365300597627
+      Epilog_9: 7448631586849500273
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

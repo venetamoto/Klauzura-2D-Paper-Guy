@@ -12,6 +12,12 @@ if (what == "animace")
     return;
 }
 
+if (what == "epilog")
+{
+    Napoveda.Text(args[2], args[3]);
+    return;
+}
+
 if (what == "napoveda")
 {
     Napoveda.Render(outDir, 3);

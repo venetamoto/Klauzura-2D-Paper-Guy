@@ -26,6 +26,7 @@ public class PlayerKresba : MonoBehaviour
     float blinkTimer;
     float stepClock;
     float spin;
+    PlayerInputReader input;
     float eatClock;
     bool wasEating;
     void LateUpdate()
@@ -94,8 +95,9 @@ public class PlayerKresba : MonoBehaviour
             return;
         }
 
-        // chuze
-        if (Mathf.Abs(player.Velocity.x) > 0.1f)
+        // chuze jen kdyz hrac opravdu macka smer (na sikmych kresbach postava trochu klouze, i kdyz stoji)
+        if (input == null) input = player.GetComponent<PlayerInputReader>();
+        if (Mathf.Abs(input.MoveX) > 0.1f && Mathf.Abs(player.Velocity.x) > 0.1f)
         {
             stepClock += dt * stepRate;
             kresba.sprite = chuze != null && chuze.Length > 0 ? chuze[(int)stepClock % chuze.Length] : bok;

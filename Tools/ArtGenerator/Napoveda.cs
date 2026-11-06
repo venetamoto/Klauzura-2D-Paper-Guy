@@ -51,6 +51,27 @@ static class Napoveda
         }
     }
 
+    // jeden radek textu tuzkou (epilog na bile obrazovce)
+    public static void Text(string path, string text)
+    {
+        var rnd = new Random(99);
+        using var font = new FontFamily("Ink Free");
+        var p = new GraphicsPath();
+        p.AddString(text, font, (int)FontStyle.Regular, 90, new PointF(0, 0), StringFormat.GenericDefault);
+        RectangleF r = p.GetBounds();
+        using var bmp = new Bitmap((int)r.Width + 60, (int)r.Height + 60, PixelFormat.Format32bppArgb);
+        using (var g = Graphics.FromImage(bmp))
+        {
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            g.Clear(Color.Transparent);
+            g.TranslateTransform(30 - r.X, 30 - r.Y);
+            Pencil(g, p, rnd);
+        }
+        Grain(bmp, rnd);
+        bmp.Save(path, ImageFormat.Png);
+        Console.WriteLine(path + " " + bmp.Width + "x" + bmp.Height);
+    }
+
     static float J(Random rnd, float a) => (float)(rnd.NextDouble() * 2 - 1) * a;
 
     static void Pencil(Graphics g, GraphicsPath p, Random rnd)
