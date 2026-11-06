@@ -12,9 +12,33 @@ if (what == "animace")
     return;
 }
 
+if (what == "tuzka")
+{
+    Napoveda.TuzkaKresba(args[2]);
+    return;
+}
+
+if (what == "rukopis")
+{
+    Napoveda.Rukopis(args[2], args[3]);
+    return;
+}
+
 if (what == "epilog")
 {
     Napoveda.Text(args[2], args[3]);
+    return;
+}
+
+if (what == "bezchocholu")
+{
+    BezChocholu.Render(outDir, args.Skip(2).ToArray());
+    return;
+}
+
+if (what == "ocistit")
+{
+    Ocistit.Render(args.Skip(2).ToArray());
     return;
 }
 

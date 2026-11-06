@@ -20,6 +20,14 @@ public class HandChaseController : MonoBehaviour
     float flyClock;
     bool chasing;
     bool erasing;
+    bool hotovo;
+    bool odlet;
+    [Tooltip("Dobry konec: guma ceka, nez hrac dokresli stenu.")]
+    public bool pauza;
+    [Tooltip("Nakreslena stena - guma do ni narazi a odleti.")]
+    public Collider2D stena;
+    [Tooltip("Jak dlouho guma maze hrace (stejne jako EraseEffect.eraseTime).")]
+    public float eraseTime = 1.5f;
     float wiggle;
 
     void Awake()
@@ -44,10 +52,19 @@ public class HandChaseController : MonoBehaviour
 
     void Update()
     {
+        if (odlet) return;
+
+        // guma drhne po hraci, i kdyz uteka; pak jede dal a smaze i ostrov
         if (erasing)
         {
             wiggle += Time.deltaTime;
-            transform.position = start + Vector3.right * Mathf.Sin(wiggle * 20f) * 0.3f;
+            Vector3 p = player.transform.position;
+            transform.position = new Vector3(p.x - 0.2f + Mathf.Sin(wiggle * 20f) * 0.35f, p.y + 0.4f + Mathf.Abs(Mathf.Cos(wiggle * 20f)) * 0.15f, 0f);
+            if (wiggle >= eraseTime)
+            {
+                erasing = false;
+                hotovo = true;
+            }
             return;
         }
 
@@ -59,6 +76,14 @@ public class HandChaseController : MonoBehaviour
             return;
         }
 
+        if (pauza) return;
+
+        if (stena != null && col.bounds.max.x >= stena.bounds.min.x - 0.05f)
+        {
+            StartCoroutine(Odraz());
+            return;
+        }
+
         speed = Mathf.Min(maxSpeed, speed + zrychleni * Time.deltaTime);
         transform.position += Vector3.right * speed * Time.deltaTime;
 
@@ -67,11 +92,11 @@ public class HandChaseController : MonoBehaviour
             Smaz(h, b.max.x);
 
         // na poslednim ostrove uz hrac nemuze nikam
-        if (player != null && player.enabled && finalIsland != null && player.IsGrounded)
+        if (player != null && player.gameObject.activeInHierarchy && finalIsland != null && player.IsGrounded)
         {
             float x = player.transform.position.x;
             if (x > finalIsland.bounds.min.x && x < finalIsland.bounds.max.x)
-                player.GetComponent<EraseEffect>().Zastav();
+                player.GetComponent<EraseEffect>().Panika();
         }
     }
 
@@ -98,12 +123,35 @@ public class HandChaseController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (erasing) return;
+        if (erasing || hotovo || odlet) return;
         PlayerController2D pc = other.GetComponentInParent<PlayerController2D>();
         if (pc == null) return;
 
         erasing = true;
-        start = transform.position;
         pc.GetComponent<EraseEffect>().StartErasing();
+    }
+
+    // guma narazi do steny, odskoci a odleti pryc
+    System.Collections.IEnumerator Odraz()
+    {
+        odlet = true;
+        Debug.Log("Guma narazila do steny");
+        Vector3 p = transform.position;
+        for (float t = 0f; t < 0.3f; t += Time.deltaTime)
+        {
+            float k = t / 0.3f;
+            transform.position = p + new Vector3(-1.5f * Mathf.Sin(k * Mathf.PI * 0.5f), 0.4f * Mathf.Sin(k * Mathf.PI), 0f);
+            transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Sin(t * 60f) * 15f);
+            yield return null;
+        }
+        p = transform.position;
+        for (float t = 0f; t < 1.2f; t += Time.deltaTime)
+        {
+            float k = t / 1.2f;
+            transform.position = p + new Vector3(-6f * k, 12f * k * k, 0f);
+            transform.rotation = Quaternion.Euler(0f, 0f, 540f * k);
+            yield return null;
+        }
+        gameObject.SetActive(false);
     }
 }

@@ -1,0 +1,1001 @@
+fileFormatVersion: 2
+guid: b7ae79c5e3de9b747a6fbfe9a77243f0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7738075672934477594
+    second: Epilog_Dobry_0
+  - first:
+      213: 5117499400640911869
+    second: Epilog_Dobry_1
+  - first:
+      213: -3844908954628686425
+    second: Epilog_Dobry_2
+  - first:
+      213: 4656596600294479567
+    second: Epilog_Dobry_3
+  - first:
+      213: 6253977975401509736
+    second: Epilog_Dobry_4
+  - first:
+      213: 2491914766707190627
+    second: Epilog_Dobry_5
+  - first:
+      213: 7703291103345638199
+    second: Epilog_Dobry_6
+  - first:
+      213: -5179612826362597888
+    second: Epilog_Dobry_7
+  - first:
+      213: -5648505904374172326
+    second: Epilog_Dobry_8
+  - first:
+      213: 8352135756984752505
+    second: Epilog_Dobry_9
+  - first:
+      213: 968640425310351841
+    second: Epilog_Dobry_10
+  - first:
+      213: -3245016553234328092
+    second: Epilog_Dobry_11
+  - first:
+      213: 5703061505905389201
+    second: Epilog_Dobry_12
+  - first:
+      213: -2569549436906552729
+    second: Epilog_Dobry_13
+  - first:
+      213: -6042394368423310087
+    second: Epilog_Dobry_14
+  - first:
+      213: -2383392011798448070
+    second: Epilog_Dobry_15
+  - first:
+      213: -608090978172098140
+    second: Epilog_Dobry_16
+  - first:
+      213: -6332430005274597912
+    second: Epilog_Dobry_17
+  - first:
+      213: 3572277995822407004
+    second: Epilog_Dobry_18
+  - first:
+      213: 6226331813457407499
+    second: Epilog_Dobry_19
+  - first:
+      213: 5898954053255651273
+    second: Epilog_Dobry_20
+  - first:
+      213: 4975717699155159597
+    second: Epilog_Dobry_21
+  - first:
+      213: 8639521998381711736
+    second: Epilog_Dobry_22
+  - first:
+      213: -32698602650608606
+    second: Epilog_Dobry_23
+  - first:
+      213: 2670552405212790227
+    second: Epilog_Dobry_24
+  - first:
+      213: -5708582302276163899
+    second: Epilog_Dobry_25
+  - first:
+      213: 1167083597348620788
+    second: Epilog_Dobry_26
+  - first:
+      213: -5342730303891415049
+    second: Epilog_Dobry_27
+  - first:
+      213: -5578070272347858009
+    second: Epilog_Dobry_28
+  - first:
+      213: 6371753987238529620
+    second: Epilog_Dobry_29
+  - first:
+      213: -163688267501171551
+    second: Epilog_Dobry_30
+  - first:
+      213: -31760659167210180
+    second: Epilog_Dobry_31
+  - first:
+      213: -126844609700882406
+    second: Epilog_Dobry_32
+  - first:
+      213: 4835402104530149357
+    second: Epilog_Dobry_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Epilog_Dobry_0
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 156
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e016ad6c25dc9490800000000000000
+      internalID: -7738075672934477594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_1
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 104
+        width: 113
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df9d9795792050740800000000000000
+      internalID: 5117499400640911869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_2
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 149
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ad73ad4da324aac0800000000000000
+      internalID: -3844908954628686425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_3
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 98
+        width: 38
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc618deafed8f9040800000000000000
+      internalID: 4656596600294479567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_4
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 113
+        width: 77
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8637ce865d79ac650800000000000000
+      internalID: 6253977975401509736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_5
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 110
+        width: 103
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36be120174f059220800000000000000
+      internalID: 2491914766707190627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_6
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 117
+        width: 54
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73bf758d17697ea60800000000000000
+      internalID: 7703291103345638199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_7
+      rect:
+        serializedVersion: 2
+        x: 1919
+        y: 121
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ea992c3915e18b0800000000000000
+      internalID: -5179612826362597888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_8
+      rect:
+        serializedVersion: 2
+        x: 1964
+        y: 109
+        width: 73
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a55b41a9ec97c91b0800000000000000
+      internalID: -5648505904374172326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_9
+      rect:
+        serializedVersion: 2
+        x: 2037
+        y: 112
+        width: 60
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9791aee283fb8e370800000000000000
+      internalID: 8352135756984752505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_10
+      rect:
+        serializedVersion: 2
+        x: 2154
+        y: 108
+        width: 77
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1f4b1b55d417d00800000000000000
+      internalID: 968640425310351841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_11
+      rect:
+        serializedVersion: 2
+        x: 2193
+        y: 174
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e5943e33a267f2d0800000000000000
+      internalID: -3245016553234328092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_12
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 54
+        width: 78
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ee1b73938552f40800000000000000
+      internalID: 5703061505905389201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_13
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 71
+        width: 52
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7624164b660275cd0800000000000000
+      internalID: -2569549436906552729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_14
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 50
+        width: 76
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fcce4df55a152ca0800000000000000
+      internalID: -6042394368423310087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_15
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 35
+        width: 135
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a38ff30d79d7ceed0800000000000000
+      internalID: -2383392011798448070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_16
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 133
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a9aee62a70af87f0800000000000000
+      internalID: -608090978172098140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_17
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 69
+        width: 74
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e5259af570be18a0800000000000000
+      internalID: -6332430005274597912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_18
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 72
+        width: 107
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d50f319e7439130800000000000000
+      internalID: 3572277995822407004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_19
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 121
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ea7dabbcf586650800000000000000
+      internalID: 6226331813457407499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_20
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 50
+        width: 102
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cf57aa157b4dd150800000000000000
+      internalID: 5898954053255651273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_21
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 132
+        width: 41
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a64c882ec4d0540800000000000000
+      internalID: 4975717699155159597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_22
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 138
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87107bebb7fb5e770800000000000000
+      internalID: 8639521998381711736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_23
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 82
+        width: 46
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22cdb5c4bc4db8ff0800000000000000
+      internalID: -32698602650608606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_24
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 85
+        width: 139
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ddf5ca6345bf0520800000000000000
+      internalID: 2670552405212790227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_25
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 93
+        width: 72
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c66fb534aa07c0b0800000000000000
+      internalID: -5708582302276163899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_26
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 90
+        width: 56
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9462b2950523010800000000000000
+      internalID: 1167083597348620788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_27
+      rect:
+        serializedVersion: 2
+        x: 2237
+        y: 109
+        width: 112
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ff56d9781fcad5b0800000000000000
+      internalID: -5342730303891415049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_28
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 137
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab1a8424a6b692b0800000000000000
+      internalID: -5578070272347858009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_29
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 133
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a088d0e740d6850800000000000000
+      internalID: 6371753987238529620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_30
+      rect:
+        serializedVersion: 2
+        x: 2386
+        y: 131
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac81b153667abdf0800000000000000
+      internalID: -163688267501171551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_31
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 69
+        width: 31
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c35918849d92f8ff0800000000000000
+      internalID: -31760659167210180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_32
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 79
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a181b11ef7b5d3ef0800000000000000
+      internalID: -126844609700882406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Epilog_Dobry_33
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 80
+        width: 46
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def12b2589cca1340800000000000000
+      internalID: 4835402104530149357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Epilog_Dobry_0: -7738075672934477594
+      Epilog_Dobry_1: 5117499400640911869
+      Epilog_Dobry_10: 968640425310351841
+      Epilog_Dobry_11: -3245016553234328092
+      Epilog_Dobry_12: 5703061505905389201
+      Epilog_Dobry_13: -2569549436906552729
+      Epilog_Dobry_14: -6042394368423310087
+      Epilog_Dobry_15: -2383392011798448070
+      Epilog_Dobry_16: -608090978172098140
+      Epilog_Dobry_17: -6332430005274597912
+      Epilog_Dobry_18: 3572277995822407004
+      Epilog_Dobry_19: 6226331813457407499
+      Epilog_Dobry_2: -3844908954628686425
+      Epilog_Dobry_20: 5898954053255651273
+      Epilog_Dobry_21: 4975717699155159597
+      Epilog_Dobry_22: 8639521998381711736
+      Epilog_Dobry_23: -32698602650608606
+      Epilog_Dobry_24: 2670552405212790227
+      Epilog_Dobry_25: -5708582302276163899
+      Epilog_Dobry_26: 1167083597348620788
+      Epilog_Dobry_27: -5342730303891415049
+      Epilog_Dobry_28: -5578070272347858009
+      Epilog_Dobry_29: 6371753987238529620
+      Epilog_Dobry_3: 4656596600294479567
+      Epilog_Dobry_30: -163688267501171551
+      Epilog_Dobry_31: -31760659167210180
+      Epilog_Dobry_32: -126844609700882406
+      Epilog_Dobry_33: 4835402104530149357
+      Epilog_Dobry_4: 6253977975401509736
+      Epilog_Dobry_5: 2491914766707190627
+      Epilog_Dobry_6: 7703291103345638199
+      Epilog_Dobry_7: -5179612826362597888
+      Epilog_Dobry_8: -5648505904374172326
+      Epilog_Dobry_9: 8352135756984752505
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

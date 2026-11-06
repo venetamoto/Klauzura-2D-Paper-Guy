@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bb47846d8edac44b8d2395bcca9e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelExit
-  nextScene: VarvaraKonec
+  nextScene: Varvara2
   afterEaten: {fileID: 708756475}
   delay: 1.3
 --- !u!61 &22764732

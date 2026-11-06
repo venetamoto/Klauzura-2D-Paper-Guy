@@ -72,6 +72,106 @@ static class Napoveda
         Console.WriteLine(path + " " + bmp.Width + "x" + bmp.Height);
     }
 
+    // tuzka nakreslena tuzkou (lezi na ostrove v dobrem konci), spicka vpravo
+    public static void TuzkaKresba(string path)
+    {
+        var rnd = new Random(31);
+        using var bmp = new Bitmap(440, 110, PixelFormat.Format32bppArgb);
+        using (var g = Graphics.FromImage(bmp))
+        {
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            g.Clear(Color.Transparent);
+            float top = 30, bot = 80, mid = 55;
+            var body = new PointF[] { new(20, top), new(320, top), new(320, bot), new(20, bot) };
+            using (var b = new SolidBrush(Color.FromArgb(255, 245, 243, 238))) g.FillPolygon(b, body);
+            // srafovani tela
+            using (var hp = new Pen(Color.FromArgb(120, 40, 40, 45), 2f))
+                for (float x = 30; x < 315; x += 9)
+                    g.DrawLine(hp, x + J(rnd, 2), top + 4, x + 12 + J(rnd, 2), bot - 4);
+            // gumicka a plechove ocko
+            using (var b = new SolidBrush(Color.FromArgb(255, 70, 68, 72))) g.FillRectangle(b, 20, top, 32, bot - top);
+            using (var p = new Pen(Color.FromArgb(230, 25, 25, 30), 3f))
+            {
+                g.DrawLine(p, 58, top, 58, bot);
+                g.DrawLine(p, 64, top, 64, bot);
+            }
+            // spicka
+            var tip = new PointF[] { new(320, top), new(400, mid - 4), new(412, mid), new(400, mid + 4), new(320, bot) };
+            using (var b = new SolidBrush(Color.FromArgb(255, 235, 225, 210))) g.FillPolygon(b, tip);
+            using (var b = new SolidBrush(Color.FromArgb(255, 30, 30, 35))) g.FillPolygon(b, new PointF[] { new(392, mid - 7), new(414, mid), new(392, mid + 7) });
+            var outline = new GraphicsPath();
+            outline.AddPolygon(new PointF[] { new(20, top), new(320, top), new(400, mid - 4), new(414, mid), new(400, mid + 4), new(320, bot), new(20, bot) });
+            outline.AddLine(320, top, 320, bot);
+            for (int i = 0; i < 3; i++)
+            {
+                var c = (GraphicsPath)outline.Clone();
+                using var m = new Matrix();
+                m.Translate(J(rnd, 1.8f), J(rnd, 1.8f));
+                c.Transform(m);
+                using var pen = new Pen(Color.FromArgb(i == 0 ? 255 : 150, 25, 25, 30), i == 0 ? 4f : 2f) { LineJoin = LineJoin.Round };
+                g.DrawPath(pen, c);
+            }
+        }
+        Grain(bmp, rnd);
+        bmp.Save(path, ImageFormat.Png);
+        Console.WriteLine(path);
+    }
+
+    // krive psane pismo: kazde pismeno trochu natocene, poskakuje a radek leze nahoru
+    public static void Rukopis(string path, string text)
+    {
+        var rnd = new Random(7);
+        using var font = new FontFamily("Segoe Script");
+        using var measureFont = new Font(font, 100, FontStyle.Regular, GraphicsUnit.Pixel);
+        var all = new GraphicsPath();
+        all.FillMode = FillMode.Winding;
+        float x = 0f;
+        float lineY = 0f;
+        int col = 0;
+        using (var tmp = new Bitmap(10, 10))
+        using (var mg = Graphics.FromImage(tmp))
+        {
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text[i] == '|')
+                {
+                    x = 0f;
+                    lineY += 150f;
+                    col = 0;
+                    continue;
+                }
+                col++;
+                string ch = text[i].ToString();
+                float adv = ch == " " ? 62f : mg.MeasureString(ch, measureFont, PointF.Empty, StringFormat.GenericTypographic).Width;
+                if (ch != " ")
+                {
+                    var p = new GraphicsPath();
+                    float size = 100f * (0.9f + (float)rnd.NextDouble() * 0.2f);
+                    p.AddString(ch, font, (int)FontStyle.Regular, size, new PointF(0, 0), StringFormat.GenericTypographic);
+                    using var m = new Matrix();
+                    float drift = -col * 1.6f;
+                    m.Translate(x + lineY * 0.12f, J(rnd, 9f) + drift + lineY);
+                    m.Rotate(J(rnd, 8f));
+                    p.Transform(m);
+                    all.AddPath(p, false);
+                }
+                x += Math.Max(adv, 34f) * (0.92f + (float)rnd.NextDouble() * 0.12f);
+            }
+        }
+        RectangleF r = all.GetBounds();
+        using var bmp = new Bitmap((int)r.Width + 100, (int)r.Height + 80, PixelFormat.Format32bppArgb);
+        using (var g = Graphics.FromImage(bmp))
+        {
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            g.Clear(Color.Transparent);
+            g.TranslateTransform(40 - r.X, 40 - r.Y);
+            Pencil(g, all, rnd);
+        }
+        Grain(bmp, rnd);
+        bmp.Save(path, ImageFormat.Png);
+        Console.WriteLine(path + " " + bmp.Width + "x" + bmp.Height);
+    }
+
     static float J(Random rnd, float a) => (float)(rnd.NextDouble() * 2 - 1) * a;
 
     static void Pencil(Graphics g, GraphicsPath p, Random rnd)

@@ -4,55 +4,136 @@ using UnityEngine;
 public class EraseEffect : MonoBehaviour
 {
     public float eraseTime = 1.5f;
-    public float fadeTime = 1.5f;
-    [Tooltip("Bily ctverec pres celou obrazovku.")]
+    [Tooltip("Bily ctverec - maska, za kterou se odkryva psany text.")]
     public Sprite bila;
-    [Tooltip("Napis \"Kazdy sesit jednou konci...\" nakresleny tuzkou.")]
+    [Tooltip("Napis \"Kazdy sesit jednou konci...\" krive psany tuzkou.")]
     public Sprite epilog;
     public float epilogWidth = 0.6f;
+    [Tooltip("Vykricnik nad hlavou, kdyz je hrac v panice.")]
+    public Sprite lek;
+    [Tooltip("Ruka s tuzkou, ktera napise epilog.")]
+    public Sprite tuzka;
+
+    [Header("Konec")]
+    [Tooltip("Jak dlouho je videt prazdny sesit, nez prijde ruka psat.")]
+    public float prazdno = 2.5f;
+    public float writeTime = 3.5f;
+
+    [Tooltip("Dobry konec: hrac se zachranil, guma uz ho nesmaze.")]
+    public bool zachranen;
 
     bool stopped;
     bool erasing;
+    public bool IsErasing => erasing;
+    PlayerKresba kresba;
+    SpriteRenderer znak;
 
-    // hrac ztrati ovladani a zustane stat
-    public void Zastav()
+    // na poslednim ostrove: hrac porad ovlada postavu, ale kdyz stoji, panikari
+    public void Panika()
     {
-        if (stopped) return;
+        if (stopped || zachranen) return;
         stopped = true;
-        GetComponent<PlayerController2D>().enabled = false;
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.linearVelocity = Vector2.zero;
-        rb.bodyType = RigidbodyType2D.Kinematic;
-        Debug.Log("Hrac ztratil ovladani");
+        Debug.Log("Hrac je v pasti");
+
+        kresba = GetComponent<PlayerKresba>();
+        if (kresba != null) kresba.panika = true;
+        if (lek != null)
+        {
+            znak = new GameObject("Panika_Znak").AddComponent<SpriteRenderer>();
+            znak.sprite = lek;
+            znak.sortingOrder = 40;
+            StartCoroutine(Znak());
+        }
+    }
+
+    // vykricnik nad hlavou poskakuje a blika
+    IEnumerator Znak()
+    {
+        while (znak != null)
+        {
+            float s = 0.55f + Mathf.Abs(Mathf.Sin(Time.time * 9f)) * 0.15f;
+            znak.transform.position = transform.position + new Vector3(0.7f, 2.4f + Mathf.Sin(Time.time * 12f) * 0.08f, 0f);
+            znak.transform.localScale = new Vector3(s, s, 1f);
+            znak.transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Sin(Time.time * 20f) * 10f);
+            yield return null;
+        }
+    }
+
+    // dobry konec: konec paniky
+    public void Uklidnit()
+    {
+        if (kresba == null) kresba = GetComponent<PlayerKresba>();
+        if (kresba != null) kresba.panika = false;
+        if (znak != null) Destroy(znak.gameObject);
     }
 
     public void StartErasing()
     {
-        if (erasing) return;
+        if (erasing || zachranen) return;
         erasing = true;
-        Zastav();
+        Panika();
+        // ted uz se nesmi restartovat level, kdyz spadne
+        MimoSesit ms = GetComponent<MimoSesit>();
+        if (ms != null) ms.enabled = false;
         StartCoroutine(Erase());
     }
 
-    // 100 % -> 75 % -> 35 % -> 0 %
+    // 100 % -> 75 % -> 35 % -> 0 %, hrdina se trese a lita z nej drobky gumy
     IEnumerator Erase()
     {
         Debug.Log("Guma maze hrace");
+        if (kresba != null)
+        {
+            kresba.panika = false;
+            kresba.mazany = true;
+        }
+
         SpriteRenderer[] srs = GetComponentsInChildren<SpriteRenderer>();
         float[] keys = { 1f, 0.75f, 0.35f, 0f };
+        float crumb = 0f;
         for (float t = 0f; t < eraseTime; t += Time.deltaTime)
         {
             float k = t / eraseTime * 3f;
             int i = Mathf.Min(2, (int)k);
-            SetAlpha(srs, Mathf.Lerp(keys[i], keys[i + 1], k - i));
+            float a = Mathf.Lerp(keys[i], keys[i + 1], k - i);
+            SetAlpha(srs, a);
+            if (znak != null) znak.color = new Color(1f, 1f, 1f, a);
+
+            crumb += Time.deltaTime;
+            if (crumb > 0.05f)
+            {
+                crumb = 0f;
+                Drobek();
+            }
             yield return null;
         }
         SetAlpha(srs, 0f);
+        if (znak != null) Destroy(znak.gameObject);
 
         // korutina musi bezet na kamere, hrac se ted vypne
         Camera cam = Camera.main;
-        cam.GetComponent<MonoBehaviour>().StartCoroutine(FadeToWhite(cam));
+        cam.GetComponent<MonoBehaviour>().StartCoroutine(Konec(cam));
         gameObject.SetActive(false);
+    }
+
+    // drobek gumy odleti a spadne
+    void Drobek()
+    {
+        if (bila == null) return;
+        GameObject go = new GameObject("Drobek");
+        go.layer = 2;
+        go.transform.position = transform.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(0f, 1.8f), 0f);
+        go.transform.localScale = Vector3.one * Random.Range(0.07f, 0.16f);
+        go.transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 90f));
+        SpriteRenderer sr = go.AddComponent<SpriteRenderer>();
+        sr.sprite = bila;
+        sr.color = new Color(0.55f, 0.5f, 0.52f);
+        sr.sortingOrder = 25;
+        Rigidbody2D rb = go.AddComponent<Rigidbody2D>();
+        rb.gravityScale = 1.5f;
+        rb.linearVelocity = new Vector2(Random.Range(-3f, 3f), Random.Range(1f, 4f));
+        rb.angularVelocity = Random.Range(-400f, 400f);
+        Destroy(go, 1.5f);
     }
 
     void SetAlpha(SpriteRenderer[] srs, float a)
@@ -65,42 +146,12 @@ public class EraseEffect : MonoBehaviour
         }
     }
 
-    IEnumerator FadeToWhite(Camera cam)
+    // prazdny sesit, pak ruka krive napise epilog
+    IEnumerator Konec(Camera cam)
     {
-        float h = cam.orthographicSize * 2f;
-        float w = h * cam.aspect;
-
-        SpriteRenderer white = Overlay(cam, "Bila_Obrazovka", bila, 1000);
-        white.transform.localScale = new Vector3(w + 2f, h + 2f, 1f);
-        for (float t = 0f; t < fadeTime; t += Time.deltaTime)
-        {
-            white.color = new Color(1f, 1f, 1f, t / fadeTime);
-            yield return null;
-        }
-        white.color = Color.white;
-
+        yield return new WaitForSeconds(prazdno);
         if (epilog == null) yield break;
-        SpriteRenderer text = Overlay(cam, "Epilog", epilog, 1001);
-        float s = w * epilogWidth / epilog.bounds.size.x;
-        text.transform.localScale = new Vector3(s, s, 1f);
-        Debug.Log("Kazdy sesit jednou konci...");
-        for (float t = 0f; t < fadeTime; t += Time.deltaTime)
-        {
-            text.color = new Color(1f, 1f, 1f, t / fadeTime);
-            yield return null;
-        }
-        text.color = Color.white;
-    }
-
-    SpriteRenderer Overlay(Camera cam, string name, Sprite sprite, int order)
-    {
-        GameObject go = new GameObject(name);
-        go.transform.SetParent(cam.transform, false);
-        go.transform.localPosition = new Vector3(0f, 0f, 1f);
-        SpriteRenderer sr = go.AddComponent<SpriteRenderer>();
-        sr.sprite = sprite;
-        sr.sortingOrder = order;
-        sr.color = new Color(1f, 1f, 1f, 0f);
-        return sr;
+        Debug.Log("Ruka pise: Kazdy sesit jednou konci...");
+        yield return PisiciRuka.Napis(cam, epilog, 1, tuzka, bila, writeTime, epilogWidth);
     }
 }

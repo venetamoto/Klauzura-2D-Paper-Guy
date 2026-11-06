@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Varvara.unity
     guid: 28d42c98494b01f47b184d7e6328cf5b
   - enabled: 1
+    path: Assets/Scenes/Varvara2.unity
+    guid: 9b60ef76ae2f5334785b81439575f426
+  - enabled: 1
     path: Assets/Scenes/VarvaraKonec.unity
     guid: 8e16b3839ef130d46b994e92337fe218
   m_configObjects:
