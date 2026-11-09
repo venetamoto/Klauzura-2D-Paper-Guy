@@ -18,15 +18,23 @@ public class EdibleCollectible : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (!other.CompareTag("Player")) return;
         if (eaten || !enabled) return;
 
         PlayerController2D player = other.GetComponentInParent<PlayerController2D>();
-        if (player == null) return;
-
-        eaten = true;
-        player.Eat();
-        Debug.Log("Snedeno: " + name);
-        StartCoroutine(FlyIntoMouth(player));
+        if(player == null)
+        {
+            Destroy(gameObject);
+        }
+        
+        if (player != null)
+        {
+            eaten = true;
+            player.Eat();
+            Debug.Log("Snedeno: " + name);
+            StartCoroutine(FlyIntoMouth(player));  
+        }
+        
     }
 
     // jazyk vec chnapne a ona zaleti do tlamy na brisku
