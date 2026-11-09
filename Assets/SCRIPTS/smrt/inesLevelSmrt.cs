@@ -1,16 +1,34 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class inesLevelSmrt : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    bool cekani = false;
+    public static bool padni = false;
     void Start()
     {
-        
+        cekani = false;
+        padni = false;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (cekani == true)
+        {
+            SceneManager.LoadScene("Ines");
+        }
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            padni = true;
+            StartCoroutine(Počkej());
+        }
+    }
+    public IEnumerator Počkej()
+    {
+        yield return new WaitForSeconds(1.0f);
+        cekani = true;
     }
 }
