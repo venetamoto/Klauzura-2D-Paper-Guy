@@ -8,9 +8,5 @@ public class destrukceZdi : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (proměnaNaMrak.znicZed2 == true)
-        {
-            Destroy(gameObject);
-        }
     }
 }

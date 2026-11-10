@@ -54,11 +54,21 @@ public class PlayerController2D : MonoBehaviour
     FunctionGraphPath slidePath;
     float slideDistance;
     float slideSpeed;
+    private Rigidbody2D gravitace;
+
+    void Update()
+    {
+        if (filipLevelSmrt.padni == true)
+        {
+            gravitace.gravityScale = 0f;
+        }
+    }
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         input = GetComponent<PlayerInputReader>();
+        gravitace = GetComponent<Rigidbody2D>();
 
         rb.gravityScale = gravityScale;
         rb.freezeRotation = true;

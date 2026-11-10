@@ -21,6 +21,10 @@ public class ovládáníMraku : MonoBehaviour
     public proměnaNaMrak promena;
     private Rigidbody2D gravitace;
 
+    public float waitForTongue = 0.35f;
+    public float flyTime = 0.3f;
+    bool eaten;
+
     void Start()
     {
         coolDown = false;

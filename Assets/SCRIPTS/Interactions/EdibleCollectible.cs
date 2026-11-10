@@ -8,8 +8,21 @@ public class EdibleCollectible : MonoBehaviour
     public float waitForTongue = 0.35f;
     public float flyTime = 0.3f;
     bool eaten;
+    public static int bod = 0;
+    [SerializeField] int bod2 = 0;
 
     public bool IsEaten => eaten;
+
+    void Start()
+    {
+        bod = 0;
+        bod2 = 0;
+    } 
+    void Update()
+    {
+        bod2 = bod;
+        bod = bod2;
+    }
 
     void Awake()
     {
@@ -50,6 +63,7 @@ public class EdibleCollectible : MonoBehaviour
             float k = t / flyTime;
             transform.position = Vector3.Lerp(start, mouth, k);
             transform.localScale = startScale * (1f - k);
+            bod =+ 1;
             yield return null;
         }
         gameObject.SetActive(false);
