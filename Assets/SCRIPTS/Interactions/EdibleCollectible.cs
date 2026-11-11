@@ -8,6 +8,7 @@ public class EdibleCollectible : MonoBehaviour
     public float waitForTongue = 0.35f;
     public float flyTime = 0.3f;
     bool eaten;
+    [SerializeField]int zkonzumovano = 0;
 
     public bool IsEaten => eaten;
 
@@ -25,6 +26,7 @@ public class EdibleCollectible : MonoBehaviour
         if(player == null)
         {
             Destroy(gameObject);
+            zkonzumovano =+ 1;
         }
         
         if (player != null)

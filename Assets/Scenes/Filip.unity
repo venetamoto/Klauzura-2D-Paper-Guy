@@ -575,11 +575,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5450966328039453157, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.12
+      value: -1.31
       objectReference: {fileID: 0}
     - target: {fileID: 5450966328039453157, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.17
+      value: 5.38
       objectReference: {fileID: 0}
     - target: {fileID: 5450966328039453157, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3481,6 +3481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EdibleCollectible
   waitForTongue: 0.35
   flyTime: 0.3
+  zkonzumovano: 0
 --- !u!61 &600879769
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4987,6 +4988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EdibleCollectible
   waitForTongue: 0.35
   flyTime: 0.3
+  zkonzumovano: 0
 --- !u!61 &810812790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5429,6 +5431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EdibleCollectible
   waitForTongue: 0.35
   flyTime: 0.3
+  zkonzumovano: 0
 --- !u!61 &884597995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5583,6 +5586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EdibleCollectible
   waitForTongue: 0.35
   flyTime: 0.3
+  zkonzumovano: 0
 --- !u!61 &908908927
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7892,7 +7896,7 @@ Transform:
   m_GameObject: {fileID: 1367310151}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.7, y: -7.72, z: 0}
+  m_LocalPosition: {x: 12.05, y: -10.24, z: 0}
   m_LocalScale: {x: 5.8033, y: 5.8033, z: 5.8033}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8084,6 +8088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EdibleCollectible
   waitForTongue: 0.35
   flyTime: 0.3
+  zkonzumovano: 0
 --- !u!61 &1399076456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9125,6 +9130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EdibleCollectible
   waitForTongue: 0.35
   flyTime: 0.3
+  zkonzumovano: 0
 --- !u!61 &1593652729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11190,6 +11196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EdibleCollectible
   waitForTongue: 0.35
   flyTime: 0.3
+  zkonzumovano: 0
 --- !u!61 &2082708808
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11344,6 +11351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EdibleCollectible
   waitForTongue: 0.35
   flyTime: 0.3
+  zkonzumovano: 0
 --- !u!61 &2085754019
 BoxCollider2D:
   m_ObjectHideFlags: 0
