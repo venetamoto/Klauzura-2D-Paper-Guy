@@ -1532,6 +1532,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3052538795900558639, guid: 2c7692f6d886cb746830ec886515088a, type: 3}
+      propertyPath: flyTime
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052538795900558639, guid: 2c7692f6d886cb746830ec886515088a, type: 3}
+      propertyPath: waitForTongue
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6942510623774723655, guid: 2c7692f6d886cb746830ec886515088a, type: 3}
       propertyPath: m_Name
       value: Tajny_Ctverec
@@ -1935,6 +1943,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 726624965804745807, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      propertyPath: eatDuration
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 1368668806309927392, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
       propertyPath: m_LocalPosition.x
       value: 64.91
