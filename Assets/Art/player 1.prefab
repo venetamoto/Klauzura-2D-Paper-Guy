@@ -175,11 +175,21 @@ MonoBehaviour:
   stojiMrk: {fileID: 21300000, guid: 19ab0d81c0848914dbfe366dd8a5e3bc, type: 3}
   chuze:
   - {fileID: 21300000, guid: 068de2f13c55ebe43bf92f403c50e93e, type: 3}
+  - {fileID: 21300000, guid: fa288cc03ed9413aa877fdc6b1e07728, type: 3}
   bok: {fileID: 21300000, guid: 7c46d31b9fade514eb9dfb8ef138501a, type: 3}
   skok: {fileID: 21300000, guid: db02c877a355b8b4bbf632e86db4de5e, type: 3}
   pad: {fileID: 21300000, guid: 9d57778cf8d6c644b9e7c6ad65077fcf, type: 3}
   jidlo: {fileID: 21300000, guid: 7c46d31b9fade514eb9dfb8ef138501a, type: 3}
-  jidloSnimky: []
+  jidloSnimky:
+  - {fileID: 21300000, guid: f1884eec97694de7b7fb1c7afb748a06, type: 3}
+  - {fileID: 21300000, guid: 151bc70ab8cf4c2a94ff36c486e555ca, type: 3}
+  - {fileID: 21300000, guid: b31abfd931f3463985129b4c9770da85, type: 3}
+  - {fileID: 21300000, guid: 9cccd0897c3f4f689194c2fa4ef31f97, type: 3}
+  - {fileID: 21300000, guid: 6332552a0f4d4e9aac0e22a013b57ad9, type: 3}
+  - {fileID: 21300000, guid: 07b8b9bf3cc141deb84d6d1c5946ec5d, type: 3}
+  - {fileID: 21300000, guid: 1a3dde831700428aa84606716b270e63, type: 3}
+  - {fileID: 21300000, guid: ed811c3baf9342df8d0eef5177638665, type: 3}
+  - {fileID: 21300000, guid: 5ef31965b16c48e4956d32bc03d52d7c, type: 3}
   lek: 0
   utika: 0
   krci: 0
