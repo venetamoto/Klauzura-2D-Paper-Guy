@@ -20,6 +20,9 @@ public class KonecMenu : MonoBehaviour
     public Sprite zvukOn;
     public Sprite zvukOff;
 
+    [Tooltip("Vybrat prvni tlacitko (ovladani sipkami). Ve startovnim menu ne - tam se hraje A/D a mezernikem.")]
+    public bool vybratPrvni = true;
+
     bool full;
 
     void Start()
@@ -39,7 +42,8 @@ public class KonecMenu : MonoBehaviour
     public void ZnovuHrat()
     {
         Debug.Log("Hra znovu od zacatku");
-        SceneManager.LoadScene(0);
+        // 0 = startovni menu, 1 = prvni level
+        SceneManager.LoadScene(1);
     }
 
     public void Ukaz(GameObject panel)
@@ -51,7 +55,7 @@ public class KonecMenu : MonoBehaviour
 
         // at jde menu ovladat i sipkami a Enterem
         Button prvni = panel.GetComponentInChildren<Button>();
-        if (prvni != null && EventSystem.current != null) EventSystem.current.SetSelectedGameObject(prvni.gameObject);
+        if (vybratPrvni && prvni != null && EventSystem.current != null) EventSystem.current.SetSelectedGameObject(prvni.gameObject);
     }
 
     public void Zpet()

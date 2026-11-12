@@ -1,0 +1,1235 @@
+fileFormatVersion: 2
+guid: 8f529e74f4778ac49959d35245659838
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8767570396708628102
+    second: Hriste_Napoveda_0
+  - first:
+      213: 1802286990546594513
+    second: Hriste_Napoveda_1
+  - first:
+      213: -4816951406928519646
+    second: Hriste_Napoveda_2
+  - first:
+      213: -1272153239805147745
+    second: Hriste_Napoveda_3
+  - first:
+      213: 8306308706477160610
+    second: Hriste_Napoveda_4
+  - first:
+      213: 6225069145821974094
+    second: Hriste_Napoveda_5
+  - first:
+      213: 8735065346036001786
+    second: Hriste_Napoveda_6
+  - first:
+      213: -2866843643016268099
+    second: Hriste_Napoveda_7
+  - first:
+      213: 1747086874237308753
+    second: Hriste_Napoveda_8
+  - first:
+      213: -2656580397143427866
+    second: Hriste_Napoveda_9
+  - first:
+      213: 468922423021079720
+    second: Hriste_Napoveda_10
+  - first:
+      213: -5438833291995939501
+    second: Hriste_Napoveda_11
+  - first:
+      213: -8264775897837397695
+    second: Hriste_Napoveda_12
+  - first:
+      213: -2144525807495154670
+    second: Hriste_Napoveda_13
+  - first:
+      213: 9107675153853613094
+    second: Hriste_Napoveda_14
+  - first:
+      213: 7066899711654871174
+    second: Hriste_Napoveda_15
+  - first:
+      213: 1245553369632929836
+    second: Hriste_Napoveda_16
+  - first:
+      213: -3177709651939154383
+    second: Hriste_Napoveda_17
+  - first:
+      213: 6582285027637217446
+    second: Hriste_Napoveda_18
+  - first:
+      213: 9156218980073589140
+    second: Hriste_Napoveda_19
+  - first:
+      213: 4392117197168655080
+    second: Hriste_Napoveda_20
+  - first:
+      213: 3567092909340214372
+    second: Hriste_Napoveda_21
+  - first:
+      213: -8567519464857982670
+    second: Hriste_Napoveda_22
+  - first:
+      213: 4827566426424510518
+    second: Hriste_Napoveda_23
+  - first:
+      213: 3979426075685628529
+    second: Hriste_Napoveda_24
+  - first:
+      213: 8959775361922893953
+    second: Hriste_Napoveda_25
+  - first:
+      213: 3472205848028974088
+    second: Hriste_Napoveda_26
+  - first:
+      213: -3220402370771229588
+    second: Hriste_Napoveda_27
+  - first:
+      213: 805889171070294149
+    second: Hriste_Napoveda_28
+  - first:
+      213: 4583074638302041596
+    second: Hriste_Napoveda_29
+  - first:
+      213: -7850132257673624750
+    second: Hriste_Napoveda_30
+  - first:
+      213: -1475296166666242580
+    second: Hriste_Napoveda_31
+  - first:
+      213: 5904505622467414277
+    second: Hriste_Napoveda_32
+  - first:
+      213: -8710547137619878094
+    second: Hriste_Napoveda_33
+  - first:
+      213: -7019530001940678089
+    second: Hriste_Napoveda_34
+  - first:
+      213: 2220773473970986315
+    second: Hriste_Napoveda_35
+  - first:
+      213: -5026333814027387759
+    second: Hriste_Napoveda_36
+  - first:
+      213: 5418360720062591846
+    second: Hriste_Napoveda_37
+  - first:
+      213: -1465737772937798852
+    second: Hriste_Napoveda_38
+  - first:
+      213: -2929551847203278912
+    second: Hriste_Napoveda_39
+  - first:
+      213: -1668169170777968027
+    second: Hriste_Napoveda_40
+  - first:
+      213: 6016551663578685955
+    second: Hriste_Napoveda_41
+  - first:
+      213: -9053201325555502927
+    second: Hriste_Napoveda_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hriste_Napoveda_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 48
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6866c0fb2daaca970800000000000000
+      internalID: 8767570396708628102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 88
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da66de0872030910800000000000000
+      internalID: 1802286990546594513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 45
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e15b97730c62db0800000000000000
+      internalID: -4816951406928519646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_3
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 43
+        width: 45
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f954d895e57685ee0800000000000000
+      internalID: -1272153239805147745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_4
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 43
+        width: 25
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a83e4482cfe54370800000000000000
+      internalID: 8306308706477160610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_5
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 49
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e86f20863e36650800000000000000
+      internalID: 6225069145821974094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_6
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 53
+        width: 13
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afbec40e6af293970800000000000000
+      internalID: 8735065346036001786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_7
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 51
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db6bd6755ece638d0800000000000000
+      internalID: -2866843643016268099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_8
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 52
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f89a27146ee3810800000000000000
+      internalID: 1747086874237308753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_9
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 97
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e4fff6343ee12bd0800000000000000
+      internalID: -2656580397143427866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_10
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 57
+        width: 73
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ac03639572f18600800000000000000
+      internalID: 468922423021079720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_11
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 55
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d7306efe16584b0800000000000000
+      internalID: -5438833291995939501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_12
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 55
+        width: 72
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149113d0c1e9d4d80800000000000000
+      internalID: -8264775897837397695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_13
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 59
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 214f798e32d1d32e0800000000000000
+      internalID: -2144525807495154670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_14
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 59
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62488134c46f46e70800000000000000
+      internalID: 9107675153853613094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_15
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 60
+        width: 13
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680cf7088dba21260800000000000000
+      internalID: 7066899711654871174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_16
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 59
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28f2c1c038194110800000000000000
+      internalID: 1245553369632929836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_17
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 60
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13626d468e186e3d0800000000000000
+      internalID: -3177709651939154383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_18
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 49
+        width: 63
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a840b2bb59f85b50800000000000000
+      internalID: 6582285027637217446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_19
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 60
+        width: 68
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 499c9f096ac611f70800000000000000
+      internalID: 9156218980073589140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_20
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 60
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea3f15025fe3fc30800000000000000
+      internalID: 4392117197168655080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_21
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 60
+        width: 62
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 464c90e0a1cd08130800000000000000
+      internalID: 3567092909340214372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_22
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 72
+        width: 12
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23925ea707e0a1980800000000000000
+      internalID: -8567519464857982670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_23
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 35
+        width: 56
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63882a85616fef240800000000000000
+      internalID: 4827566426424510518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_24
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 47
+        width: 13
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17a2b239ee2c93730800000000000000
+      internalID: 3979426075685628529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_25
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 48
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18806b28834875c70800000000000000
+      internalID: 8959775361922893953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_26
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 49
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c0dce72d0cf2030800000000000000
+      internalID: 3472205848028974088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_27
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 48
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64ea503b15de43d0800000000000000
+      internalID: -3220402370771229588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_28
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 50
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5889af96ee71f2b00800000000000000
+      internalID: 805889171070294149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_29
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 71
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf55813f91a5a9f30800000000000000
+      internalID: 4583074638302041596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_30
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 49
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 253478dad4abe0390800000000000000
+      internalID: -7850132257673624750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_31
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 52
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce5fc5fe3f1b68be0800000000000000
+      internalID: -1475296166666242580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_32
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 41
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5098779849401f150800000000000000
+      internalID: 5904505622467414277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_33
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 54
+        width: 93
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f1fde578bed1780800000000000000
+      internalID: -8710547137619878094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_34
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 43
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73af02087ae959e90800000000000000
+      internalID: -7019530001940678089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_35
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 55
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4d96aa55b5c1de10800000000000000
+      internalID: 2220773473970986315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_36
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 54
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19cfc5cd600ee3ab0800000000000000
+      internalID: -5026333814027387759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_37
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 44
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663b2400e52e13b40800000000000000
+      internalID: 5418360720062591846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_38
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 57
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b9b26e247a8abe0800000000000000
+      internalID: -1465737772937798852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_39
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 61
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cfeb5ccd142857d0800000000000000
+      internalID: -2929551847203278912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_40
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 48
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 562758e3af879d8e0800000000000000
+      internalID: -1668169170777968027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_41
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 45
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 302a4686cd51f7350800000000000000
+      internalID: 6016551663578685955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hriste_Napoveda_42
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 48
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b03b2e3c519c5280800000000000000
+      internalID: -9053201325555502927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Hriste_Napoveda_0: 8767570396708628102
+      Hriste_Napoveda_1: 1802286990546594513
+      Hriste_Napoveda_10: 468922423021079720
+      Hriste_Napoveda_11: -5438833291995939501
+      Hriste_Napoveda_12: -8264775897837397695
+      Hriste_Napoveda_13: -2144525807495154670
+      Hriste_Napoveda_14: 9107675153853613094
+      Hriste_Napoveda_15: 7066899711654871174
+      Hriste_Napoveda_16: 1245553369632929836
+      Hriste_Napoveda_17: -3177709651939154383
+      Hriste_Napoveda_18: 6582285027637217446
+      Hriste_Napoveda_19: 9156218980073589140
+      Hriste_Napoveda_2: -4816951406928519646
+      Hriste_Napoveda_20: 4392117197168655080
+      Hriste_Napoveda_21: 3567092909340214372
+      Hriste_Napoveda_22: -8567519464857982670
+      Hriste_Napoveda_23: 4827566426424510518
+      Hriste_Napoveda_24: 3979426075685628529
+      Hriste_Napoveda_25: 8959775361922893953
+      Hriste_Napoveda_26: 3472205848028974088
+      Hriste_Napoveda_27: -3220402370771229588
+      Hriste_Napoveda_28: 805889171070294149
+      Hriste_Napoveda_29: 4583074638302041596
+      Hriste_Napoveda_3: -1272153239805147745
+      Hriste_Napoveda_30: -7850132257673624750
+      Hriste_Napoveda_31: -1475296166666242580
+      Hriste_Napoveda_32: 5904505622467414277
+      Hriste_Napoveda_33: -8710547137619878094
+      Hriste_Napoveda_34: -7019530001940678089
+      Hriste_Napoveda_35: 2220773473970986315
+      Hriste_Napoveda_36: -5026333814027387759
+      Hriste_Napoveda_37: 5418360720062591846
+      Hriste_Napoveda_38: -1465737772937798852
+      Hriste_Napoveda_39: -2929551847203278912
+      Hriste_Napoveda_4: 8306308706477160610
+      Hriste_Napoveda_40: -1668169170777968027
+      Hriste_Napoveda_41: 6016551663578685955
+      Hriste_Napoveda_42: -9053201325555502927
+      Hriste_Napoveda_5: 6225069145821974094
+      Hriste_Napoveda_6: 8735065346036001786
+      Hriste_Napoveda_7: -2866843643016268099
+      Hriste_Napoveda_8: 1747086874237308753
+      Hriste_Napoveda_9: -2656580397143427866
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

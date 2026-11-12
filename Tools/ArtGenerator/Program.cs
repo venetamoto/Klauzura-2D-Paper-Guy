@@ -37,6 +37,13 @@ if (what == "tuzka")
     return;
 }
 
+if (what == "rukopishalo")
+{
+    Napoveda.RukopisHalo = true;
+    Napoveda.Rukopis(args[2], args[3]);
+    return;
+}
+
 if (what == "rukopis")
 {
     Napoveda.Rukopis(args[2], args[3]);

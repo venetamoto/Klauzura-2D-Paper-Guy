@@ -157,6 +157,6 @@ public class EraseEffect : MonoBehaviour
         Debug.Log("Ruka pise: Kazdy sesit jednou konci...");
         yield return PisiciRuka.Napis(cam, epilog, 1, tuzka, bila, writeTime, epilogWidth);
         yield return new WaitForSeconds(menuPo);
-        SceneManager.LoadScene("KonecHry");
+        SceneManager.LoadScene("KonecMenu");
     }
 }

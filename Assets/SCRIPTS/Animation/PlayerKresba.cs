@@ -58,6 +58,8 @@ public class PlayerKresba : MonoBehaviour
         t.localRotation = Quaternion.identity;
         t.localScale = Vector3.one;
         kresba.flipX = player.Facing < 0;
+        // pri uteku (start v menu, utek ve Varvara2) bezi vzdy doprava - nesmi bezet pozadu
+        if (utika) kresba.flipX = false;
 
         // kotrmelce po grafu
         if (player.IsSliding)

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: e429ebc6445ddb843b7715be3e426fe7
+  - enabled: 1
     path: Assets/Scenes/Ines.unity
     guid: 0f99703b17188574988a556e345945e1
   - enabled: 1
@@ -21,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/VarvaraKonec.unity
     guid: 8e16b3839ef130d46b994e92337fe218
   - enabled: 1
-    path: Assets/Scenes/KonecHry.unity
+    path: Assets/Scenes/KonecMenu.unity
     guid: ee5af41eade5c104f93f6aa2a16e1abf
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -184,6 +184,8 @@ static class Napoveda
     }
 
     // krive psane pismo: kazde pismeno trochu natocene, poskakuje a radek leze nahoru
+    public static bool RukopisHalo;
+
     public static void Rukopis(string path, string text)
     {
         var rnd = new Random(7);
@@ -234,6 +236,7 @@ static class Napoveda
             Pencil(g, all, rnd);
         }
         Grain(bmp, rnd);
+        if (RukopisHalo) Halo(bmp);
         bmp.Save(path, ImageFormat.Png);
         Console.WriteLine(path + " " + bmp.Width + "x" + bmp.Height);
     }

@@ -45,6 +45,7 @@ public class DobryKonec : MonoBehaviour
 
     void Update()
     {
+        if (Pauza.pauznuto) return;
         if (vzata || player == null || !player.gameObject.activeInHierarchy) return;
         if (tajny == null || !tajny.IsEaten) return;
         if (playerCol == null) playerCol = player.GetComponent<Collider2D>();
@@ -151,7 +152,7 @@ public class DobryKonec : MonoBehaviour
         Camera cam = Camera.main;
         yield return PisiciRuka.Napis(cam, napis, 2, rukaTuzka, bila, writeTime, 0.55f);
         yield return new WaitForSeconds(menuPo);
-        SceneManager.LoadScene("KonecHry");
+        SceneManager.LoadScene("KonecMenu");
     }
 
     IEnumerator Let(Transform tr, Vector3 from, Vector3 to, float time, float angle)

@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 887a5300e03ca7e419e7812bc5f8f9fe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6195279917728640448
+    second: Start_Podtitul_0
+  - first:
+      213: -4875553295676132849
+    second: Start_Podtitul_1
+  - first:
+      213: -1916154034560129365
+    second: Start_Podtitul_2
+  - first:
+      213: -6149614062185240053
+    second: Start_Podtitul_3
+  - first:
+      213: 2522785761116478974
+    second: Start_Podtitul_4
+  - first:
+      213: -5178692640623779300
+    second: Start_Podtitul_5
+  - first:
+      213: -2048208298444621962
+    second: Start_Podtitul_6
+  - first:
+      213: -3476432717772020326
+    second: Start_Podtitul_7
+  - first:
+      213: -1197210969688791605
+    second: Start_Podtitul_8
+  - first:
+      213: 6156799880240312900
+    second: Start_Podtitul_9
+  - first:
+      213: -3447607595161446445
+    second: Start_Podtitul_10
+  - first:
+      213: 2189727577203315447
+    second: Start_Podtitul_11
+  - first:
+      213: -6555043023095993543
+    second: Start_Podtitul_12
+  - first:
+      213: -3279938432140357889
+    second: Start_Podtitul_13
+  - first:
+      213: -1590114116273688186
+    second: Start_Podtitul_14
+  - first:
+      213: 5016299574918092548
+    second: Start_Podtitul_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Start_Podtitul_0
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 49
+        width: 31
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0425ca32db1f50aa0800000000000000
+      internalID: -6195279917728640448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 45
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f023dbffb1e865cb0800000000000000
+      internalID: -4875553295676132849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_2
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 39
+        width: 94
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba6ac1bce047865e0800000000000000
+      internalID: -1916154034560129365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_3
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 35
+        width: 61
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0aa3bda79e28aaa0800000000000000
+      internalID: -6149614062185240053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_4
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 66
+        width: 71
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdd2cf884cb20320800000000000000
+      internalID: 2522785761116478974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_5
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 56
+        width: 107
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c12a0b23b769128b0800000000000000
+      internalID: -5178692640623779300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_6
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 78
+        width: 59
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6777339876d4393e0800000000000000
+      internalID: -2048208298444621962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_7
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 65
+        width: 252
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9527a3bcda31cfc0800000000000000
+      internalID: -3476432717772020326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_8
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 86
+        width: 42
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc5af7657f6a26fe0800000000000000
+      internalID: -1197210969688791605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_9
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 88
+        width: 105
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44234e6fed8517550800000000000000
+      internalID: 6156799880240312900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_10
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 96
+        width: 55
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d7967d8823a720d0800000000000000
+      internalID: -3447607595161446445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_11
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 87
+        width: 87
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f2941a31a9736e10800000000000000
+      internalID: 2189727577203315447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_12
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 107
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93be5f0c91fc705a0800000000000000
+      internalID: -6555043023095993543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_13
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 79
+        width: 55
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe4f13bf515b72d0800000000000000
+      internalID: -3279938432140357889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_14
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 99
+        width: 72
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6813c23d2a7cee9e0800000000000000
+      internalID: -1590114116273688186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Podtitul_15
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 48
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4079fe9c2e97d9540800000000000000
+      internalID: 5016299574918092548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Start_Podtitul_0: -6195279917728640448
+      Start_Podtitul_1: -4875553295676132849
+      Start_Podtitul_10: -3447607595161446445
+      Start_Podtitul_11: 2189727577203315447
+      Start_Podtitul_12: -6555043023095993543
+      Start_Podtitul_13: -3279938432140357889
+      Start_Podtitul_14: -1590114116273688186
+      Start_Podtitul_15: 5016299574918092548
+      Start_Podtitul_2: -1916154034560129365
+      Start_Podtitul_3: -6149614062185240053
+      Start_Podtitul_4: 2522785761116478974
+      Start_Podtitul_5: -5178692640623779300
+      Start_Podtitul_6: -2048208298444621962
+      Start_Podtitul_7: -3476432717772020326
+      Start_Podtitul_8: -1197210969688791605
+      Start_Podtitul_9: 6156799880240312900
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
