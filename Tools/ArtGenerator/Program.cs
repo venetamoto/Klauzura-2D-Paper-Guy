@@ -6,9 +6,28 @@ string outDir = args.Length > 0 ? args[0] : ".";
 string what = args.Length > 1 ? args[1] : "all";
 Directory.CreateDirectory(outDir);
 
+if (what == "animace1")
+{
+    Animace.Zoom = 1;
+    Animace.Render(outDir, args[2], args.Skip(3).ToArray());
+    return;
+}
+
 if (what == "animace")
 {
     Animace.Render(outDir, args[2], args.Skip(3).ToArray());
+    return;
+}
+
+if (what == "tlacitko")
+{
+    Napoveda.Tlacitko(args[2], args[3]);
+    return;
+}
+
+if (what == "radky")
+{
+    Napoveda.Radky(args[2], args[3]);
     return;
 }
 

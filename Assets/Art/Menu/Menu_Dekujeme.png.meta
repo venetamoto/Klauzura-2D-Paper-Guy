@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: 94824549f3187594983948edba148713
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4812997844128148767
+    second: Menu_Dekujeme_0
+  - first:
+      213: -3402368360242877661
+    second: Menu_Dekujeme_1
+  - first:
+      213: -2477564247419998719
+    second: Menu_Dekujeme_2
+  - first:
+      213: 2765338071221674980
+    second: Menu_Dekujeme_3
+  - first:
+      213: 3354434571369682277
+    second: Menu_Dekujeme_4
+  - first:
+      213: -1665810111233580201
+    second: Menu_Dekujeme_5
+  - first:
+      213: 5529418532141701334
+    second: Menu_Dekujeme_6
+  - first:
+      213: 1401082131184974425
+    second: Menu_Dekujeme_7
+  - first:
+      213: 8524930048662735449
+    second: Menu_Dekujeme_8
+  - first:
+      213: -3890858911604251183
+    second: Menu_Dekujeme_9
+  - first:
+      213: -8890509108345860431
+    second: Menu_Dekujeme_10
+  - first:
+      213: -5481723080805319448
+    second: Menu_Dekujeme_11
+  - first:
+      213: 1547560460338666352
+    second: Menu_Dekujeme_12
+  - first:
+      213: 508857601484043705
+    second: Menu_Dekujeme_13
+  - first:
+      213: -5900638733516250956
+    second: Menu_Dekujeme_14
+  - first:
+      213: 3847186988678039906
+    second: Menu_Dekujeme_15
+  - first:
+      213: -4776588250386130458
+    second: Menu_Dekujeme_16
+  - first:
+      213: 6274533353109790597
+    second: Menu_Dekujeme_17
+  - first:
+      213: 139311740615047526
+    second: Menu_Dekujeme_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Menu_Dekujeme_0
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 58
+        width: 59
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1daaf3f9043bc240800000000000000
+      internalID: 4812997844128148767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_1
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 150
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32be1bcb00c58c0d0800000000000000
+      internalID: -3402368360242877661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_2
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 117
+        width: 15
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ea254917ced9dd0800000000000000
+      internalID: -2477564247419998719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_3
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 42
+        width: 80
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3280b0354706620800000000000000
+      internalID: 2765338071221674980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_4
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 51
+        width: 71
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56597c858785d8e20800000000000000
+      internalID: 3354434571369682277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_5
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 40
+        width: 69
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7532ba8978ad1e8e0800000000000000
+      internalID: -1665810111233580201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_6
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 59
+        width: 72
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d894cedbd07cbc40800000000000000
+      internalID: 5529418532141701334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_7
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 46
+        width: 76
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a7d6a66c4a17310800000000000000
+      internalID: 1401082131184974425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_8
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 37
+        width: 57
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a889556b2ae4670800000000000000
+      internalID: 8524930048662735449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_9
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 66
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d56aae3f64e00ac0800000000000000
+      internalID: -3890858911604251183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_10
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 54
+        width: 72
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be8ba4e1119e9480800000000000000
+      internalID: -8890509108345860431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_11
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 58
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ecf983c6e10de3b0800000000000000
+      internalID: -5481723080805319448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_12
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 83
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b1de21a0a0a7510800000000000000
+      internalID: 1547560460338666352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_13
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 36
+        width: 94
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5b6b1ea43df0700800000000000000
+      internalID: 508857601484043705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_14
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 67
+        width: 67
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b06ad4b558bc1ea0800000000000000
+      internalID: -5900638733516250956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_15
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 56
+        width: 51
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 269c8a4de24f36530800000000000000
+      internalID: 3847186988678039906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_16
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 91
+        width: 100
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e91e613b4626bdb0800000000000000
+      internalID: -4776588250386130458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_17
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 48
+        width: 66
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f137b37de931750800000000000000
+      internalID: 6274533353109790597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_Dekujeme_18
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 95
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 669b66c3a4feee100800000000000000
+      internalID: 139311740615047526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Menu_Dekujeme_0: 4812997844128148767
+      Menu_Dekujeme_1: -3402368360242877661
+      Menu_Dekujeme_10: -8890509108345860431
+      Menu_Dekujeme_11: -5481723080805319448
+      Menu_Dekujeme_12: 1547560460338666352
+      Menu_Dekujeme_13: 508857601484043705
+      Menu_Dekujeme_14: -5900638733516250956
+      Menu_Dekujeme_15: 3847186988678039906
+      Menu_Dekujeme_16: -4776588250386130458
+      Menu_Dekujeme_17: 6274533353109790597
+      Menu_Dekujeme_18: 139311740615047526
+      Menu_Dekujeme_2: -2477564247419998719
+      Menu_Dekujeme_3: 2765338071221674980
+      Menu_Dekujeme_4: 3354434571369682277
+      Menu_Dekujeme_5: -1665810111233580201
+      Menu_Dekujeme_6: 5529418532141701334
+      Menu_Dekujeme_7: 1401082131184974425
+      Menu_Dekujeme_8: 8524930048662735449
+      Menu_Dekujeme_9: -3890858911604251183
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

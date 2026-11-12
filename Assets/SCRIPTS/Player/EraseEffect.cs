@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EraseEffect : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class EraseEffect : MonoBehaviour
     [Tooltip("Jak dlouho je videt prazdny sesit, nez prijde ruka psat.")]
     public float prazdno = 2.5f;
     public float writeTime = 3.5f;
+    [Tooltip("Za kolik sekund po dopsani napisu se ukaze menu konce hry.")]
+    public float menuPo = 3f;
 
     [Tooltip("Dobry konec: hrac se zachranil, guma uz ho nesmaze.")]
     public bool zachranen;
@@ -153,5 +156,7 @@ public class EraseEffect : MonoBehaviour
         if (epilog == null) yield break;
         Debug.Log("Ruka pise: Kazdy sesit jednou konci...");
         yield return PisiciRuka.Napis(cam, epilog, 1, tuzka, bila, writeTime, epilogWidth);
+        yield return new WaitForSeconds(menuPo);
+        SceneManager.LoadScene("KonecHry");
     }
 }

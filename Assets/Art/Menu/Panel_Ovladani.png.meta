@@ -1,0 +1,1755 @@
+fileFormatVersion: 2
+guid: 88abf5d2b25748a4b8d7385682c6457e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6552341907012191888
+    second: Panel_Ovladani_0
+  - first:
+      213: -1221642201284643183
+    second: Panel_Ovladani_1
+  - first:
+      213: 4164474249727993243
+    second: Panel_Ovladani_2
+  - first:
+      213: -4988041143577610054
+    second: Panel_Ovladani_3
+  - first:
+      213: -3546022753109409489
+    second: Panel_Ovladani_4
+  - first:
+      213: -7604194654301512652
+    second: Panel_Ovladani_5
+  - first:
+      213: -1084682371352102884
+    second: Panel_Ovladani_6
+  - first:
+      213: -1114008296580977799
+    second: Panel_Ovladani_7
+  - first:
+      213: -2722637441047464487
+    second: Panel_Ovladani_8
+  - first:
+      213: -1169709221220844489
+    second: Panel_Ovladani_9
+  - first:
+      213: 2843690858891359784
+    second: Panel_Ovladani_10
+  - first:
+      213: -2135669676820546992
+    second: Panel_Ovladani_11
+  - first:
+      213: 4993698845479202433
+    second: Panel_Ovladani_12
+  - first:
+      213: 4529386389423139316
+    second: Panel_Ovladani_13
+  - first:
+      213: -3369593854542769340
+    second: Panel_Ovladani_14
+  - first:
+      213: 214348981804422109
+    second: Panel_Ovladani_15
+  - first:
+      213: 27903782915593368
+    second: Panel_Ovladani_16
+  - first:
+      213: 3787191075122698154
+    second: Panel_Ovladani_17
+  - first:
+      213: -5588935932982601442
+    second: Panel_Ovladani_18
+  - first:
+      213: -7485369924470453907
+    second: Panel_Ovladani_19
+  - first:
+      213: 1118100431940893663
+    second: Panel_Ovladani_20
+  - first:
+      213: 3066840448642107334
+    second: Panel_Ovladani_21
+  - first:
+      213: -1538934305163256781
+    second: Panel_Ovladani_22
+  - first:
+      213: -2257258835995213713
+    second: Panel_Ovladani_23
+  - first:
+      213: -6845079961520295847
+    second: Panel_Ovladani_24
+  - first:
+      213: 1639032098209820475
+    second: Panel_Ovladani_25
+  - first:
+      213: -1755094027042755653
+    second: Panel_Ovladani_26
+  - first:
+      213: 8209408088391704679
+    second: Panel_Ovladani_27
+  - first:
+      213: -114490438448649147
+    second: Panel_Ovladani_28
+  - first:
+      213: 8302275586934944982
+    second: Panel_Ovladani_29
+  - first:
+      213: 1636690195819130641
+    second: Panel_Ovladani_30
+  - first:
+      213: -5843828116429335790
+    second: Panel_Ovladani_31
+  - first:
+      213: 5835496515629705797
+    second: Panel_Ovladani_32
+  - first:
+      213: 7118380412696300019
+    second: Panel_Ovladani_33
+  - first:
+      213: -2985735281119525727
+    second: Panel_Ovladani_34
+  - first:
+      213: 5903970509710136076
+    second: Panel_Ovladani_35
+  - first:
+      213: -4920004062744563901
+    second: Panel_Ovladani_36
+  - first:
+      213: -5319406358469972086
+    second: Panel_Ovladani_37
+  - first:
+      213: -4821992030763035043
+    second: Panel_Ovladani_38
+  - first:
+      213: -3632407863483188704
+    second: Panel_Ovladani_39
+  - first:
+      213: 772066744027995605
+    second: Panel_Ovladani_40
+  - first:
+      213: -2311505650746545262
+    second: Panel_Ovladani_41
+  - first:
+      213: 6531316582505965052
+    second: Panel_Ovladani_42
+  - first:
+      213: -6414576528402323065
+    second: Panel_Ovladani_43
+  - first:
+      213: -167569167892621456
+    second: Panel_Ovladani_44
+  - first:
+      213: -9158383157168092710
+    second: Panel_Ovladani_45
+  - first:
+      213: -5691723947801441106
+    second: Panel_Ovladani_46
+  - first:
+      213: -8170305603932103547
+    second: Panel_Ovladani_47
+  - first:
+      213: -6505285224475663246
+    second: Panel_Ovladani_48
+  - first:
+      213: 7267519330474571363
+    second: Panel_Ovladani_49
+  - first:
+      213: 3476179442993408766
+    second: Panel_Ovladani_50
+  - first:
+      213: -412820758535889361
+    second: Panel_Ovladani_51
+  - first:
+      213: -7611871569669013087
+    second: Panel_Ovladani_52
+  - first:
+      213: 6218186535761638680
+    second: Panel_Ovladani_53
+  - first:
+      213: -3829996609271102098
+    second: Panel_Ovladani_54
+  - first:
+      213: -2526443330951199167
+    second: Panel_Ovladani_55
+  - first:
+      213: -1612051142726585680
+    second: Panel_Ovladani_56
+  - first:
+      213: -1410495029583494315
+    second: Panel_Ovladani_57
+  - first:
+      213: 4044214234215496810
+    second: Panel_Ovladani_58
+  - first:
+      213: -151301019666614049
+    second: Panel_Ovladani_59
+  - first:
+      213: 8838107087557176171
+    second: Panel_Ovladani_60
+  - first:
+      213: -8129401833033101737
+    second: Panel_Ovladani_61
+  - first:
+      213: -5435139787129349872
+    second: Panel_Ovladani_62
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Panel_Ovladani_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 331
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 079f1a950c76115a0800000000000000
+      internalID: -6552341907012191888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 332
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1967dc5f3eadb0fe0800000000000000
+      internalID: -1221642201284643183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_2
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 333
+        width: 12
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b956c4b044f2bc930800000000000000
+      internalID: 4164474249727993243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_3
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 330
+        width: 47
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab8f508f10be6cab0800000000000000
+      internalID: -4988041143577610054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_4
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 324
+        width: 45
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f21067bf71ff9cec0800000000000000
+      internalID: -3546022753109409489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_5
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 324
+        width: 26
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c1f6b2049787690800000000000000
+      internalID: -7604194654301512652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_6
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 329
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18fd61512f62f0f0800000000000000
+      internalID: -1084682371352102884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_7
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 330
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97be3754b5f3a80f0800000000000000
+      internalID: -1114008296580977799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_8
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 329
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d5ff2a2caf373ad0800000000000000
+      internalID: -2722637441047464487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_9
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 331
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73cf1a229ab54cfe0800000000000000
+      internalID: -1169709221220844489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_10
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 322
+        width: 95
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826be3705c1d67720800000000000000
+      internalID: 2843690858891359784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_11
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 321
+        width: 25
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05ab9838eb39c52e0800000000000000
+      internalID: -2135669676820546992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_12
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 325
+        width: 68
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ee01864ae2d4540800000000000000
+      internalID: 4993698845479202433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_13
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 307
+        width: 37
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f92e086cec9bde30800000000000000
+      internalID: 4529386389423139316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_14
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 325
+        width: 74
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44393aefd3ccc31d0800000000000000
+      internalID: -3369593854542769340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_15
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 229
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd35b66634589f200800000000000000
+      internalID: 214348981804422109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_16
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 232
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 894d29cb752236000800000000000000
+      internalID: 27903782915593368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_17
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 231
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa7d739a73ece8430800000000000000
+      internalID: 3787191075122698154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_18
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 220
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e19d722616c1072b0800000000000000
+      internalID: -5588935932982601442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_19
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 253
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d69cb8f76bf9e1890800000000000000
+      internalID: -7485369924470453907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_20
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 230
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb3c0d3b6a448f00800000000000000
+      internalID: 1118100431940893663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_21
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 219
+        width: 70
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7cc14a32b9f8a20800000000000000
+      internalID: 3066840448642107334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_22
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 231
+        width: 59
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33cd410376b94aae0800000000000000
+      internalID: -1538934305163256781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_23
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 223
+        width: 26
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f60c4625c0b9ca0e0800000000000000
+      internalID: -2257258835995213713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_24
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 228
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9503072ba046101a0800000000000000
+      internalID: -6845079961520295847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_25
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 222
+        width: 25
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f624562030fb610800000000000000
+      internalID: 1639032098209820475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_26
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 225
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbbe4b20847a4a7e0800000000000000
+      internalID: -1755094027042755653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_27
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 216
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7606ecc392dade170800000000000000
+      internalID: 8209408088391704679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_28
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 231
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ce6168d8f396ef0800000000000000
+      internalID: -114490438448649147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_29
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 140
+        width: 51
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4b7a2b8ab973370800000000000000
+      internalID: 8302275586934944982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_30
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 139
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11fe921cf01b6b610800000000000000
+      internalID: 1636690195819130641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_31
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 137
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2131acf3a4d86eea0800000000000000
+      internalID: -5843828116429335790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_32
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 132
+        width: 25
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a6326c929dbf050800000000000000
+      internalID: 5835496515629705797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_33
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 139
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f98cd2454199c260800000000000000
+      internalID: 7118380412696300019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_34
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 127
+        width: 68
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a40587b4998096d0800000000000000
+      internalID: -2985735281119525727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_35
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 137
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0397a3e5ed1fe150800000000000000
+      internalID: 5903970509710136076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_36
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 160
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34fa1aa4f52a8bbb0800000000000000
+      internalID: -4920004062744563901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_37
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 130
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f6173b91cad26b0800000000000000
+      internalID: -5319406358469972086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_38
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 137
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d56da98cbc7d41db0800000000000000
+      internalID: -4821992030763035043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_39
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 35
+        width: 50
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02abfb12b48179dc0800000000000000
+      internalID: -3632407863483188704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_40
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 48
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd5ea4fc9ee6ba00800000000000000
+      internalID: 772066744027995605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_41
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 48
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ba1f68bd1ebefd0800000000000000
+      internalID: -2311505650746545262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_42
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 89
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5e2efc3d5e3aa50800000000000000
+      internalID: 6531316582505965052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_43
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 42
+        width: 74
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789650022a8daf6a0800000000000000
+      internalID: -6414576528402323065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_44
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 43
+        width: 45
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077d378cabcacadf0800000000000000
+      internalID: -167569167892621456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_45
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 93
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad94310ba03e6e080800000000000000
+      internalID: -9158383157168092710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_46
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 48
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eac06bbb93fe201b0800000000000000
+      internalID: -5691723947801441106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_47
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 52
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c5e33675e3d9e80800000000000000
+      internalID: -8170305603932103547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_48
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 51
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 274e7880e8598b5a0800000000000000
+      internalID: -6505285224475663246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_49
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 47
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 366b83b735a6bd460800000000000000
+      internalID: 7267519330474571363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_50
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 46
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efa232b29cedd3030800000000000000
+      internalID: 3476179442993408766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_51
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 48
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e9f8315bd554af0800000000000000
+      internalID: -412820758535889361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_52
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 35
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a1cbf503233d5690800000000000000
+      internalID: -7611871569669013087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_53
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 48
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815703b75bf6b4650800000000000000
+      internalID: 6218186535761638680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_54
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 70
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e650275406e19dac0800000000000000
+      internalID: -3829996609271102098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_55
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 47
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146cf791d2540fcd0800000000000000
+      internalID: -2526443330951199167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_56
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 39
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2f406d608d0a9e0800000000000000
+      internalID: -1612051142726585680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_57
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 50
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553c8346e3aec6ce0800000000000000
+      internalID: -1410495029583494315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_58
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 49
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6c3ef93b6fef1830800000000000000
+      internalID: 4044214234215496810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_59
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 39
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8fd94368876edf0800000000000000
+      internalID: -151301019666614049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_60
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 52
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6b25b0e19347aa70800000000000000
+      internalID: 8838107087557176171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_61
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 47
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75e07a1ba109e2f80800000000000000
+      internalID: -8129401833033101737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panel_Ovladani_62
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 44
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019109309218294b0800000000000000
+      internalID: -5435139787129349872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Panel_Ovladani_0: -6552341907012191888
+      Panel_Ovladani_1: -1221642201284643183
+      Panel_Ovladani_10: 2843690858891359784
+      Panel_Ovladani_11: -2135669676820546992
+      Panel_Ovladani_12: 4993698845479202433
+      Panel_Ovladani_13: 4529386389423139316
+      Panel_Ovladani_14: -3369593854542769340
+      Panel_Ovladani_15: 214348981804422109
+      Panel_Ovladani_16: 27903782915593368
+      Panel_Ovladani_17: 3787191075122698154
+      Panel_Ovladani_18: -5588935932982601442
+      Panel_Ovladani_19: -7485369924470453907
+      Panel_Ovladani_2: 4164474249727993243
+      Panel_Ovladani_20: 1118100431940893663
+      Panel_Ovladani_21: 3066840448642107334
+      Panel_Ovladani_22: -1538934305163256781
+      Panel_Ovladani_23: -2257258835995213713
+      Panel_Ovladani_24: -6845079961520295847
+      Panel_Ovladani_25: 1639032098209820475
+      Panel_Ovladani_26: -1755094027042755653
+      Panel_Ovladani_27: 8209408088391704679
+      Panel_Ovladani_28: -114490438448649147
+      Panel_Ovladani_29: 8302275586934944982
+      Panel_Ovladani_3: -4988041143577610054
+      Panel_Ovladani_30: 1636690195819130641
+      Panel_Ovladani_31: -5843828116429335790
+      Panel_Ovladani_32: 5835496515629705797
+      Panel_Ovladani_33: 7118380412696300019
+      Panel_Ovladani_34: -2985735281119525727
+      Panel_Ovladani_35: 5903970509710136076
+      Panel_Ovladani_36: -4920004062744563901
+      Panel_Ovladani_37: -5319406358469972086
+      Panel_Ovladani_38: -4821992030763035043
+      Panel_Ovladani_39: -3632407863483188704
+      Panel_Ovladani_4: -3546022753109409489
+      Panel_Ovladani_40: 772066744027995605
+      Panel_Ovladani_41: -2311505650746545262
+      Panel_Ovladani_42: 6531316582505965052
+      Panel_Ovladani_43: -6414576528402323065
+      Panel_Ovladani_44: -167569167892621456
+      Panel_Ovladani_45: -9158383157168092710
+      Panel_Ovladani_46: -5691723947801441106
+      Panel_Ovladani_47: -8170305603932103547
+      Panel_Ovladani_48: -6505285224475663246
+      Panel_Ovladani_49: 7267519330474571363
+      Panel_Ovladani_5: -7604194654301512652
+      Panel_Ovladani_50: 3476179442993408766
+      Panel_Ovladani_51: -412820758535889361
+      Panel_Ovladani_52: -7611871569669013087
+      Panel_Ovladani_53: 6218186535761638680
+      Panel_Ovladani_54: -3829996609271102098
+      Panel_Ovladani_55: -2526443330951199167
+      Panel_Ovladani_56: -1612051142726585680
+      Panel_Ovladani_57: -1410495029583494315
+      Panel_Ovladani_58: 4044214234215496810
+      Panel_Ovladani_59: -151301019666614049
+      Panel_Ovladani_6: -1084682371352102884
+      Panel_Ovladani_60: 8838107087557176171
+      Panel_Ovladani_61: -8129401833033101737
+      Panel_Ovladani_62: -5435139787129349872
+      Panel_Ovladani_7: -1114008296580977799
+      Panel_Ovladani_8: -2722637441047464487
+      Panel_Ovladani_9: -1169709221220844489
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

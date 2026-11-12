@@ -24,7 +24,7 @@ static class Napoveda
 
                 using var font = new FontFamily("Ink Free");
                 var text = new GraphicsPath();
-                text.AddString("Stiskni", font, (int)FontStyle.Regular, 70, new PointF(12, 28), StringFormat.GenericDefault);
+                text.AddString("Press", font, (int)FontStyle.Regular, 70, new PointF(12, 28), StringFormat.GenericDefault);
                 float right = text.GetBounds().Right;
                 Pencil(g, text, rnd);
 
@@ -66,6 +66,72 @@ static class Napoveda
             g.Clear(Color.Transparent);
             g.TranslateTransform(30 - r.X, 30 - r.Y);
             Pencil(g, p, rnd);
+        }
+        Grain(bmp, rnd);
+        bmp.Save(path, ImageFormat.Png);
+        Console.WriteLine(path + " " + bmp.Width + "x" + bmp.Height);
+    }
+
+    // tlacitko do menu: napis Ink Free v rucne nakreslenem ramecku
+    public static void Tlacitko(string path, string text)
+    {
+        var rnd = new Random(text.Length * 13 + 5);
+        using var font = new FontFamily("Ink Free");
+        var p = new GraphicsPath();
+        p.AddString(text, font, (int)FontStyle.Regular, 80, new PointF(0, 0), StringFormat.GenericDefault);
+        RectangleF r = p.GetBounds();
+        int pad = 40;
+        int w = (int)r.Width + pad * 2 + 20, h = (int)r.Height + pad * 2 + 10;
+        using var bmp = new Bitmap(w, h, PixelFormat.Format32bppArgb);
+        using (var g = Graphics.FromImage(bmp))
+        {
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            g.Clear(Color.Transparent);
+            using (var b = new SolidBrush(Color.FromArgb(150, 255, 255, 250)))
+                g.FillRectangle(b, 14, 14, w - 28, h - 28);
+            for (int pass = 0; pass < 2; pass++)
+            {
+                var box = new GraphicsPath();
+                box.AddLines(Wobbly(rnd, new PointF[] {
+                    new(12, 12), new(w - 12, 14), new(w - 14, h - 12), new(14, h - 14), new(12, 16) }));
+                using var pen = new Pen(Color.FromArgb(pass == 0 ? 255 : 160, 25, 25, 35), pass == 0 ? 5f : 2.5f) { LineJoin = LineJoin.Round };
+                g.DrawPath(pen, box);
+            }
+            g.TranslateTransform(pad + 10 - r.X, pad + 5 - r.Y);
+            Pencil(g, p, rnd);
+        }
+        Grain(bmp, rnd);
+        bmp.Save(path, ImageFormat.Png);
+        Console.WriteLine(path + " " + w + "x" + h);
+    }
+
+    // nekolik radku textu tuzkou pod sebou (ovladani, autori); | = novy radek
+    public static void Radky(string path, string text)
+    {
+        var rnd = new Random(text.Length);
+        using var font = new FontFamily("Ink Free");
+        var all = new GraphicsPath();
+        all.FillMode = FillMode.Winding;
+        string[] lines = text.Split('|');
+        for (int i = 0; i < lines.Length; i++)
+        {
+            if (lines[i].Length == 0) continue;
+            var p = new GraphicsPath();
+            p.AddString(lines[i], font, (int)FontStyle.Regular, 64, new PointF(0, 0), StringFormat.GenericDefault);
+            using var m = new Matrix();
+            m.Translate(J(rnd, 6f), i * 95f + J(rnd, 3f));
+            m.Rotate(J(rnd, 1.2f));
+            p.Transform(m);
+            all.AddPath(p, false);
+        }
+        RectangleF r = all.GetBounds();
+        using var bmp = new Bitmap((int)r.Width + 80, (int)r.Height + 80, PixelFormat.Format32bppArgb);
+        using (var g = Graphics.FromImage(bmp))
+        {
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            g.Clear(Color.Transparent);
+            g.TranslateTransform(40 - r.X, 40 - r.Y);
+            Pencil(g, all, rnd);
         }
         Grain(bmp, rnd);
         bmp.Save(path, ImageFormat.Png);

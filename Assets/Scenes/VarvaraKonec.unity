@@ -2123,6 +2123,7 @@ MonoBehaviour:
   tuzka: {fileID: 21300000, guid: 368b42fd08781114299305c7f6bbfc6e, type: 3}
   prazdno: 2.5
   writeTime: 3.5
+  menuPo: 3
   zachranen: 0
 --- !u!114 &1096090111
 MonoBehaviour:
@@ -2139,6 +2140,14 @@ MonoBehaviour:
   sesit: {fileID: 976758212}
   okraj: 0.5
   delay: 0.6
+  rozpad:
+  - {fileID: 21300000, guid: cbb1e05c7e7f4f7bbf7c0f5c6e9afeee, type: 3}
+  - {fileID: 21300000, guid: 75c91107315748ff9833d663cb8e0e9a, type: 3}
+  - {fileID: 21300000, guid: 65270ed4f1e940aabd8e7266eaaa6501, type: 3}
+  - {fileID: 21300000, guid: 762c31d7fa9b4660be79968efab80c0a, type: 3}
+  - {fileID: 21300000, guid: 0efea84e580f49efb2fbc7ec34b7e9cf, type: 3}
+  - {fileID: 21300000, guid: 63edaba6812d4a51b0ed1001f208d2bb, type: 3}
+  rozpadTime: 1.2
 --- !u!114 &1096090112 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1516316970225311282, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
@@ -2671,6 +2680,7 @@ MonoBehaviour:
   napis: {fileID: 21300000, guid: b7ae79c5e3de9b747a6fbfe9a77243f0, type: 3}
   stenaVyska: 7
   writeTime: 4.5
+  menuPo: 3
 --- !u!1 &1306992408
 GameObject:
   m_ObjectHideFlags: 0

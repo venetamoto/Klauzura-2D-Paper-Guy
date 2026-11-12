@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Dobry konec: kdo cestou snedl tajny modry ctverecek, najde na ostrove tuzku.
 // Klavesou F ji vezme, dokresli si chocholku a pred gumu nakresli stenu. Guma narazi a odleti.
@@ -29,6 +30,7 @@ public class DobryKonec : MonoBehaviour
     public Sprite napis;
     public float stenaVyska = 7f;
     public float writeTime = 4.5f;
+    public float menuPo = 3f;
 
     bool ukazana;
     bool vzata;
@@ -148,6 +150,8 @@ public class DobryKonec : MonoBehaviour
         Debug.Log("Ruka pise: Nekdy si svuj pribeh musis dokreslit sam...");
         Camera cam = Camera.main;
         yield return PisiciRuka.Napis(cam, napis, 2, rukaTuzka, bila, writeTime, 0.55f);
+        yield return new WaitForSeconds(menuPo);
+        SceneManager.LoadScene("KonecHry");
     }
 
     IEnumerator Let(Transform tr, Vector3 from, Vector3 to, float time, float angle)

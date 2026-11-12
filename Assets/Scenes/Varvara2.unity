@@ -1505,6 +1505,14 @@ MonoBehaviour:
   sesit: {fileID: 1935520779}
   okraj: 0.5
   delay: 0.6
+  rozpad:
+  - {fileID: 21300000, guid: cbb1e05c7e7f4f7bbf7c0f5c6e9afeee, type: 3}
+  - {fileID: 21300000, guid: 75c91107315748ff9833d663cb8e0e9a, type: 3}
+  - {fileID: 21300000, guid: 65270ed4f1e940aabd8e7266eaaa6501, type: 3}
+  - {fileID: 21300000, guid: 762c31d7fa9b4660be79968efab80c0a, type: 3}
+  - {fileID: 21300000, guid: 0efea84e580f49efb2fbc7ec34b7e9cf, type: 3}
+  - {fileID: 21300000, guid: 63edaba6812d4a51b0ed1001f208d2bb, type: 3}
+  rozpadTime: 1.2
 --- !u!1 &1622853976
 GameObject:
   m_ObjectHideFlags: 0
