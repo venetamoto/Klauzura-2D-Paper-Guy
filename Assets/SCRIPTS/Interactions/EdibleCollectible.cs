@@ -74,18 +74,20 @@ public class EdibleCollectible : MonoBehaviour
         }
         bod += 1;
 
-        // v levelu Ines: kdyz je snedeno vsechno, jde se na level Varvara
-        if (SceneManager.GetActiveScene().name == "Ines" && bod >= celkem)
+        // poradi levelu: Ines -> Filip -> Varvara; kdyz je snedeno vsechno, jde se na dalsi
+        string scena = SceneManager.GetActiveScene().name;
+        string dalsi = scena == "Ines" ? "Filip" : scena == "Filip" ? "Varvara" : null;
+        if (dalsi != null && bod >= celkem)
         {
-            Debug.Log("Snedeno vsech " + celkem + ", jde se na Varvaru");
-            player.StartCoroutine(NaVarvaru());
+            Debug.Log("Snedeno vsech " + celkem + ", jde se na " + dalsi);
+            player.StartCoroutine(Dalsi(dalsi));
         }
         gameObject.SetActive(false);
     }
 
-    static IEnumerator NaVarvaru()
+    static IEnumerator Dalsi(string scena)
     {
         yield return new WaitForSeconds(0.6f);
-        SceneManager.LoadScene("Varvara");
+        SceneManager.LoadScene(scena);
     }
 }
