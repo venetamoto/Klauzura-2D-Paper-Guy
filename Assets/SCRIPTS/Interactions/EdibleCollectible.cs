@@ -11,7 +11,7 @@ public class EdibleCollectible : MonoBehaviour
     bool eaten;
     public static int bod = 0;
     [SerializeField] int bod2 = 0;
-    [SerializeField]int zkonzumovano = 0;
+    public static int zkonzumovano = 0;
 
     public bool IsEaten => eaten;
 
@@ -20,14 +20,8 @@ public class EdibleCollectible : MonoBehaviour
 
     void Start()
     {
-        bod = 0;
-        bod2 = 0;
         celkem = FindObjectsByType<EdibleCollectible>(FindObjectsSortMode.None).Length;
-    }
-    void Update()
-    {
-        bod2 = bod;
-        bod = bod2;
+        zkonzumovano = 0;
     }
 
     void Awake()
@@ -44,17 +38,17 @@ public class EdibleCollectible : MonoBehaviour
         if(player == null)
         {
             Destroy(gameObject);
-            zkonzumovano += 1;
         }
 
         if (player != null)
         {
+            zkonzumovano += 1;
+            Debug.Log("jídlo: " + zkonzumovano);
             eaten = true;
             player.Eat();
             Debug.Log("Snedeno: " + name);
             StartCoroutine(FlyIntoMouth(player));
         }
-
     }
 
     // jazyk vec chnapne a ona zaleti do tlamy na brisku
