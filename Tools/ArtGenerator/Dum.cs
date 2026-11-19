@@ -10,8 +10,8 @@ using System.IO;
 static class Dum
 {
     const float PPU = 60f;
-    const float X0 = 22.4f, Y1 = 6.8f;          // levy horni roh obrazku ve svete
-    const float W = 18.5f, H = 11.8f;            // x 22.4..40.9, y -5..6.8
+    const float X0 = 22.4f, Y1 = 6.0f;          // levy horni roh obrazku ve svete (pod textem cervene plosiny)
+    const float W = 18.5f, H = 11.0f;            // x 22.4..40.9, y -5..6.0
     static readonly Color Tuzka = Color.FromArgb(55, 52, 50);
     static readonly Color Papir = Color.FromArgb(242, 238, 228);
     static readonly Color PapirTmavsi = Color.FromArgb(228, 222, 208);
@@ -29,36 +29,36 @@ static class Dum
             var rnd = new Random(11);
 
             // --- stena z prken ---
-            PointF[] stena = { P(22.7f, 4.7f), P(40.6f, 4.5f), P(40.6f, -5f), P(22.7f, -5f) };
+            PointF[] stena = { P(22.7f, 3.9f), P(40.6f, 3.7f), P(40.6f, -5f), P(22.7f, -5f) };
             using (var b = new SolidBrush(Papir)) g.FillPolygon(b, stena);
             using (var cesta = new GraphicsPath()) { cesta.AddPolygon(stena); Srafuj(g, cesta, 0.2f, 45, 72, rnd); }
             for (float x = 23.8f; x < 40.4f; x += 1.15f + (float)rnd.NextDouble() * 0.25f)
             {
-                float top = 4.7f - (x - 22.7f) * 0.011f;
+                float top = 3.9f - (x - 22.7f) * 0.011f;
                 Cara(g, new[] { P(x, top), P(x + 0.05f, -1.5f), P(x - 0.03f, -5f) }, 2.2f, 3f, rnd.Next());
-                if (rnd.NextDouble() < 0.5) Suk(g, x + 0.55f, -4.5f + (float)rnd.NextDouble() * 8.5f, rnd);
+                if (rnd.NextDouble() < 0.5) Suk(g, x + 0.55f, -4.5f + (float)rnd.NextDouble() * 7.8f, rnd);
             }
             Cara(g, stena, 4f, 3f, 5, true);
             // stin pod strechou
-            using (var cesta = new GraphicsPath()) { cesta.AddPolygon(new[] { P(22.7f, 4.7f), P(40.6f, 4.5f), P(40.6f, 3.9f), P(22.7f, 4.1f) }); Srafuj(g, cesta, 0.06f, 140, 30, rnd); }
+            using (var cesta = new GraphicsPath()) { cesta.AddPolygon(new[] { P(22.7f, 3.9f), P(40.6f, 3.7f), P(40.6f, 3.1f), P(22.7f, 3.3f) }); Srafuj(g, cesta, 0.06f, 140, 30, rnd); }
 
             // --- krivá strecha z prken ---
-            PointF[] strecha = { P(22.4f, 4.3f), P(23.3f, 6.7f), P(40.0f, 6.78f), P(40.9f, 4.0f), P(31.5f, 4.45f) };
+            PointF[] strecha = { P(22.4f, 3.5f), P(23.3f, 5.85f), P(40.0f, 5.92f), P(40.9f, 3.2f), P(31.5f, 3.65f) };
             using (var b = new SolidBrush(PapirTmavsi)) g.FillPolygon(b, strecha);
-            for (float y = 4.6f; y < 6.7f; y += 0.42f)
+            for (float y = 3.8f; y < 5.85f; y += 0.41f)
             {
                 float sag = (float)rnd.NextDouble() * 0.12f;
-                Cara(g, new[] { P(22.6f + (y - 4.3f) * 0.35f, y), P(31.5f, y - 0.12f - sag), P(40.6f - (y - 4.0f) * 0.25f, y + 0.05f) }, 2f, 3f, rnd.Next());
+                Cara(g, new[] { P(22.6f + (y - 3.5f) * 0.35f, y), P(31.5f, y - 0.12f - sag), P(40.6f - (y - 3.2f) * 0.25f, y + 0.05f) }, 2f, 3f, rnd.Next());
             }
             for (int i = 0; i < 40; i++)
             {
-                float x = 23f + (float)rnd.NextDouble() * 17f, y = 4.6f + (float)rnd.NextDouble() * 1.9f;
+                float x = 23f + (float)rnd.NextDouble() * 17f, y = 3.8f + (float)rnd.NextDouble() * 1.85f;
                 Cara(g, new[] { P(x, y), P(x + 0.5f + (float)rnd.NextDouble() * 0.8f, y + 0.05f) }, 1.3f, 1.5f, rnd.Next());
             }
             // svisle spary mezi sindeli
             for (int i = 0; i < 70; i++)
             {
-                float x = 23.2f + (float)rnd.NextDouble() * 17f, y = 4.5f + (float)rnd.NextDouble() * 2.1f;
+                float x = 23.2f + (float)rnd.NextDouble() * 17f, y = 3.7f + (float)rnd.NextDouble() * 1.9f;
                 Cara(g, new[] { P(x, y), P(x + 0.04f, y + 0.36f) }, 1.6f, 1f, rnd.Next());
             }
             using (var cesta = new GraphicsPath()) { cesta.AddPolygon(strecha); Srafuj(g, cesta, 0.12f, 70, 15, rnd); }
@@ -67,7 +67,7 @@ static class Dum
             // --- okna (diry) a dvere (diry) ---
             RectangleF[] okna = {
                 R(26.3f, -4.7f, 29.4f, -1.9f), R(32.6f, -4.7f, 35.7f, -1.9f),   // dole - hrdina chodi po zemi
-                R(27.1f, 0.5f, 29.7f, 3.1f), R(33.3f, 0.5f, 35.9f, 3.1f) };     // nahore - kdyz pada shora
+                R(27.1f, 0.1f, 29.7f, 2.5f), R(33.3f, 0.1f, 35.9f, 2.5f) };     // nahore - kdyz pada shora
             RectangleF[] dvere = { R(22.76f, -5f, 24.63f, -1.61f), R(38.53f, -5f, 40.59f, -1.56f) };
 
             g.CompositingMode = CompositingMode.SourceCopy;
@@ -84,6 +84,24 @@ static class Dum
                 // zarubne
                 Cara(g, new[] { P(d.Left - 0.12f, d.Top), P(d.Left - 0.12f, d.Bottom + 0.15f), P(d.Right + 0.12f, d.Bottom + 0.15f), P(d.Right + 0.12f, d.Top) }, 3.5f, 2.5f, rnd.Next());
             }
+
+            // skica: krizove srafovani do koutu a pod okna (mimo diry)
+            Kriz(g, 22.75f, -1.3f, 25.6f, 0.8f, 160, rnd);
+            Kriz(g, 37.6f, -1.25f, 40.55f, 0.9f, 160, rnd);
+            Kriz(g, 26.9f, -0.9f, 29.9f, -0.15f, 70, rnd);
+            Kriz(g, 33.1f, -0.9f, 36.1f, -0.15f, 70, rnd);
+            Kriz(g, 29.7f, -5f, 32.3f, -3.4f, 90, rnd);
+            Kriz(g, 36.0f, -5f, 38.3f, -3.8f, 60, rnd);
+            Kriz(g, 24.8f, -5f, 26.1f, -3.9f, 40, rnd);
+            // trava a kaminky u zeme
+            using (var pen = new Pen(Color.FromArgb(150, Tuzka), 1.6f) { StartCap = LineCap.Round, EndCap = LineCap.Round })
+                for (int i = 0; i < 140; i++)
+                {
+                    float x = 22.5f + (float)rnd.NextDouble() * 18.2f;
+                    PointF z = P(x, -5f);
+                    float v = 6f + (float)rnd.NextDouble() * 12f, nakl = ((float)rnd.NextDouble() - 0.5f) * 10f;
+                    g.DrawLine(pen, z.X, z.Y - 1, z.X + nakl, z.Y - v);
+                }
         }
         string cesta2 = Path.Combine(slozka, "Dum.png");
         bmp.Save(cesta2, ImageFormat.Png);
@@ -161,30 +179,58 @@ static class Dum
     static void Cara(Graphics g, PointF[] body, float sirka, float amp, int seed, bool zavrena = false) => CaraPx(g, body, sirka, amp, seed, zavrena);
 
     // carka tuzkou: dvakrat pres sebe, trochu roztresena
+    // skica: kazdy usek je samostatny tah, 3x pres sebe, konce prelezaji pres rohy, obcas mezera
     static void CaraPx(Graphics g, PointF[] body, float sirka, float amp, int seed, bool zavrena = false)
     {
-        for (int pruchod = 0; pruchod < 2; pruchod++)
+        int n = zavrena ? body.Length : body.Length - 1;
+        for (int pruchod = 0; pruchod < 3; pruchod++)
         {
             var rnd = new Random(seed + pruchod * 31);
-            var vys = new List<PointF>();
-            int n = zavrena ? body.Length : body.Length - 1;
+            int alfa = pruchod == 0 ? 215 : pruchod == 1 ? 130 : 75;
+            float tl = pruchod == 0 ? sirka : sirka * (0.45f + 0.15f * pruchod);
+            using var pen = new Pen(Color.FromArgb(alfa, Tuzka), tl) { LineJoin = LineJoin.Round, StartCap = LineCap.Round, EndCap = LineCap.Round };
             for (int i = 0; i < n; i++)
             {
                 PointF a = body[i], b = body[(i + 1) % body.Length];
                 float dx = b.X - a.X, dy = b.Y - a.Y, len = MathF.Sqrt(dx * dx + dy * dy);
                 if (len < 0.01f) continue;
-                int kroku = Math.Max(1, (int)(len / 12));
-                float nx = -dy / len, ny = dx / len;
-                for (int j = 0; j < kroku; j++)
+                float ux = dx / len, uy = dy / len, nx = -uy, ny = ux;
+                // prelez pres konce a posun celeho tahu
+                float pred = 3f + (float)rnd.NextDouble() * 12f, za = 3f + (float)rnd.NextDouble() * 12f;
+                float posun = ((float)rnd.NextDouble() - 0.5f) * 2.5f * (pruchod + 1);
+                PointF z = new PointF(a.X - ux * pred + nx * posun, a.Y - uy * pred + ny * posun);
+                PointF k = new PointF(b.X + ux * za + nx * posun, b.Y + uy * za + ny * posun);
+                float L = len + pred + za;
+                int kroku = Math.Max(2, (int)(L / 10));
+                var tah = new List<PointF>();
+                for (int j = 0; j <= kroku; j++)
                 {
-                    float t = j / (float)kroku, off = ((float)rnd.NextDouble() - 0.5f) * amp;
-                    vys.Add(new PointF(a.X + dx * t + nx * off, a.Y + dy * t + ny * off));
+                    float t = j / (float)kroku, off = ((float)rnd.NextDouble() - 0.5f) * amp * 1.4f;
+                    // obcas tuzka odskoci - kratka mezera
+                    if (pruchod == 0 && j > 1 && j < kroku - 1 && rnd.NextDouble() < 0.025)
+                    {
+                        if (tah.Count > 1) g.DrawLines(pen, tah.ToArray());
+                        tah.Clear();
+                        continue;
+                    }
+                    tah.Add(new PointF(z.X + (k.X - z.X) * t + nx * off, z.Y + (k.Y - z.Y) * t + ny * off));
                 }
+                if (tah.Count > 1) g.DrawLines(pen, tah.ToArray());
             }
-            vys.Add(zavrena ? vys[0] : body[body.Length - 1]);
-            using var pen = new Pen(Color.FromArgb(pruchod == 0 ? 230 : 110, Tuzka), pruchod == 0 ? sirka : sirka * 0.6f)
-            { LineJoin = LineJoin.Round, StartCap = LineCap.Round, EndCap = LineCap.Round };
-            if (vys.Count > 1) g.DrawLines(pen, vys.ToArray());
+        }
+    }
+
+    // krizove srafovani do kouta (svetove souradnice obdelniku), hustota = pocet tahu
+    static void Kriz(Graphics g, float x0, float y0, float x1, float y1, int hustota, Random rnd)
+    {
+        using var pen = new Pen(Color.FromArgb(95, Tuzka), 1.5f) { StartCap = LineCap.Round, EndCap = LineCap.Round };
+        PointF a = P(x0, y1), b = P(x1, y0);
+        for (int i = 0; i < hustota; i++)
+        {
+            float x = a.X + (float)rnd.NextDouble() * (b.X - a.X), y = a.Y + (float)rnd.NextDouble() * (b.Y - a.Y);
+            float d = 10f + (float)rnd.NextDouble() * 22f;
+            if (i % 2 == 0) g.DrawLine(pen, x, y, x + d * 0.6f, y - d);
+            else g.DrawLine(pen, x, y, x + d, y + d * 0.35f);
         }
     }
 
