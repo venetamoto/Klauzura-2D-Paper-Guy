@@ -6,6 +6,18 @@ string outDir = args.Length > 0 ? args[0] : ".";
 string what = args.Length > 1 ? args[1] : "all";
 Directory.CreateDirectory(outDir);
 
+if (what == "roztahnout")
+{
+    Roztahnout.Udelej(args[2], args[3], int.Parse(args[4]));
+    return;
+}
+
+if (what == "barevne")
+{
+    RukopisBarevny.Udelej(args[2], args[3], int.Parse(args[4]));
+    return;
+}
+
 if (what == "rukafoto")
 {
     RukaFoto.Vyrez(args[2], args[3], args[4]);

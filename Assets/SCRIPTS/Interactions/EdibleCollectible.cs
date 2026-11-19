@@ -20,6 +20,9 @@ public class EdibleCollectible : MonoBehaviour
 
     void Start()
     {
+        // kazdy level pocita snedene jidlo od nuly (jinak se bod pricita z minuleho levelu i z minuleho Play)
+        bod = 0;
+        bod2 = 0;
         celkem = FindObjectsByType<EdibleCollectible>(FindObjectsSortMode.None).Length;
         zkonzumovano = 0;
     }

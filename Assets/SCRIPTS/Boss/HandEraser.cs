@@ -11,6 +11,9 @@ public class HandEraser : MonoBehaviour
     [Header("Smaze se az po snedeni")]
     public EdibleCollectible needEaten;
 
+    [Header("Napsany text na plosine - smaze se spolu s ni")]
+    public SpriteRenderer napis;
+
     [Header("Potom ruka nakresli malou plosinu")]
     public GameObject drawAfter;
     public float drawTime = 1f;
@@ -58,10 +61,12 @@ public class HandEraser : MonoBehaviour
 
             c.a = 1f - t / eraseTime;
             sr.color = c;
+            if (napis != null) napis.color = new Color(1f, 1f, 1f, c.a);
             yield return null;
         }
 
         sr.enabled = false;
+        if (napis != null) napis.enabled = false;
         col.enabled = false;
 
         if (drawAfter != null) yield return DrawPlatform();

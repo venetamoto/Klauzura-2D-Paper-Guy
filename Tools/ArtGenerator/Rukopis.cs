@@ -198,3 +198,96 @@ static class Svatozar
         Console.WriteLine($"{soubor}: {W}x{H}, svatozar {r} px");
     }
 }
+
+// Vyrez textu, ktery ma i cervene skrtnuti: modra propiska zustane modra, cervena cervena; tahy tlustsi o t px
+static class RukopisBarevny
+{
+    public static void Udelej(string vstup, string vystup, int t)
+    {
+        using var src = new Bitmap(vstup);
+        int w = src.Width, h = src.Height;
+        var a = new int[w, h];
+        var cervena = new bool[w, h];
+        int x0 = w, y0 = h, x1 = -1, y1 = -1;
+        for (int y = 0; y < h; y++)
+            for (int x = 0; x < w; x++)
+            {
+                Color c = src.GetPixel(x, y);
+                int rozdil = Math.Abs(c.B - c.R);
+                int al = Math.Clamp((rozdil - 10) * 255 / 55, 0, 255);
+                a[x, y] = al;
+                cervena[x, y] = c.R > c.B;
+                if (al > 90) { x0 = Math.Min(x0, x); x1 = Math.Max(x1, x); y0 = Math.Min(y0, y); y1 = Math.Max(y1, y); }
+            }
+        int okraj = 6 + t;
+        int W = x1 - x0 + 1 + 2 * okraj, H = y1 - y0 + 1 + 2 * okraj;
+        var b = new int[W, H];
+        var bc = new bool[W, H];
+        for (int y = y0; y <= y1; y++)
+            for (int x = x0; x <= x1; x++)
+            {
+                int v = a[x, y];
+                if (v < 90) continue;
+                for (int oy = -t; oy <= t; oy++)
+                    for (int ox = -t; ox <= t; ox++)
+                    {
+                        if (ox * ox + oy * oy > t * t + 1) continue;
+                        int px = x - x0 + okraj + ox, py = y - y0 + okraj + oy;
+                        // cervena vyhrava (skrtnuti je pres text)
+                        if (v > b[px, py] || (cervena[x, y] && !bc[px, py])) { b[px, py] = Math.Max(v, b[px, py]); bc[px, py] = cervena[x, y]; }
+                    }
+            }
+        Color modra = Color.FromArgb(12, 36, 120), cerv = Color.FromArgb(205, 40, 45);
+        using var dst = new Bitmap(W, H, PixelFormat.Format32bppArgb);
+        for (int y = 0; y < H; y++)
+            for (int x = 0; x < W; x++)
+                dst.SetPixel(x, y, Color.FromArgb(Math.Min(255, b[x, y] * 3 / 2), bc[x, y] ? cerv : modra));
+        dst.Save(vystup, ImageFormat.Png);
+        Console.WriteLine($"{vystup}: {W}x{H}, +{t} px, modra + cervena");
+    }
+}
+
+// Roztahne napis na danou sirku tim, ze rozsune slova (pismena se nedeformuji); vypise, kde je cervena (skrtnuti)
+static class Roztahnout
+{
+    public static void Udelej(string vstup, string vystup, int cilSirka)
+    {
+        using var src = new Bitmap(vstup);
+        int w = src.Width, h = src.Height;
+        bool[] prazdny = new bool[w];
+        for (int x = 0; x < w; x++)
+        {
+            prazdny[x] = true;
+            for (int y = 0; y < h; y++) if (src.GetPixel(x, y).A > 40) { prazdny[x] = false; break; }
+        }
+        // mezery mezi slovy = aspon 25 px bez inkoustu
+        var mezery = new System.Collections.Generic.List<(int z, int k)>();
+        for (int x = 0; x < w; x++)
+        {
+            if (!prazdny[x]) continue;
+            int z = x;
+            while (x < w && prazdny[x]) x++;
+            if (x - z >= 25 && z > 0 && x < w) mezery.Add((z, x));
+        }
+        int navic = Math.Max(0, cilSirka - w);
+        int naMezeru = mezery.Count > 0 ? navic / mezery.Count : 0;
+        int W = w + naMezeru * mezery.Count;
+        using var dst = new Bitmap(W, h, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+        int posun = 0, m = 0;
+        long cervX = 0, cervN = 0;
+        for (int x = 0; x < w; x++)
+        {
+            if (m < mezery.Count && x == mezery[m].z) { posun += naMezeru; m++; }
+            for (int y = 0; y < h; y++)
+            {
+                Color c = src.GetPixel(x, y);
+                if (c.A == 0) continue;
+                dst.SetPixel(x + posun, y, c);
+                if (c.A > 120 && c.R > c.B) { cervX += x + posun; cervN++; }
+            }
+        }
+        dst.Save(vystup, System.Drawing.Imaging.ImageFormat.Png);
+        float cerv = cervN > 0 ? (float)cervX / cervN / W : -1f;
+        Console.WriteLine($"{vystup}: {W}x{h}, mezer {mezery.Count}, cervena na {cerv.ToString("0.000", System.Globalization.CultureInfo.InvariantCulture)} sirky");
+    }
+}

@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: a132a2c0f1cd6ed4e829a01aec62d33a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5620893063862551786
+    second: Text_Spodni_0
+  - first:
+      213: 8005798200486667572
+    second: Text_Spodni_1
+  - first:
+      213: 234861401558047791
+    second: Text_Spodni_2
+  - first:
+      213: 5527953520243136439
+    second: Text_Spodni_3
+  - first:
+      213: 4441727906522544457
+    second: Text_Spodni_4
+  - first:
+      213: -5080737898666306306
+    second: Text_Spodni_5
+  - first:
+      213: 3738142938520140838
+    second: Text_Spodni_6
+  - first:
+      213: 5147533841295786194
+    second: Text_Spodni_7
+  - first:
+      213: -9081541298330657816
+    second: Text_Spodni_8
+  - first:
+      213: 1087999120478922285
+    second: Text_Spodni_9
+  - first:
+      213: -6257314877287275672
+    second: Text_Spodni_10
+  - first:
+      213: 1054895589899139604
+    second: Text_Spodni_11
+  - first:
+      213: 4105616411458328953
+    second: Text_Spodni_12
+  - first:
+      213: -8519980684594737841
+    second: Text_Spodni_13
+  - first:
+      213: 4397932080968867786
+    second: Text_Spodni_14
+  - first:
+      213: 6307861540066746654
+    second: Text_Spodni_15
+  - first:
+      213: 3448956899090527188
+    second: Text_Spodni_16
+  - first:
+      213: -5924152814795964470
+    second: Text_Spodni_17
+  - first:
+      213: 7479060226022238606
+    second: Text_Spodni_18
+  - first:
+      213: 5302796096146170804
+    second: Text_Spodni_19
+  - first:
+      213: -8787861876754700814
+    second: Text_Spodni_20
+  - first:
+      213: 3241118636398295936
+    second: Text_Spodni_21
+  - first:
+      213: 8893782114950286755
+    second: Text_Spodni_22
+  - first:
+      213: 26533266148240344
+    second: Text_Spodni_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Text_Spodni_0
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 41
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae40cf7f57c610e40800000000000000
+      internalID: 5620893063862551786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_1
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 20
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 435287bfb0f4a1f60800000000000000
+      internalID: 8005798200486667572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_2
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 25
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c515b4335624300800000000000000
+      internalID: 234861401558047791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_3
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 62
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b756f4307c37bc40800000000000000
+      internalID: 5527953520243136439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_4
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 21
+        width: 85
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94937396fff24ad30800000000000000
+      internalID: 4441727906522544457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_5
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 41
+        width: 76
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef45121dcc79d79b0800000000000000
+      internalID: -5080737898666306306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_6
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 43
+        width: 43
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62cb022723d80e330800000000000000
+      internalID: 3738142938520140838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_7
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 64
+        width: 43
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0ccbf71c6bf6740800000000000000
+      internalID: 5147533841295786194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_8
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 54
+        width: 35
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb16f32e42e7f180800000000000000
+      internalID: -9081541298330657816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_9
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 60
+        width: 37
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2665148f69591f00800000000000000
+      internalID: 1087999120478922285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_10
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 43
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8636683954d8929a0800000000000000
+      internalID: -6257314877287275672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_11
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 9
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a701f23fdb3ae00800000000000000
+      internalID: 1054895589899139604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_12
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 11
+        width: 42
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979dcfcaf541af830800000000000000
+      internalID: 4105616411458328953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_13
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 12
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d8a8945b2f2c980800000000000000
+      internalID: -8519980684594737841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_14
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 9
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf91782de7980d30800000000000000
+      internalID: 4397932080968867786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_15
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 14
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e11e60476a60a8750800000000000000
+      internalID: 6307861540066746654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_16
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 12
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d37cefb6082ddf20800000000000000
+      internalID: 3448956899090527188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_17
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 27
+        width: 43
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acfb4f6076e29cda0800000000000000
+      internalID: -5924152814795964470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_18
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 20
+        width: 68
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e89eec956a5fac760800000000000000
+      internalID: 7479060226022238606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_19
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 44
+        width: 33
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b3ee1b34f0579940800000000000000
+      internalID: 5302796096146170804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_20
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 35
+        width: 39
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5a6d4ee2e3b0680800000000000000
+      internalID: -8787861876754700814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_21
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 46
+        width: 38
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b3b654a34cafc20800000000000000
+      internalID: 3241118636398295936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_22
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 23
+        width: 33
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ad855756bf0d6b70800000000000000
+      internalID: 8893782114950286755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Text_Spodni_23
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 5
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db2f7f6dd34e5000800000000000000
+      internalID: 26533266148240344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Text_Spodni_0: 5620893063862551786
+      Text_Spodni_1: 8005798200486667572
+      Text_Spodni_10: -6257314877287275672
+      Text_Spodni_11: 1054895589899139604
+      Text_Spodni_12: 4105616411458328953
+      Text_Spodni_13: -8519980684594737841
+      Text_Spodni_14: 4397932080968867786
+      Text_Spodni_15: 6307861540066746654
+      Text_Spodni_16: 3448956899090527188
+      Text_Spodni_17: -5924152814795964470
+      Text_Spodni_18: 7479060226022238606
+      Text_Spodni_19: 5302796096146170804
+      Text_Spodni_2: 234861401558047791
+      Text_Spodni_20: -8787861876754700814
+      Text_Spodni_21: 3241118636398295936
+      Text_Spodni_22: 8893782114950286755
+      Text_Spodni_23: 26533266148240344
+      Text_Spodni_3: 5527953520243136439
+      Text_Spodni_4: 4441727906522544457
+      Text_Spodni_5: -5080737898666306306
+      Text_Spodni_6: 3738142938520140838
+      Text_Spodni_7: 5147533841295786194
+      Text_Spodni_8: -9081541298330657816
+      Text_Spodni_9: 1087999120478922285
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
