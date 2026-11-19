@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 1524898053097314465}
   - component: {fileID: 2456890738472651819}
   - component: {fileID: -1890651310198482789}
+  - component: {fileID: 4873185633315914368}
   m_Layer: 0
   m_Name: "\u010Dm\xE1rkomrakz\xE1kladn\xED_0"
   m_TagString: Player
@@ -268,6 +269,8 @@ MonoBehaviour:
   speedY3: 0
   spriteRenderer: {fileID: 0}
   promena: {fileID: 0}
+  waitForTongue: 0.35
+  flyTime: 0.3
 --- !u!61 &2456890738472651819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -341,3 +344,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4873185633315914368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154505352052876079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467e83742ae488143bb2199059e192bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: "Assembly-CSharp::destruk\u010Dn\xEDSkript"
+  bomba: {fileID: 0}
+  zed1: {fileID: 0}
+  zed12: {fileID: 0}
+  stul: {fileID: 0}
+  nuzky: {fileID: 4712013356286340791, guid: 44fde2716e7969c4780b8e2b6db111b7, type: 3}
+  snura: {fileID: 2570529219976704791, guid: 6f7e2ac1ad9134a4480e677cb79f8dd3, type: 3}
+  zed2: {fileID: 1736051514857081667, guid: cc89b1134fe914548bfcae732384ac32, type: 3}
+  mrakTransformatorPrefab: {fileID: 8154505352052876079}
+  cmarkaTransformatorPrefab: {fileID: 7341812184705142913, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}

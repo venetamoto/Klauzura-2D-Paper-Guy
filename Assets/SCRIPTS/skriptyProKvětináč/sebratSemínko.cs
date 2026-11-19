@@ -2,15 +2,6 @@ using UnityEngine;
 
 public class sebratSemínko : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {

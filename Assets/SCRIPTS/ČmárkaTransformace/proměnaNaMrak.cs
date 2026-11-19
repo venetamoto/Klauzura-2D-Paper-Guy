@@ -39,17 +39,17 @@ public class proměnaNaMrak : MonoBehaviour
     {
         if (collision.gameObject.tag == "bomba")
         {
-            bomba.bombaSebrano = true;
+            destrukčníSkript.bombaSebrano = true;
         }
         if (collision.gameObject.tag == "zdivo")
         {
-            if (bomba.bombaSebrano == true)
+            if (destrukčníSkript.bombaSebrano == true)
             {
                 znicZed = true;
                 mrakTransformace = true;
                 znicMrak = true;
                 transform.position = new Vector3(4f, -10f, 0f);
-                bomba.bombaSebrano = false;
+                destrukčníSkript.bombaSebrano = false;
             }
         }
         if (collision.gameObject.tag == "čmárkaTransformator")
