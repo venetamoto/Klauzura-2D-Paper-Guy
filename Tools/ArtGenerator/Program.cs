@@ -6,6 +6,25 @@ string outDir = args.Length > 0 ? args[0] : ".";
 string what = args.Length > 1 ? args[1] : "all";
 Directory.CreateDirectory(outDir);
 
+if (what == "dum")
+{
+    Dum.Kresli(outDir);
+    return;
+}
+
+if (what == "scena")
+{
+    var ci = System.Globalization.CultureInfo.InvariantCulture;
+    Scena.Vypis(args[2], float.Parse(args[3], ci), float.Parse(args[4], ci), float.Parse(args[5], ci), float.Parse(args[6], ci));
+    return;
+}
+
+if (what == "srovnat")
+{
+    for (int i = 2; i < args.Length; i++) Srovnat.Udelej(args[i]);
+    return;
+}
+
 if (what == "roztahnout")
 {
     Roztahnout.Udelej(args[2], args[3], int.Parse(args[4]));

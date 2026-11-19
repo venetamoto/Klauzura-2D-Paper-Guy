@@ -291,3 +291,63 @@ static class Roztahnout
         Console.WriteLine($"{vystup}: {W}x{h}, mezer {mezery.Count}, cervena na {cerv.ToString("0.000", System.Globalization.CultureInfo.InvariantCulture)} sirky");
     }
 }
+
+// Srovna sikmo napsany text do vodorovna a vypise vysku "jadra" pismen (radky s 10-90 % inkoustu) v pixelech,
+// aby sly texty zvetsit podle velikosti pismen, ne podle ramecku
+static class Srovnat
+{
+    public static void Udelej(string soubor)
+    {
+        Bitmap src = new Bitmap(soubor);
+        int w = src.Width, h = src.Height;
+        // sklon: prumerne y inkoustu v kazdem sloupci, primka metodou nejmensich ctvercu
+        double sx = 0, sy = 0, sxx = 0, sxy = 0, sw = 0;
+        for (int x = 0; x < w; x++)
+        {
+            double m = 0, my = 0;
+            for (int y = 0; y < h; y++) { int a = src.GetPixel(x, y).A; m += a; my += a * y; }
+            if (m < 1) continue;
+            double yy = my / m;
+            sx += x * m; sy += yy * m; sxx += (double)x * x * m; sxy += x * yy * m; sw += m;
+        }
+        double sklon = (sw * sxy - sx * sy) / (sw * sxx - sx * sx);
+        double uhel = Math.Atan(sklon) * 180 / Math.PI;
+        Bitmap rovny = src;
+        if (Math.Abs(uhel) > 0.8)
+        {
+            int W = w + 40, H = h + (int)(Math.Abs(sklon) * w) + 40;
+            rovny = new Bitmap(W, H, PixelFormat.Format32bppArgb);
+            using (var g = Graphics.FromImage(rovny))
+            {
+                g.Clear(Color.Transparent);
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.TranslateTransform(W / 2f, H / 2f);
+                g.RotateTransform((float)-uhel);
+                g.DrawImage(src, -w / 2f, -h / 2f, w, h);
+            }
+        }
+        // oriznout
+        int x0 = rovny.Width, y0 = rovny.Height, x1 = -1, y1 = -1;
+        var radky = new double[rovny.Height];
+        for (int y = 0; y < rovny.Height; y++)
+            for (int x = 0; x < rovny.Width; x++)
+            {
+                int a = rovny.GetPixel(x, y).A;
+                radky[y] += a;
+                if (a > 60) { x0 = Math.Min(x0, x); x1 = Math.Max(x1, x); y0 = Math.Min(y0, y); y1 = Math.Max(y1, y); }
+            }
+        int o = 4;
+        x0 = Math.Max(0, x0 - o); y0 = Math.Max(0, y0 - o); x1 = Math.Min(rovny.Width - 1, x1 + o); y1 = Math.Min(rovny.Height - 1, y1 + o);
+        double celkem = 0; for (int y = y0; y <= y1; y++) celkem += radky[y];
+        double s = 0; int j0 = y0, j1 = y1;
+        for (int y = y0; y <= y1; y++) { s += radky[y]; if (s >= celkem * 0.10) { j0 = y; break; } }
+        s = 0;
+        for (int y = y0; y <= y1; y++) { s += radky[y]; if (s >= celkem * 0.90) { j1 = y; break; } }
+        var vyrez = rovny.Clone(new Rectangle(x0, y0, x1 - x0 + 1, y1 - y0 + 1), PixelFormat.Format32bppArgb);
+        if (rovny != src) rovny.Dispose();
+        src.Dispose();
+        vyrez.Save(soubor, ImageFormat.Png);
+        Console.WriteLine($"{soubor}: uhel {uhel:0.0}, {vyrez.Width}x{vyrez.Height}, jadro {j1 - j0 + 1} px ({(double)(j1 - j0 + 1) / vyrez.Height:0.000})");
+        vyrez.Dispose();
+    }
+}
