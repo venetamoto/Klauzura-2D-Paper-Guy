@@ -9,7 +9,7 @@ using System.IO;
 // Vypise sirku hlavy a vysku chodidel v prvnim snimku (pro PPU a pivot).
 public static class Animace
 {
-    const int Zoom = 5;
+    public static int Zoom = 5;
     const int Close = 2;
 
     public static void Render(string outDir, string prefix, string[] files)

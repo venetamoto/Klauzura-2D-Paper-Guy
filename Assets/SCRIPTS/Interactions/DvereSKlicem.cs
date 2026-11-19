@@ -26,6 +26,7 @@ public class DvereSKlicem : MonoBehaviour
     // bez klice se neda projit, s klicem u dveri zmackni F
     void Update()
     {
+        if (Pauza.pauznuto) return;
         if (opening || !Klic.mam) return;
         if (player == null)
         {

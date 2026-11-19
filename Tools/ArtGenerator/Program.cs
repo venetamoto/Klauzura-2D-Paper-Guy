@@ -6,15 +6,108 @@ string outDir = args.Length > 0 ? args[0] : ".";
 string what = args.Length > 1 ? args[1] : "all";
 Directory.CreateDirectory(outDir);
 
+if (what == "dum")
+{
+    Dum.Kresli(outDir);
+    return;
+}
+
+if (what == "scena")
+{
+    var ci = System.Globalization.CultureInfo.InvariantCulture;
+    Scena.Vypis(args[2], float.Parse(args[3], ci), float.Parse(args[4], ci), float.Parse(args[5], ci), float.Parse(args[6], ci));
+    return;
+}
+
+if (what == "srovnat")
+{
+    for (int i = 2; i < args.Length; i++) Srovnat.Udelej(args[i]);
+    return;
+}
+
+if (what == "roztahnout")
+{
+    Roztahnout.Udelej(args[2], args[3], int.Parse(args[4]));
+    return;
+}
+
+if (what == "barevne")
+{
+    RukopisBarevny.Udelej(args[2], args[3], int.Parse(args[4]));
+    return;
+}
+
+if (what == "rukafoto")
+{
+    RukaFoto.Vyrez(args[2], args[3], args[4]);
+    return;
+}
+
+if (what == "rukamapa")
+{
+    RukaFoto.Mapa(args[2], args[3]);
+    return;
+}
+
+if (what == "svatozar")
+{
+    for (int i = 3; i < args.Length; i++) Svatozar.Udelej(args[i], int.Parse(args[2]));
+    return;
+}
+
+if (what == "ztlustit")
+{
+    Ztlustit.Udelej(args[2], int.Parse(args[3]));
+    return;
+}
+
+if (what == "dvaradky")
+{
+    for (int i = 2; i + 1 < args.Length; i += 2) Rukopis2.Dva(args[i], args[i + 1]);
+    return;
+}
+
+if (what == "vyriznout")
+{
+    for (int i = 2; i + 1 < args.Length; i += 2) Rukopis.Vyrizni(args[i], args[i + 1]);
+    return;
+}
+
+if (what == "animace1")
+{
+    Animace.Zoom = 1;
+    Animace.Render(outDir, args[2], args.Skip(3).ToArray());
+    return;
+}
+
 if (what == "animace")
 {
     Animace.Render(outDir, args[2], args.Skip(3).ToArray());
     return;
 }
 
+if (what == "tlacitko")
+{
+    Napoveda.Tlacitko(args[2], args[3]);
+    return;
+}
+
+if (what == "radky")
+{
+    Napoveda.Radky(args[2], args[3]);
+    return;
+}
+
 if (what == "tuzka")
 {
     Napoveda.TuzkaKresba(args[2]);
+    return;
+}
+
+if (what == "rukopishalo")
+{
+    Napoveda.RukopisHalo = true;
+    Napoveda.Rukopis(args[2], args[3]);
     return;
 }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Collider2D))]
 public class EdibleCollectible : MonoBehaviour
@@ -8,9 +9,23 @@ public class EdibleCollectible : MonoBehaviour
     public float waitForTongue = 0.35f;
     public float flyTime = 0.3f;
     bool eaten;
-    [SerializeField]int zkonzumovano = 0;
+    public static int bod = 0;
+    [SerializeField] int bod2 = 0;
+    public static int zkonzumovano = 0;
 
     public bool IsEaten => eaten;
+
+    // kolik jidla je v levelu celkem
+    static int celkem;
+
+    void Start()
+    {
+        // kazdy level pocita snedene jidlo od nuly (jinak se bod pricita z minuleho levelu i z minuleho Play)
+        bod = 0;
+        bod2 = 0;
+        celkem = FindObjectsByType<EdibleCollectible>(FindObjectsSortMode.None).Length;
+        zkonzumovano = 0;
+    }
 
     void Awake()
     {
@@ -26,17 +41,17 @@ public class EdibleCollectible : MonoBehaviour
         if(player == null)
         {
             Destroy(gameObject);
-            zkonzumovano =+ 1;
         }
-        
+
         if (player != null)
         {
+            zkonzumovano += 1;
+            Debug.Log("jídlo: " + zkonzumovano);
             eaten = true;
             player.Eat();
             Debug.Log("Snedeno: " + name);
-            StartCoroutine(FlyIntoMouth(player));  
+            StartCoroutine(FlyIntoMouth(player));
         }
-        
     }
 
     // jazyk vec chnapne a ona zaleti do tlamy na brisku
@@ -54,6 +69,22 @@ public class EdibleCollectible : MonoBehaviour
             transform.localScale = startScale * (1f - k);
             yield return null;
         }
+        bod += 1;
+
+        // poradi levelu: Ines -> Filip -> Varvara; kdyz je snedeno vsechno, jde se na dalsi
+        string scena = SceneManager.GetActiveScene().name;
+        string dalsi = scena == "Ines" ? "Filip" : scena == "Filip" ? "Varvara" : null;
+        if (dalsi != null && bod >= celkem)
+        {
+            Debug.Log("Snedeno vsech " + celkem + ", jde se na " + dalsi);
+            player.StartCoroutine(Dalsi(dalsi));
+        }
         gameObject.SetActive(false);
+    }
+
+    static IEnumerator Dalsi(string scena)
+    {
+        yield return new WaitForSeconds(0.6f);
+        SceneManager.LoadScene(scena);
     }
 }

@@ -30,6 +30,7 @@ public class Klic : MonoBehaviour
     // hrac stoji u klice a zmackne F
     void Update()
     {
+        if (Pauza.pauznuto) return;
         if (taken) return;
         if (player == null)
         {
