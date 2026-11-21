@@ -253,8 +253,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: "Assembly-CSharp::kv\u011Btin\xE1\u010D"
   kytka1prefab: {fileID: 3879620754748767779, guid: 24a23768cc0899d4e905c26e1721e252, type: 3}
   kytka2prefab: {fileID: 5720227628889553978, guid: e7987be0509237f448131642e022e09e, type: 3}
-  kapkopadprefab: {fileID: 0}
+  kapkopadprefab: {fileID: 3304055505972276337, guid: 35100e61ab703904ead250c1aaba7c83, type: 3}
   player: {fileID: 1005494776}
   okruh: 5
 --- !u!1 &268480632
@@ -2162,6 +2162,7 @@ GameObject:
   - component: {fileID: 915492281}
   - component: {fileID: 915492280}
   - component: {fileID: 915492279}
+  - component: {fileID: 915492282}
   m_Layer: 3
   m_Name: "dve\u0159e"
   m_TagString: zdivo
@@ -2290,6 +2291,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -360.177}
+--- !u!114 &915492282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915492278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371cbe204f599bd4cbb7807fe1ccd1f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: "Assembly-CSharp::druh\xFDleveldve\u0159e"
 --- !u!1001 &1005494767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3645,25 +3658,13 @@ PrefabInstance:
       addedObject: {fileID: 1346609326}
     - targetCorrespondingSourceObject: {fileID: 24814642100107178, guid: fa2176264a51b5446a0a0ca6ef987d7b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1346609325}
+      addedObject: {fileID: 1346609328}
   m_SourcePrefab: {fileID: 100100000, guid: fa2176264a51b5446a0a0ca6ef987d7b, type: 3}
 --- !u!1 &1346609324 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 24814642100107178, guid: fa2176264a51b5446a0a0ca6ef987d7b, type: 3}
   m_PrefabInstance: {fileID: 1346609323}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1346609325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346609324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e93d6dc728c35947a84db35960bac92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::inesLevelSmrt
 --- !u!114 &1346609326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3723,6 +3724,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1346609328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346609324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca7552146b83374ab7d8c99f7e6e524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Smrt
+  mrtvaCmarkaPrefab: {fileID: 0}
 --- !u!1001 &1349962887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4121,7 +4135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: "Assembly-CSharp::kv\u011Btin\xE1\u010D"
   kytka1prefab: {fileID: 3879620754748767779, guid: 24a23768cc0899d4e905c26e1721e252, type: 3}
   kytka2prefab: {fileID: 5720227628889553978, guid: e7987be0509237f448131642e022e09e, type: 3}
-  kapkopadprefab: {fileID: 0}
+  kapkopadprefab: {fileID: 3304055505972276337, guid: 35100e61ab703904ead250c1aaba7c83, type: 3}
   player: {fileID: 1005494776}
   okruh: 5
 --- !u!1 &1595946348
@@ -4693,25 +4707,13 @@ PrefabInstance:
       addedObject: {fileID: 1826398566}
     - targetCorrespondingSourceObject: {fileID: 2848775685137872651, guid: 51f69b322a744ce47b2745b5c40331d4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1826398565}
+      addedObject: {fileID: 1826398568}
   m_SourcePrefab: {fileID: 100100000, guid: 51f69b322a744ce47b2745b5c40331d4, type: 3}
 --- !u!1 &1826398564 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2848775685137872651, guid: 51f69b322a744ce47b2745b5c40331d4, type: 3}
   m_PrefabInstance: {fileID: 1826398563}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1826398565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826398564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e93d6dc728c35947a84db35960bac92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::inesLevelSmrt
 --- !u!114 &1826398566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4771,6 +4773,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1826398568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826398564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca7552146b83374ab7d8c99f7e6e524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Smrt
+  mrtvaCmarkaPrefab: {fileID: 0}
 --- !u!1 &1842215016
 GameObject:
   m_ObjectHideFlags: 0
@@ -5012,25 +5027,13 @@ PrefabInstance:
       addedObject: {fileID: 1863492067}
     - targetCorrespondingSourceObject: {fileID: 24814642100107178, guid: fa2176264a51b5446a0a0ca6ef987d7b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1863492066}
+      addedObject: {fileID: 1863492069}
   m_SourcePrefab: {fileID: 100100000, guid: fa2176264a51b5446a0a0ca6ef987d7b, type: 3}
 --- !u!1 &1863492065 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 24814642100107178, guid: fa2176264a51b5446a0a0ca6ef987d7b, type: 3}
   m_PrefabInstance: {fileID: 1863492064}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1863492066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863492065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e93d6dc728c35947a84db35960bac92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::inesLevelSmrt
 --- !u!114 &1863492067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5090,6 +5093,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1863492069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863492065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca7552146b83374ab7d8c99f7e6e524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Smrt
+  mrtvaCmarkaPrefab: {fileID: 0}
 --- !u!1 &2000885915
 GameObject:
   m_ObjectHideFlags: 0
@@ -5706,25 +5722,13 @@ PrefabInstance:
       addedObject: {fileID: 2097691317}
     - targetCorrespondingSourceObject: {fileID: 2848775685137872651, guid: 51f69b322a744ce47b2745b5c40331d4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2097691316}
+      addedObject: {fileID: 2097691319}
   m_SourcePrefab: {fileID: 100100000, guid: 51f69b322a744ce47b2745b5c40331d4, type: 3}
 --- !u!1 &2097691315 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2848775685137872651, guid: 51f69b322a744ce47b2745b5c40331d4, type: 3}
   m_PrefabInstance: {fileID: 2097691314}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2097691316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097691315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e93d6dc728c35947a84db35960bac92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::inesLevelSmrt
 --- !u!114 &2097691317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5784,6 +5788,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2097691319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097691315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca7552146b83374ab7d8c99f7e6e524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Smrt
+  mrtvaCmarkaPrefab: {fileID: 0}
 --- !u!1 &2118291591
 GameObject:
   m_ObjectHideFlags: 0

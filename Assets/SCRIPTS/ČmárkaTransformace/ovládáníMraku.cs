@@ -17,6 +17,7 @@ public class ovládáníMraku : MonoBehaviour
     bool dash2 = false;
     bool cas2 = false;
     bool coolDown2 = false;
+    bool POCKEJ = false;
     public SpriteRenderer spriteRenderer;
     public proměnaNaMrak promena;
     private Rigidbody2D gravitace;
@@ -26,6 +27,7 @@ public class ovládáníMraku : MonoBehaviour
         coolDown = false;
         cas = false;
         dash = false;
+        POCKEJ = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
         gravitace = GetComponent<Rigidbody2D>();
     }
@@ -41,47 +43,52 @@ public class ovládáníMraku : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-        if (filipLevelSmrt.padni == true)
+    //dash pro pravou stranu
+        if (POCKEJ == false)
         {
-            gravitace.gravityScale = 0f;
-        }
-
-        if (coolDown == true)
-        {
-            if (Input.GetKeyUp(KeyCode.D) || cas == true)
+            if (coolDown == true)
             {
-                if (Input.GetKeyDown(KeyCode.D))
+                if (Input.GetKeyUp(KeyCode.D) || cas == true)
                 {
-                    dash = true;
+                    if (Input.GetKeyDown(KeyCode.D))
+                    {
+                        dash = true;
+                    }
                 }
             }
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            StartCoroutine(Počkej());
-        }
-        if (dash == true)
-        {
-            transform.position = new Vector3(transform.position.x+Time.deltaTime*speedX2, transform.position.y+Time.deltaTime*speedY2, 0);
-        }
-
-        if (coolDown2 == true)
-        {
-            if (Input.GetKeyUp(KeyCode.A) || cas2 == true)
+            if (Input.GetKeyUp(KeyCode.D))
             {
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    dash2 = true;
-                }
+                StartCoroutine(Počkej());
+            }
+            if (dash == true)
+            {
+                transform.position = new Vector3(transform.position.x+Time.deltaTime*speedX2, transform.position.y+Time.deltaTime*speedY2, 0);
+                StartCoroutine(CoolDown());
             }
         }
-        if (Input.GetKeyUp(KeyCode.A))
+
+    //dash pro levou stranu
+        if (POCKEJ == false)
         {
-            StartCoroutine(Počkej2());
-        }
-        if (dash2 == true)
-        {
-            transform.position = new Vector3(transform.position.x+Time.deltaTime*speedX3, transform.position.y+Time.deltaTime*speedY3, 0);
+            if (coolDown2 == true)
+            {
+                if (Input.GetKeyUp(KeyCode.A) || cas2 == true)
+                {
+                    if (Input.GetKeyDown(KeyCode.A))
+                    {
+                        dash2 = true;
+                    }
+                }
+            }
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                StartCoroutine(Počkej2());
+            }
+            if (dash2 == true)
+            {
+                transform.position = new Vector3(transform.position.x+Time.deltaTime*speedX3, transform.position.y+Time.deltaTime*speedY3, 0);
+                StartCoroutine(CoolDown());
+            }
         }
     }
     public IEnumerator Počkej()
@@ -101,5 +108,12 @@ public class ovládáníMraku : MonoBehaviour
         coolDown2 = false;
         cas2 = false;
         dash2 = false;
+    }
+    public IEnumerator CoolDown()
+    {
+        yield return new WaitForSeconds(0.2f);
+        POCKEJ = true;
+        yield return new WaitForSeconds(1.0f);
+        POCKEJ = false;
     }
 }
