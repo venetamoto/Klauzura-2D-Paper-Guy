@@ -224,7 +224,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7765112157125232277, guid: a79aa7b9a56fc224ebfa54b265a7f00f, type: 3}
+  m_Sprite: {fileID: -1386683391063219287, guid: 64bce5db452da9844924b8a78272fa1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -269,8 +269,6 @@ MonoBehaviour:
   speedY3: 0
   spriteRenderer: {fileID: 0}
   promena: {fileID: 0}
-  waitForTongue: 0.35
-  flyTime: 0.3
 --- !u!61 &2456890738472651819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -309,7 +307,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10, y: 10}
+    oldSize: {x: 8.84, y: 7.2900004}
     newSize: {x: 10, y: 10}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

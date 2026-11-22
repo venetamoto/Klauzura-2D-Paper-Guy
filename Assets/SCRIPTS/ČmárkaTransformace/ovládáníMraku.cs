@@ -36,11 +36,11 @@ public class ovládáníMraku : MonoBehaviour
         transform.position = transform.position + new Vector3(Input.GetAxis("Horizontal")*speedX*Time.deltaTime,Input.GetAxis("Vertical")*speedY*Time.deltaTime,0);
         if (Input.GetKeyDown(KeyCode.D))
         {
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = false;
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            spriteRenderer.flipX = false;
+            spriteRenderer.flipX = true;
         }
 
     //dash pro pravou stranu
