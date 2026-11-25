@@ -149,9 +149,9 @@ GameObject:
   - component: {fileID: 2894931171354524158}
   - component: {fileID: 1216249461042311661}
   - component: {fileID: 1524898053097314465}
-  - component: {fileID: 2456890738472651819}
   - component: {fileID: -1890651310198482789}
   - component: {fileID: 4873185633315914368}
+  - component: {fileID: 3265186239363612286}
   m_Layer: 0
   m_Name: "\u010Dm\xE1rkomrakz\xE1kladn\xED_0"
   m_TagString: Player
@@ -168,8 +168,8 @@ Transform:
   m_GameObject: {fileID: 8154505352052876079}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50.312134, y: -13.247618, z: 0}
-  m_LocalScale: {x: 0.27532497, y: 0.25803643, z: 1}
+  m_LocalPosition: {x: -52.912, y: -23.4911, z: 0}
+  m_LocalScale: {x: 0.3001, y: 0.32495, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7700405016099788238}
@@ -269,52 +269,6 @@ MonoBehaviour:
   speedY3: 0
   spriteRenderer: {fileID: 0}
   promena: {fileID: 0}
---- !u!61 &2456890738472651819
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8154505352052876079}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.08349323, y: -0.17008424}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.84, y: 7.2900004}
-    newSize: {x: 10, y: 10}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 7.525483, y: 9.854216}
-  m_EdgeRadius: 0
 --- !u!50 &-1890651310198482789
 Rigidbody2D:
   serializedVersion: 5
@@ -363,3 +317,39 @@ MonoBehaviour:
   zed2: {fileID: 1736051514857081667, guid: cc89b1134fe914548bfcae732384ac32, type: 3}
   mrakTransformatorPrefab: {fileID: 8154505352052876079}
   cmarkaTransformatorPrefab: {fileID: 7341812184705142913, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+--- !u!58 &3265186239363612286
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154505352052876079}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.14671999, y: -0.42585906}
+  m_Radius: 3.1617832

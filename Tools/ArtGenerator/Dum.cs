@@ -248,6 +248,35 @@ static class Dum
         g.Clip = stary;
     }
 
+    // karticka misto cerneho bloku: ram modrou propiskou po krajich bloku a uvnitr rovna kresba autorky
+    // (blok je ve hre otoceny o uhel - kresba se otoci zpet, aby byla rovne)
+    public static void Karta(string kresba, string vystup, float sirkaJ, float vyskaJ, float uhelBloku)
+    {
+        const float ppu = 120f;
+        int w = (int)(sirkaJ * ppu), h = (int)(vyskaJ * ppu);
+        using var bmp = new Bitmap(w, h, PixelFormat.Format32bppArgb);
+        using (var g = Graphics.FromImage(bmp))
+        {
+            g.SmoothingMode = SmoothingMode.HighQuality;
+            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            g.Clear(Color.Transparent);
+            var rnd = new Random(kresba.Length);
+            CaraPx(g, new[] { new PointF(6, 6), new PointF(w - 6, 6), new PointF(w - 6, h - 6), new PointF(6, h - 6) }, 5f, 3f, rnd.Next(), true);
+            CaraPx(g, new[] { new PointF(14, 14), new PointF(w - 14, 14), new PointF(w - 14, h - 14), new PointF(14, h - 14) }, 2f, 3f, rnd.Next(), true);
+
+            using var k = new Bitmap(kresba);
+            float a = MathF.Abs(uhelBloku * MathF.PI / 180f);
+            float co = MathF.Abs(MathF.Cos(a)), si = MathF.Abs(MathF.Sin(a));
+            // otocena kresba se musi vejit do ramu (obrys otoceneho obdelniku)
+            float s = Math.Min((w - 40) / (k.Width * co + k.Height * si), (h - 40) / (k.Width * si + k.Height * co));
+            g.TranslateTransform(w / 2f, h / 2f);
+            g.RotateTransform(uhelBloku); // zpet proti otoceni bloku ve hre (v obrazku y jde dolu)
+            g.DrawImage(k, -k.Width * s / 2f, -k.Height * s / 2f, k.Width * s, k.Height * s);
+        }
+        bmp.Save(vystup, ImageFormat.Png);
+        Console.WriteLine($"{vystup}: {w}x{h} ({ppu} px = 1), kresba otocena o {uhelBloku}");
+    }
+
     // okno: ram ze dvou car, krizek, parapet
     static void Okno(Graphics g, RectangleF o, Random rnd)
     {

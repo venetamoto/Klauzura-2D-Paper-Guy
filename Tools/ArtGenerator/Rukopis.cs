@@ -5,8 +5,30 @@ using System.Drawing.Imaging;
 // Rucne psany text autora (modra propiska na bilem papiru) -> PNG s pruhlednym pozadim, oriznute na text
 static class Rukopis
 {
+    // kresba uz s pruhlednym pozadim (z tabletu): jen oriznout, barvy a pruhlednost nechat jak jsou
+    public static void Oriznout(string vstup, string vystup)
+    {
+        using var src = new Bitmap(vstup);
+        int x0 = src.Width, y0 = src.Height, x1 = -1, y1 = -1;
+        for (int y = 0; y < src.Height; y++)
+            for (int x = 0; x < src.Width; x++)
+                if (src.GetPixel(x, y).A > 20) { x0 = Math.Min(x0, x); x1 = Math.Max(x1, x); y0 = Math.Min(y0, y); y1 = Math.Max(y1, y); }
+        int o = 6;
+        x0 = Math.Max(0, x0 - o); y0 = Math.Max(0, y0 - o); x1 = Math.Min(src.Width - 1, x1 + o); y1 = Math.Min(src.Height - 1, y1 + o);
+        using var dst = src.Clone(new Rectangle(x0, y0, x1 - x0 + 1, y1 - y0 + 1), PixelFormat.Format32bppArgb);
+        dst.Save(vystup, ImageFormat.Png);
+        Console.WriteLine($"{vystup}: {dst.Width}x{dst.Height} (pruhledna kresba, jen oriznuta)");
+    }
+
     public static void Vyrizni(string vstup, string vystup)
     {
+        using (var test = new Bitmap(vstup))
+            if (test.GetPixel(0, 0).A == 0 && test.GetPixel(test.Width - 1, test.Height - 1).A == 0)
+            {
+                test.Dispose();
+                Oriznout(vstup, vystup);
+                return;
+            }
         using var src = new Bitmap(vstup);
         int w = src.Width, h = src.Height;
         var a = new byte[w, h];
@@ -349,5 +371,37 @@ static class Srovnat
         vyrez.Save(soubor, ImageFormat.Png);
         Console.WriteLine($"{soubor}: uhel {uhel:0.0}, {vyrez.Width}x{vyrez.Height}, jadro {j1 - j0 + 1} px ({(double)(j1 - j0 + 1) / vyrez.Height:0.000})");
         vyrez.Dispose();
+    }
+}
+
+// Obrys horni hrany kresby pod danym radkem (napr. hromadka bez car a much nad ni) jako body polygonu
+// v jednotkach spritu (100 px = 1, stred obrazku = 0,0, y nahoru). Vypise "x,y x,y ..." pro PolygonCollider2D.
+static class ObrysHrany
+{
+    public static void Vypis(string soubor, int odRadku)
+    {
+        using var b = new Bitmap(soubor);
+        int w = b.Width, h = b.Height;
+        var body = new System.Collections.Generic.List<string>();
+        float U(int px) => px / 100f;
+        int prvni = -1, posledni = -1;
+        var vrch = new System.Collections.Generic.List<(int x, int y)>();
+        for (int x = 0; x < w; x += 6)
+        {
+            int top = -1;
+            for (int y = odRadku; y < h; y++) if (b.GetPixel(x, y).A > 80) { top = y; break; }
+            if (top < 0) continue;
+            if (prvni < 0) prvni = x;
+            posledni = x;
+            vrch.Add((x, top));
+        }
+        var ci = System.Globalization.CultureInfo.InvariantCulture;
+        string Bod(int x, int y) => ((x - w / 2f) / 100f).ToString("0.###", ci) + "," + ((h / 2f - y) / 100f).ToString("0.###", ci);
+        int spodek = h - 8;
+        body.Add(Bod(prvni, spodek));
+        foreach (var (x, y) in vrch) body.Add(Bod(x, y));
+        body.Add(Bod(posledni, spodek));
+        Console.WriteLine(string.Join(" ", body));
+        Console.WriteLine($"# {vrch.Count} bodu vrchu, sirka {U(posledni - prvni):0.00} j, obrazek {w}x{h}");
     }
 }
