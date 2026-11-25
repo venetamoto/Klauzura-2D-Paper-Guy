@@ -12,6 +12,19 @@ if (what == "denik")
     return;
 }
 
+if (what == "obrys")
+{
+    ObrysHrany.Vypis(args[2], int.Parse(args[3]));
+    return;
+}
+
+if (what == "karta")
+{
+    var ci = System.Globalization.CultureInfo.InvariantCulture;
+    Dum.Karta(args[2], args[3], float.Parse(args[4], ci), float.Parse(args[5], ci), float.Parse(args[6], ci));
+    return;
+}
+
 if (what == "dum")
 {
     Dum.Kresli(outDir);

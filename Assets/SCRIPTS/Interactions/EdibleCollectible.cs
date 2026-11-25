@@ -10,7 +10,7 @@ public class EdibleCollectible : MonoBehaviour
     public float flyTime = 0.3f;
     bool eaten;
     public static int bod = 0;
-    [SerializeField] int bod2 = 0;
+    public int bod2 = 0; // kopie bod pro inspektor
     public static int zkonzumovano = 0;
 
     public bool IsEaten => eaten;
@@ -23,7 +23,7 @@ public class EdibleCollectible : MonoBehaviour
         // kazdy level pocita snedene jidlo od nuly (jinak se bod pricita z minuleho levelu i z minuleho Play)
         bod = 0;
         bod2 = 0;
-        celkem = FindObjectsByType<EdibleCollectible>(FindObjectsSortMode.None).Length;
+        celkem = FindObjectsByType<EdibleCollectible>().Length;
         zkonzumovano = 0;
     }
 
@@ -70,6 +70,7 @@ public class EdibleCollectible : MonoBehaviour
             yield return null;
         }
         bod += 1;
+        bod2 = bod;
 
         // poradi levelu: Ines -> Filip -> Varvara; kdyz je snedeno vsechno, jde se na dalsi
         string scena = SceneManager.GetActiveScene().name;

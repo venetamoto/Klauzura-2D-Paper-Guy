@@ -30,7 +30,7 @@ public class DvereSKlicem : MonoBehaviour
         if (opening || !Klic.mam) return;
         if (player == null)
         {
-            player = FindFirstObjectByType<PlayerController2D>();
+            player = FindAnyObjectByType<PlayerController2D>();
             if (player == null) return;
             playerCol = player.GetComponent<Collider2D>();
         }
