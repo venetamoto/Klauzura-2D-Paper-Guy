@@ -2053,7 +2053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca7552146b83374ab7d8c99f7e6e524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Smrt
-  mrtvaCmarkaPrefab: {fileID: 0}
+  mrtvaCmarkaPrefab: {fileID: 3993428289041607602, guid: b68c73444f4aca6418c8bd33bf8059ff, type: 3}
 --- !u!1 &516053921 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7930763528142684990, guid: e46010dd7e232bc419961ae78c6a0542, type: 3}
@@ -5138,7 +5138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca7552146b83374ab7d8c99f7e6e524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Smrt
-  mrtvaCmarkaPrefab: {fileID: 0}
+  mrtvaCmarkaPrefab: {fileID: 3993428289041607602, guid: b68c73444f4aca6418c8bd33bf8059ff, type: 3}
 --- !u!1001 &1243984725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8080,7 +8080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca7552146b83374ab7d8c99f7e6e524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Smrt
-  mrtvaCmarkaPrefab: {fileID: 0}
+  mrtvaCmarkaPrefab: {fileID: 3993428289041607602, guid: b68c73444f4aca6418c8bd33bf8059ff, type: 3}
 --- !u!1001 &1915798402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9126,7 +9126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca7552146b83374ab7d8c99f7e6e524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Smrt
-  mrtvaCmarkaPrefab: {fileID: 0}
+  mrtvaCmarkaPrefab: {fileID: 3993428289041607602, guid: b68c73444f4aca6418c8bd33bf8059ff, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
