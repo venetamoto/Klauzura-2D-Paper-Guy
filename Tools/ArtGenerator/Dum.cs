@@ -221,7 +221,8 @@ static class Dum
     static TextureBrush PapirFoto(float ppu, float x0, float y1)
     {
         papir ??= new Bitmap(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "..", "Assets", "Art", "Generated", "Pozadi_Papir_16x9.jpg"));
-        const float fotoPpu = 37.5f, listX = -1.27f, listY = 25f;
+        const float listX = -1.27f, listY = 25f;
+        float fotoPpu = papir.Width / 53.333f;
         float s = ppu / fotoPpu;
         var b = new TextureBrush(papir, WrapMode.Clamp);
         b.Transform = new Matrix(s, 0, 0, s, -(x0 - listX) * ppu, -(listY - y1) * ppu);

@@ -147,7 +147,18 @@ public class DobryKonec : MonoBehaviour
         MimoSesit ms = player.GetComponent<MimoSesit>();
         if (ms != null) ms.enabled = false;
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1.8f);
+        while (!guma.odlet) yield return null;
+
+        // stena uz neni potreba - zmizi, aby nezakryvala napis
+        Color c0 = ss.color;
+        for (float t = 0f; t < 0.7f; t += Time.deltaTime)
+        {
+            ss.color = new Color(c0.r, c0.g, c0.b, 1f - t / 0.7f);
+            yield return null;
+        }
+        Destroy(stena);
+
         Debug.Log("Ruka pise: Nekdy si svuj pribeh musis dokreslit sam...");
         Camera cam = Camera.main;
         yield return PisiciRuka.Napis(cam, napis, 2, rukaTuzka, bila, writeTime, 0.55f);

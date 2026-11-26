@@ -19769,6 +19769,7 @@ MonoBehaviour:
   smoothTime: 0.2
   levelBounds: {fileID: 91917080}
   shake: {fileID: 1901345664}
+  dolniOkraj: 1.3
   introWait: 1.5
   introTime: 1.5
   showSmoothTime: 0.5

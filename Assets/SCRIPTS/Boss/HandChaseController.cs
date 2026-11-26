@@ -21,7 +21,7 @@ public class HandChaseController : MonoBehaviour
     bool chasing;
     bool erasing;
     bool hotovo;
-    bool odlet;
+    [HideInInspector] public bool odlet;
     [Tooltip("Dobry konec: guma ceka, nez hrac dokresli stenu.")]
     public bool pauza;
     [Tooltip("Nakreslena stena - guma do ni narazi a odleti.")]

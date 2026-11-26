@@ -74,6 +74,28 @@ if (what == "svatozar")
     return;
 }
 
+if (what == "zaostrit")
+{
+    // zaostrit <zdroj.jpg> <cil.jpg> <meritko> <sila>
+    Zaostrit.Udelej(args[2], args[3], float.Parse(args[4], System.Globalization.CultureInfo.InvariantCulture), float.Parse(args[5], System.Globalization.CultureInfo.InvariantCulture));
+    return;
+}
+
+if (what == "ostre")
+{
+    // ostre <cilove ppu> <zdroj.png> <cil.png> ...
+    float cilPpu = float.Parse(args[2], System.Globalization.CultureInfo.InvariantCulture);
+    for (int i = 3; i + 1 < args.Length; i += 2) Ostre.Udelej(args[i], args[i + 1], cilPpu);
+    return;
+}
+
+if (what == "pruhledne" || what == "pruhlednetvrde")
+{
+    Pruhledne.Tvrde = what == "pruhlednetvrde";
+    for (int i = 2; i < args.Length; i++) Pruhledne.Udelej(args[i]);
+    return;
+}
+
 if (what == "ztlustit")
 {
     Ztlustit.Udelej(args[2], int.Parse(args[3]));
