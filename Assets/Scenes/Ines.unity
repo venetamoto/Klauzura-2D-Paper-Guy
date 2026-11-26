@@ -8740,7 +8740,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906101247}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -8937,6 +8937,34 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1586811852}
   m_SourcePrefab: {fileID: 100100000, guid: e46010dd7e232bc419961ae78c6a0542, type: 3}
+--- !u!1 &1979363244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7341812184705142913, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+  m_PrefabInstance: {fileID: 2053304875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1979363251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979363244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d09a620e7c90a2468f4c91b6fcd028d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MimoSesit
+  sesit: {fileID: 1439113996}
+  okraj: 0.5
+  delay: 0.6
+  rozpad:
+  - {fileID: 21300000, guid: cbb1e05c7e7f4f7bbf7c0f5c6e9afeee, type: 3}
+  - {fileID: 21300000, guid: 75c91107315748ff9833d663cb8e0e9a, type: 3}
+  - {fileID: 21300000, guid: 65270ed4f1e940aabd8e7266eaaa6501, type: 3}
+  - {fileID: 21300000, guid: 762c31d7fa9b4660be79968efab80c0a, type: 3}
+  - {fileID: 21300000, guid: 0efea84e580f49efb2fbc7ec34b7e9cf, type: 3}
+  - {fileID: 21300000, guid: 63edaba6812d4a51b0ed1001f208d2bb, type: 3}
+  rozpadTime: 1.2
 --- !u!1001 &1986962141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9429,7 +9457,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7341812184705142913, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1979363251}
   m_SourcePrefab: {fileID: 100100000, guid: e8b213ae6c7fed84185bbb68f95a8987, type: 3}
 --- !u!1001 &2079699047
 PrefabInstance:
@@ -9878,7 +9909,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279820419194609830}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
