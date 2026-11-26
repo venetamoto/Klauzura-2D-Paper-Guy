@@ -18,6 +18,7 @@ public class ovládáníMraku : MonoBehaviour
     bool cas2 = false;
     bool coolDown2 = false;
     bool POCKEJ = false;
+    public bool canDash = true;
     public SpriteRenderer spriteRenderer;
     public proměnaNaMrak promena;
     private Rigidbody2D gravitace;
@@ -44,6 +45,9 @@ public class ovládáníMraku : MonoBehaviour
         }
 
     //dash pro pravou stranu
+    if (canDash == false) return;
+        
+
         if (POCKEJ == false)
         {
             if (coolDown == true)
@@ -115,5 +119,19 @@ public class ovládáníMraku : MonoBehaviour
         POCKEJ = true;
         yield return new WaitForSeconds(1.0f);
         POCKEJ = false;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "omítka")
+        {
+            canDash = false;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "omítka")
+        {
+            canDash = true;
+        }
     }
 }

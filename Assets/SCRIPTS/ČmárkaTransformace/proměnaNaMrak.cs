@@ -5,7 +5,7 @@ public class proměnaNaMrak : MonoBehaviour
 {
     public GameObject mrakTransformatorPrefab;
     public GameObject cmarkaTransformatorPrefab;
-    bool mrakTransformace = false;
+    public static bool mrakTransformace = false;
     bool cmarkaTransformace = false;
     public static bool znicCmarku = false;
     public static bool znicMrak = false;
@@ -37,10 +37,6 @@ public class proměnaNaMrak : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "bomba")
-        {
-            destrukčníSkript.bombaSebrano = true;
-        }
         if (collision.gameObject.tag == "zdivo")
         {
             if (destrukčníSkript.bombaSebrano == true)
