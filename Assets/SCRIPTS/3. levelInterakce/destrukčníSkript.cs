@@ -1,9 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
+using UnityEditor.Build.Reporting;
 
 public class destrukčníSkript : MonoBehaviour
 {
     public GameObject bomba;
+    public GameObject bombaAnimace;
     public GameObject zed1;
     public GameObject zed12;
     public GameObject stul;
@@ -16,6 +19,7 @@ public class destrukčníSkript : MonoBehaviour
     bool nuzkySebrano = false;
     public static bool ustrihnuto = false;
     bool POCKEJ = false;
+    bool bum = false;
 
     void Start()
     {
@@ -23,6 +27,7 @@ public class destrukčníSkript : MonoBehaviour
         nuzkySebrano = false;
         ustrihnuto = false;
         POCKEJ = false;
+        bum = false;
     }
 
     void Update()
@@ -32,6 +37,16 @@ public class destrukčníSkript : MonoBehaviour
             GameObject SMAZTO3 = GameObject.Find("zeď 2");
             StartCoroutine(ČAS());
             if (POCKEJ == true) Destroy(SMAZTO3);
+        }
+        if (bum == true)
+        {
+            Destroy(zed1);
+            Destroy(zed12);
+            Destroy(stul);
+            Instantiate(mrakTransformatorPrefab, transform.position, transform.rotation);
+            Destroy(cmarkaTransformatorPrefab);
+            GameObject SMAZTO4 = GameObject.Find("exploze(Clone)");
+            Destroy(SMAZTO4);
         }
     }
 
@@ -44,11 +59,8 @@ public class destrukčníSkript : MonoBehaviour
         }
         if ((collision.gameObject.name == "zeď1" || collision.gameObject.name == "zeď1(2)") && bombaSebrano == true)
         {
-            Destroy(zed1);
-            Destroy(zed12);
-            Destroy(stul);
-            Instantiate(mrakTransformatorPrefab, transform.position, transform.rotation);
-            Destroy(cmarkaTransformatorPrefab);
+            Instantiate(bombaAnimace, transform.position, transform.rotation);
+            StartCoroutine(Výbuch());
         }
 
         if (collision.gameObject.name == "nůžky")
@@ -69,5 +81,10 @@ public class destrukčníSkript : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         POCKEJ = true;
+    }
+    public IEnumerator Výbuch()
+    {
+        yield return new WaitForSeconds(1.9f);
+        bum = true;
     }
 }
