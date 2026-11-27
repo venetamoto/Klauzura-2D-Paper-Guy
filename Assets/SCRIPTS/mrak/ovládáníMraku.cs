@@ -117,7 +117,10 @@ public class ovládáníMraku : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         POCKEJ = true;
-        yield return new WaitForSeconds(1.0f);
+        dashUI.spustSlider = true;
+        yield return new WaitForSeconds(2.0f);
+        dashUI.zmensise = true;
+        dashUI.spustSlider = false;
         POCKEJ = false;
     }
     private void OnCollisionEnter2D(Collision2D collision)

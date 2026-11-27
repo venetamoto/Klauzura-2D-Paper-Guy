@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEditor.Build.Reporting;
+using System.Net;
 
 public class destrukčníSkript : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class destrukčníSkript : MonoBehaviour
     public static bool bombaSebrano = false;
     bool nuzkySebrano = false;
     public static bool ustrihnuto = false;
+    bool ustrich = false;
     bool POCKEJ = false;
     bool bum = false;
 
@@ -71,9 +73,13 @@ public class destrukčníSkript : MonoBehaviour
         }
         if (collision.gameObject.name == "šňůra" && nuzkySebrano == true)
         {
-            GameObject SMAZTO2 = GameObject.Find("šňůra");
-            Destroy(SMAZTO2);
-            ustrihnuto = true;
+            StartCoroutine(Ústřich());
+            if (ustrich == true)
+            {
+                GameObject SMAZTO2 = GameObject.Find("šňůra");
+                Destroy(SMAZTO2);
+                ustrihnuto = true;
+            }
         }
     } 
 
@@ -86,5 +92,10 @@ public class destrukčníSkript : MonoBehaviour
     {
         yield return new WaitForSeconds(1.9f);
         bum = true;
+    }
+    public IEnumerator Ústřich()
+    {
+        yield return new WaitForSeconds(1f);
+        ustrich = true;
     }
 }
