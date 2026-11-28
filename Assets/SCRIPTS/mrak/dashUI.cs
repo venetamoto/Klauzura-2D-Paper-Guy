@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class dashUI : MonoBehaviour
 {
@@ -6,9 +7,10 @@ public class dashUI : MonoBehaviour
     public static bool zmensise = false;
     void Start()
     {
-        transform.localScale = new Vector3(5.312984f, 0.3f, 0f);
-        spustSlider = false;
+        spustSlider = true;
         zmensise = false;
+        transform.localScale = new Vector3(0f, 0.3f, 0f);
+        StartCoroutine(CoolDown());
     }
 
     void Update()
@@ -28,5 +30,15 @@ public class dashUI : MonoBehaviour
             transform.localScale = new Vector3(0f, 0.3f, 0f);
             zmensise = false;
         }
+    }
+
+    public IEnumerator CoolDown()
+    {
+        ovládáníMraku.POCKEJ = true;
+        spustSlider = true;
+        yield return new WaitForSeconds(2.0f);
+        zmensise = true;
+        spustSlider = false;
+        ovládáníMraku.POCKEJ = false;
     }
 }

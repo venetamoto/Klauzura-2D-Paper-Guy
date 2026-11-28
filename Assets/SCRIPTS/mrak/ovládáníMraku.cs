@@ -17,7 +17,7 @@ public class ovládáníMraku : MonoBehaviour
     bool dash2 = false;
     bool cas2 = false;
     bool coolDown2 = false;
-    bool POCKEJ = false;
+    public static bool POCKEJ = false;
     public bool canDash = true;
     public SpriteRenderer spriteRenderer;
     public proměnaNaMrak promena;
